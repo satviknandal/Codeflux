@@ -1,0 +1,764 @@
+<div class="elementor-element elementor-element-4a4128c e-con-full e-flex e-con e-parent" data-id="4a4128c" data-element_type="container">
+                            <div class="elementor-element elementor-element-317a61a elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="317a61a" data-element_type="widget" data-widget_type="html.default">
+                                <style>
+                                    .techstack-section {
+                                        padding: 5rem 0 6rem;
+                                        background: var(--bg);
+                                        border-top: 1px solid var(--border);
+                                        overflow: hidden
+                                    }
+
+                                    .techstack-section .section-title {
+                                        font-family: 'Inter',var(--font);
+                                        font-weight: 600 !important;
+                                        font-size: 2.25rem !important;
+                                        letter-spacing: -.03em;
+                                        line-height: 1.02
+                                    }
+
+                                    @media (min-width: 768px) {
+                                        .techstack-section .section-title {
+                                            font-size:3rem !important
+                                        }
+                                    }
+
+                                    @media (min-width: 1024px) {
+                                        .techstack-section .section-title {
+                                            font-size:3.75rem !important
+                                        }
+                                    }
+
+                                    .tech-marquees {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1.25rem;
+                                        margin-top: 3rem
+                                    }
+
+                                    .tech-row {
+                                        overflow: hidden;
+                                        position: relative
+                                    }
+
+                                    .tech-row:before,.tech-row:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        width: 96px;
+                                        z-index: 2;
+                                        pointer-events: none
+                                    }
+
+                                    @media (min-width: 768px) {
+                                        .tech-row:before,.tech-row:after {
+                                            width:160px
+                                        }
+                                    }
+
+                                    .tech-row:before {
+                                        left: 0;
+                                        background: linear-gradient(to right,var(--bg),transparent)
+                                    }
+
+                                    .tech-row:after {
+                                        right: 0;
+                                        background: linear-gradient(to left,var(--bg),transparent)
+                                    }
+
+                                    .tech-track {
+                                        display: flex;
+                                        gap: 1rem;
+                                        width: max-content;
+                                        will-change: transform
+                                    }
+
+                                    @media (min-width: 768px) {
+                                        .tech-track {
+                                            gap:1.25rem
+                                        }
+                                    }
+
+                                    .tech-row-left .tech-track {
+                                        animation: scroll-left 38s linear infinite
+                                    }
+
+                                    .tech-row-right .tech-track {
+                                        animation: scroll-right 38s linear infinite
+                                    }
+
+                                    @keyframes scroll-left {
+                                        from {
+                                            transform: translateX(0)
+                                        }
+
+                                        to {
+                                            transform: translateX(-25%)
+                                        }
+                                    }
+
+                                    @keyframes scroll-right {
+                                        from {
+                                            transform: translateX(-25%)
+                                        }
+
+                                        to {
+                                            transform: translateX(0)
+                                        }
+                                    }
+
+                                    .tech-item {
+                                        flex-shrink: 0;
+                                        width: 128px;
+                                        height: 128px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        gap: .75rem;
+                                        border-radius: 1rem;
+                                        border: 1px solid var(--border);
+                                        background: var(--bg);
+                                        box-shadow: 0 10px 28px -16px rgba(15,23,42,.18);
+                                        transition: box-shadow .25s,transform .25s
+                                    }
+
+                                    @media (min-width: 768px) {
+                                        .tech-item {
+                                            width:144px;
+                                            height: 144px;
+                                            border-radius: 1.125rem
+                                        }
+                                    }
+
+                                    html.dark .tech-item {
+                                        background: var(--surface-2)
+                                    }
+
+                                    .tech-item:hover {
+                                        transform: translateY(-3px);
+                                        box-shadow: 0 18px 40px -16px rgba(0,123,255,.25)
+                                    }
+
+                                    .tech-item img {
+                                        height: 40px;
+                                        width: auto;
+                                        max-width: 80%;
+                                        object-fit: contain;
+                                        filter: var(--tech-filter)
+                                    }
+
+                                    .tech-item img.tech-wide {
+                                        height: 28px
+                                    }
+
+                                    .tech-item span {
+                                        font-size: .8125rem;
+                                        font-weight: 600;
+                                        letter-spacing: -.01em;
+                                        color: var(--fg);
+                                        white-space: nowrap
+                                    }
+
+                                    @media (min-width: 768px) {
+                                        .tech-item img {
+                                            height:48px
+                                        }
+
+                                        .tech-item img.tech-wide {
+                                            height: 32px
+                                        }
+
+                                        .tech-item span {
+                                            font-size: .875rem
+                                        }
+                                    }
+                                </style>
+                                <section class="techstack-section" id="tech">
+                                    <div class="container">
+                                        <div class="section-header">
+                                            <span class="overline-tag">Technology</span>
+                                            <h2 class="section-title">
+                                                A Stack Built on the Best<br>
+                                                Of <span class="text-gradient">Modern AI.</span>
+                                            </h2>
+                                            <p class="section-subtitle">We’re provider-agnostic by design, choosing the right model, framework, and runtime for every workload.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tech-marquees">
+                                        <div class="tech-row tech-row-left">
+                                            <div class="tech-track" id="tech-row-1">
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    <span>OpenAI</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    <span>Anthropic</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    <span>Mistral</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    <span>LLaMA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    <span>TensorFlow</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    <span>PyTorch</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    <span>Hugging Face</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    <span>OpenAI</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    <span>Anthropic</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    <span>Mistral</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    <span>LLaMA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    <span>TensorFlow</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    <span>PyTorch</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    <span>Hugging Face</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    <span>OpenAI</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    <span>Anthropic</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    <span>Mistral</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    <span>LLaMA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    <span>TensorFlow</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    <span>PyTorch</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    <span>Hugging Face</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/openai.svg" alt="OpenAI" loading="lazy">
+                                                    <span>OpenAI</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/anthropic.svg" alt="Anthropic" loading="lazy">
+                                                    <span>Anthropic</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/mistral.svg" alt="Mistral" loading="lazy">
+                                                    <span>Mistral</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llama.svg" alt="LLaMA" loading="lazy">
+                                                    <span>LLaMA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/tensorflow.svg" alt="TensorFlow" loading="lazy">
+                                                    <span>TensorFlow</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pytorch.svg" alt="PyTorch" loading="lazy">
+                                                    <span>PyTorch</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/huggingface.svg" alt="Hugging Face" loading="lazy">
+                                                    <span>Hugging Face</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tech-row tech-row-right">
+                                            <div class="tech-track" id="tech-row-2">
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    <span>AWS</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    <span>Azure</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    <span>GCP</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    <span>NVIDIA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    <span>LangChain</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    <span>LangGraph</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    <span>LlamaIndex</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    <span>AWS</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    <span>Azure</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    <span>GCP</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    <span>NVIDIA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    <span>LangChain</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    <span>LangGraph</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    <span>LlamaIndex</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    <span>AWS</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    <span>Azure</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    <span>GCP</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    <span>NVIDIA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    <span>LangChain</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    <span>LangGraph</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    <span>LlamaIndex</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/aws.svg" alt="AWS" loading="lazy">
+                                                    <span>AWS</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/azure.svg" alt="Azure" loading="lazy">
+                                                    <span>Azure</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/gcp.svg" alt="Google Cloud" loading="lazy">
+                                                    <span>GCP</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/nvidia.svg" alt="NVIDIA" loading="lazy">
+                                                    <span>NVIDIA</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langchain.svg" alt="LangChain" loading="lazy">
+                                                    <span>LangChain</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/langgraph.svg" alt="LangGraph" loading="lazy">
+                                                    <span>LangGraph</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/llamaindex.svg" alt="LlamaIndex" loading="lazy">
+                                                    <span>LlamaIndex</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tech-row tech-row-left">
+                                            <div class="tech-track" id="tech-row-3">
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    <span>JAX</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    <span>Pinecone</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    <span>Weaviate</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    <span>Qdrant</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    <span>Vercel</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    <span>Kubernetes</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    <span>JAX</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    <span>Pinecone</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    <span>Weaviate</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    <span>Qdrant</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    <span>Vercel</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    <span>Kubernetes</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    <span>JAX</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    <span>Pinecone</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    <span>Weaviate</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    <span>Qdrant</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    <span>Vercel</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    <span>Kubernetes</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/jax.png" alt="JAX" loading="lazy">
+                                                    <span>JAX</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/pinecone.svg" alt="Pinecone" loading="lazy">
+                                                    <span>Pinecone</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" class="tech-wide" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' decoding="async" class="lazyload tech-wide" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/weaviate.svg" alt="Weaviate" loading="lazy">
+                                                    <span>Weaviate</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/qdrant.svg" alt="Qdrant" loading="lazy">
+                                                    <span>Qdrant</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/vercel.svg" alt="Vercel" loading="lazy">
+                                                    <span>Vercel</span>
+                                                </div>
+                                                <div class="tech-item">
+                                                    <noscript>
+                                                        <img decoding="async" src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    </noscript>
+                                                    <img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' class="lazyload" decoding="async" data-src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/homepage/assets/brand/tech/kubernetes.svg" alt="Kubernetes" loading="lazy">
+                                                    <span>Kubernetes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
