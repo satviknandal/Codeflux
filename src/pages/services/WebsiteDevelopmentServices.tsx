@@ -67,8 +67,6 @@ const WebsiteDevelopmentServices = () => {
       <WebDevelopmentProblems/>
       <DigitalServices/>
       <WhyCodefluxforWebDevelopment
-        title={<p>Why Choose <span className='text-sky-400'>Codeflux ?</span></p>}
-        desc={"Codeflux combines vast industry experience with a focus on technology and client needs. Keep reading to see why we are your best choice for web application development!"}
         pointers={pointers}
         pointerClass={''}
       />

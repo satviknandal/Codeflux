@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import {
   FaGlobe,
@@ -6,7 +5,6 @@ import {
   FaInfinity,
   FaStar,
 } from "react-icons/fa";
-import { ItemVariant } from "../../shared/MotionSetting";
 import CompHeader from "../shared/CompHeader";
 
 

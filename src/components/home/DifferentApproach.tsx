@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Zap, Bug, Settings, Cpu, Smartphone, Link2, Code2, Search } from "lucide-react";
 import codefluxLogo from "../../assets/logoIcon.png"
 import mastercardLogo from "../../assets/payment/mastercard.svg";
@@ -26,7 +26,7 @@ interface CardProps {
   description: string;
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 50,
@@ -41,7 +41,7 @@ const cardVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     scale: 0.85,
@@ -58,7 +58,7 @@ const itemVariants = {
   },
 };
 
-const fadeUpVariants = {
+const fadeUpVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 25,

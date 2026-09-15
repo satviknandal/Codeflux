@@ -1,4 +1,4 @@
-import { ArrowRight, BlocksIcon, BrainCircuitIcon, Building2, Building2Icon, CloudSyncIcon, Columns3CogIcon, FolderCodeIcon, MonitorCogIcon, ScanFaceIcon, ShieldLockIcon } from "lucide-react";
+import { BlocksIcon, BrainCircuitIcon, Building2Icon, CloudSyncIcon, Columns3CogIcon, FolderCodeIcon, MonitorCogIcon, ScanFaceIcon, ShieldLockIcon } from "lucide-react";
 import AutomationPlatformIcon from "../svg/AutomationIcon";
 import DesignIcon from "../svg/DesignIcon";
 import ExpandIcon from "../svg/ExpandIcon";

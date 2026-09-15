@@ -3,10 +3,10 @@ import { BriefcaseBusiness, GlobeIcon, Layers3, ShieldCheck } from "lucide-react
 import CompHeader from "../shared/CompHeader";
 
 interface WhyChooseCodefluxSoftwareDevelopmentProps {
-  onCtaClick?: () => void;
+  // onCtaClick?: () => void;
 }
 
-const WhyChooseCodefluxSoftwareDevelopment: React.FC<WhyChooseCodefluxSoftwareDevelopmentProps> = ({ onCtaClick }) => {
+const WhyChooseCodefluxSoftwareDevelopment: React.FC<WhyChooseCodefluxSoftwareDevelopmentProps> = () => {
   const features = [
     {
       icon: Layers3,

@@ -1,4 +1,3 @@
-import React from "react";
 import reacticon from "../../assets/icons/reactjs-icon.webp";
 import angularicon from "../../assets/icons/angular-icon.webp";
 import vueicon from "../../assets/icons/vuejs-original.svg";
@@ -98,11 +97,11 @@ const businessAITech = [
 
 const SoftwareTechnologyStack = ({width = "w-full"}: SoftwareTechnologyStackProps) => {
 
-    const renderTechStack = (title, technologies) => {
+    const renderTechStack = (title: string, technologies: any) => {
         return <div className="w-full p-4 mb-2 md:mb-4 border border-gray-100 rounded-md bg-white" style={{boxShadow: "0 10px 28px rgba(15, 23, 42, 0.04)"}}>
             <div className="mb-3 text-sm uppercase font-semibold">{title}</div>
             <div className="flex flex-wrap gap-2">
-                {technologies.map((tech) => (
+                {technologies.map((tech: any) => (
                 <div
                     key={tech.name}
                     className="flex min-h-[42px] items-center rounded-xl border border-[#e2e8f0] bg-[#f8fbff] px-4 py-2 transition-colors hover:bg-[#dbeafe]"

@@ -12,7 +12,6 @@ import WhyCodefluxforWebDevelopment from '../../components/webdev/WhyCodefluxfor
 import { AIBlogsData, AIDevelopmentServices, AIIndustryDrivenData, WhyCodefluxForAIDevelopmentData } from '../../shared/data/AIServicesData';
 import AIServicesHero from '../../components/aiservices/AIServicesHero';
 import AIBusinessBanner from '../../components/aiservices/AIBusinessBanner';
-import AITechnologyStack from '../../components/aiservices/AITechnologyStack';
 
 const AIServices = () => {
   
@@ -48,8 +47,6 @@ const AIServices = () => {
       <AIServicesHero/>
       <CustomAIServices/>
       <WhyCodefluxforWebDevelopment
-        title={<p>Why Choose <span className='bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)] bg-clip-text text-transparent'>Codeflux for AI Development ?</span></p>}
-        desc={"Codeflux redefines AI development services by transforming visionary ideas into intelligent applications. We specialize in custom AI development, crafting tailored strategies that integrate seamlessly with your business solving complexities and driving measurable growth through next-gen technology."}
         pointers={WhyCodefluxForAIDevelopmentData}
         pointerClass={'bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)] bg-clip-text text-transparent'}
       />
@@ -65,10 +62,7 @@ const AIServices = () => {
       </div>
       <IndustryDrivenSolutions/>
       <AIDevelopmentBlogs/>
-      <TechAIDifference
-          title="Traditional Software vs AI-Powered Systems"
-          subheading="Explore expert insights on AI development, automation, and enterprise use cases. Discover practical guides, industry trends, and proven strategies for building scalable AI solutions that drive business value."
-        />
+      <TechAIDifference/>
       {/* <AITechnologyStack/> */}
       <div className="container-wrapper">
         <FAQs title="AI Development FAQs" faqs={AIDevelopmentFaqs}/>

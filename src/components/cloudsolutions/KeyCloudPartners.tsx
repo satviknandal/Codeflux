@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import microsoftlogo from "../../assets/logo/Microsoft-logo.png";
 import awslogo from "../../assets/logo/AWS-logo.png";

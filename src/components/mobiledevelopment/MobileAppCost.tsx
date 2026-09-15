@@ -164,7 +164,7 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
   );
 };
 
-const CostFactor = ({icon, title, items}: {icon: string; title: string; items: string[]}) => {
+const CostFactor = ({icon, title, items}: {icon: any; title: string; items: string[]}) => {
   return (
     <div className="flex-1">
       <div className="mb-5 flex items-center gap-3">

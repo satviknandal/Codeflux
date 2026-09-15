@@ -1,6 +1,6 @@
 import Sdsapproach from "../../assets/services/SPE-Approach.svg";
 import { motion } from "framer-motion";
-import { ContainerVariant, ItemVariant, ItemVariantLeft } from "../../shared/MotionSetting";
+import { ContainerVariant } from "../../shared/MotionSetting";
 import CompHeader from "../shared/CompHeader";
 
 interface SoftwareSecurityProps {

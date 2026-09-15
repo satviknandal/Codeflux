@@ -5,8 +5,6 @@ import {
   Headphones,
   Box
 } from "lucide-react";
-import { ItemVariantLeft } from "../../shared/MotionSetting";
-import { motion } from "framer-motion";
 import CompHeader from "../shared/CompHeader";
 
 const Avatar = ({

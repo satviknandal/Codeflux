@@ -1,5 +1,6 @@
+import { type Variants } from "framer-motion";
 
-const ContainerVariant = {
+const ContainerVariant: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -8,7 +9,7 @@ const ContainerVariant = {
   },
 };
 
-const ItemVariant = {
+const ItemVariant: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
@@ -23,7 +24,7 @@ const ItemVariant = {
   },
 };
 
-const ItemVariantLeft = {
+const ItemVariantLeft: Variants= {
   hidden: {
     opacity: 0,
     x: -50,
@@ -38,7 +39,7 @@ const ItemVariantLeft = {
   },
 };
 
-const ItemVariantRight = {
+const ItemVariantRight: Variants = {
   hidden: {
     opacity: 0,
     x: 50,
@@ -53,7 +54,7 @@ const ItemVariantRight = {
   },
 };
 
-const CardContainerVariant = {
+const CardContainerVariant: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -63,7 +64,7 @@ const CardContainerVariant = {
   },
 };
 
-const ParagraphContainerVariant = {
+const ParagraphContainerVariant: Variants = {
   hidden: {},
   visible: {
     transition: {

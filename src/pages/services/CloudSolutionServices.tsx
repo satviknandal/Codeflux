@@ -5,8 +5,6 @@ import FAQs from '../../components/faq/FAQs';
 import { CloudServicesData, WhyCloudServicesData } from '../../shared/data/CloudPlatformData';
 import KeyCloudPartners from '../../components/cloudsolutions/KeyCloudPartners';
 import CloudPlatformServices from '../../components/cloudsolutions/CloudPlatformServices';
-import BreadCrumbNav from '../../components/BreadcrumbNav';
-import cloud from "../../assets/cloud.png";
 import CloudSolutionsHero from '../../components/cloudsolutions/CloudSolutionsHero';
 
 const CloudSolutionServices = () => {
@@ -17,7 +15,6 @@ const CloudSolutionServices = () => {
       columns={3}
       gap={16}
       width='w-[100%]'
-      isBg={true}
     />
   }
 

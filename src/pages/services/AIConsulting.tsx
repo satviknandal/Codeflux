@@ -118,66 +118,6 @@ const AIConsulting = () => {
       ),
     },
   ];
-  
-  const processAIData = [
-    {
-      title: "Discovery & Strategy",
-      description: "We start by understanding your business goals, current workflows, available data, and expected outcomes to define the right AI opportunity.",
-      icon: (
-        <RocketIcon
-          width={24}
-          height={24}
-          strokeWidth={1}
-          className="text-white"
-        />
-      ),
-    },
-    {
-      title: "Data Collection & Annotation",
-      description: "We assess data readiness, system dependencies, integration requirements, and deployment considerations before development begins.",
-      icon: (
-        <DesignIcon
-          width={24}
-          height={24}
-          className="text-white"
-        />
-      ),
-    },
-    {
-      title: "Solution Design",
-      description: "Our team defines the architecture, workflow, AI approach, and delivery roadmap aligned with your operational needs.",
-      icon: (
-        <SoftwareCodeIcon
-          width={24}
-          height={24}
-          className="text-white"
-        />
-      ),
-    },
-    {
-      title: "Development and Integration",
-      description: "We build the solution, connect it with your systems, test performance, and prepare it for production deployment.",
-      icon: (
-        <MaintenanceIcon
-          width={24}
-          height={24}
-          className="text-white"
-        />
-      ),
-    },
-    {
-      title: "Deployment &  Monitoring",
-      description: "After deployment, we support monitoring, tuning, improvements, and long-term solution performance.",
-      icon: (
-        <MaintenanceIcon
-          width={24}
-          height={24}
-          className="text-white"
-        />
-      ),
-    },
-  ];
-
 
   const industryDrivenData = [
     {
@@ -229,7 +169,6 @@ const AIConsulting = () => {
       title="Latest Blogs & Insights on AI"
       subheading="Explore expert insights on AI development, automation, and enterprise use cases. Discover practical guides, industry trends, and proven strategies for building scalable AI solutions that drive business value."
       data={AIBlogsData}
-      width='w-full'
       isBg={true}
       type="aiblog"
       columns={3}

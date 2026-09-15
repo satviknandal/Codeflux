@@ -1,22 +1,47 @@
-import React from 'react';
-import HeroNew from '../HeroNew';
+import React, { useEffect, useRef } from "react";
+import HeroNew from "../HeroNew";
 
-const cn = (...classes) => classes.filter(Boolean).join(' ');
+const AppFlow: React.FC = () => {
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-const AppFlow = () => {
-    const canvasRef = React.useRef(null);
-
-    React.useEffect(() => {
+    useEffect(() => {
         const canvas = canvasRef.current;
+
         if (!canvas) return;
-        
-        const ctx = canvas.getContext('2d');
-        let animationFrameId;
-        let particles = [];
-        const mouse = { x: null, y: null, radius: 200 };
+
+        const ctx = canvas.getContext("2d");
+
+        if (!ctx) return;
+
+        let animationFrameId: number;
+        let particles: Particle[] = [];
+
+        const mouse: {
+            x: number | null;
+            y: number | null;
+            radius: number;
+        } = {
+            x: null,
+            y: null,
+            radius: 200,
+        };
 
         class Particle {
-            constructor(x, y, directionX, directionY, size, color) {
+            x: number;
+            y: number;
+            directionX: number;
+            directionY: number;
+            size: number;
+            color: string;
+
+            constructor(
+                x: number,
+                y: number,
+                directionX: number,
+                directionY: number,
+                size: number,
+                color: string
+            ) {
                 this.x = x;
                 this.y = y;
                 this.directionX = directionX;
@@ -25,30 +50,54 @@ const AppFlow = () => {
                 this.color = color;
             }
 
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = this.color;
-                ctx.fill();
+            draw(): void {
+                if(ctx) {
+                    ctx.beginPath();
+                    ctx.arc(
+                        this.x,
+                        this.y,
+                        this.size,
+                        0,
+                        Math.PI * 2,
+                        false
+                    );
+    
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
             }
 
-            update() {
-                if (this.x > canvas.width || this.x < 0) {
+            update(): void {
+                // Bounce from edges
+                if (
+                    canvas && this.x > canvas.width - this.size ||
+                    this.x < this.size
+                ) {
                     this.directionX = -this.directionX;
                 }
-                if (this.y > canvas.height || this.y < 0) {
+
+                if (
+                    canvas && this.y > canvas.height - this.size ||
+                    this.y < this.size
+                ) {
                     this.directionY = -this.directionY;
                 }
 
-                // Mouse collision detection
+                // Mouse collision
                 if (mouse.x !== null && mouse.y !== null) {
-                    let dx = mouse.x - this.x;
-                    let dy = mouse.y - this.y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < mouse.radius + this.size) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    // Prevent division by zero
+                    if (distance > 0 && distance < mouse.radius + this.size) {
                         const forceDirectionX = dx / distance;
                         const forceDirectionY = dy / distance;
-                        const force = (mouse.radius - distance) / mouse.radius;
+
+                        const force =
+                            (mouse.radius - distance) / mouse.radius;
+
                         this.x -= forceDirectionX * force * 5;
                         this.y -= forceDirectionY * force * 5;
                     }
@@ -56,98 +105,202 @@ const AppFlow = () => {
 
                 this.x += this.directionX;
                 this.y += this.directionY;
+
                 this.draw();
             }
         }
 
-        function init() {
+        const init = (): void => {
             particles = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+
+            const numberOfParticles =
+                (canvas.width * canvas.height) / 9000;
+
             for (let i = 0; i < numberOfParticles; i++) {
-                let size = (Math.random() * 2) + 1;
-                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * 0.4) - 0.2;
-                let directionY = (Math.random() * 0.4) - 0.2;
-                let color = 'rgba(74, 51, 131, 0.8)'; // Brighter purple
-                particles.push(new Particle(x, y, directionX, directionY, size, color));
+                const size = Math.random() * 2 + 1;
+
+                const x =
+                    Math.random() *
+                        (canvas.width - size * 2) +
+                    size;
+
+                const y =
+                    Math.random() *
+                        (canvas.height - size * 2) +
+                    size;
+
+                const directionX =
+                    Math.random() * 0.4 - 0.2;
+
+                const directionY =
+                    Math.random() * 0.4 - 0.2;
+
+                const color = "rgba(74, 51, 131, 0.8)";
+
+                particles.push(
+                    new Particle(
+                        x,
+                        y,
+                        directionX,
+                        directionY,
+                        size,
+                        color
+                    )
+                );
             }
         };
 
-        const resizeCanvas = () => {
+        const resizeCanvas = (): void => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            init(); 
+
+            init();
         };
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
 
-        const connect = () => {
-            let opacityValue = 1;
+        const connect = (): void => {
             for (let a = 0; a < particles.length; a++) {
-                for (let b = a; b < particles.length; b++) {
-                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x))
-                        + ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
-                    
-                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-                        opacityValue = 1 - (distance / 20000);
-                        
-                        let dx_mouse_a = particles[a].x - mouse.x;
-                        let dy_mouse_a = particles[a].y - mouse.y;
-                        let distance_mouse_a = Math.sqrt(dx_mouse_a*dx_mouse_a + dy_mouse_a*dy_mouse_a);
+                for (let b = a + 1; b < particles.length; b++) {
+                    const dx =
+                        particles[a].x - particles[b].x;
 
-                        if (mouse.x && distance_mouse_a < mouse.radius) {
-                             ctx.strokeStyle = `rgba(255, 255, 255,0.1)`;
-                        } else {
-                             ctx.strokeStyle = `rgba(24, 68, 120,0.2)`;
+                    const dy =
+                        particles[a].y - particles[b].y;
+
+                    const distance =
+                        dx * dx + dy * dy;
+
+                    const maxDistance =
+                        (canvas.width / 7) *
+                        (canvas.height / 7);
+
+                    if (distance < maxDistance) {
+                        let strokeColor =
+                            "rgba(24, 68, 120, 0.2)";
+
+                        if (
+                            mouse.x !== null &&
+                            mouse.y !== null
+                        ) {
+                            const mouseDx =
+                                particles[a].x - mouse.x;
+
+                            const mouseDy =
+                                particles[a].y - mouse.y;
+
+                            const mouseDistance =
+                                Math.sqrt(
+                                    mouseDx * mouseDx +
+                                        mouseDy * mouseDy
+                                );
+
+                            if (
+                                mouseDistance <
+                                mouse.radius
+                            ) {
+                                strokeColor =
+                                    "rgba(255, 255, 255, 0.1)";
+                            }
                         }
+
+                        ctx.strokeStyle = strokeColor;
                         ctx.lineWidth = 1;
+
                         ctx.beginPath();
-                        ctx.moveTo(particles[a].x, particles[a].y);
-                        ctx.lineTo(particles[b].x, particles[b].y);
+
+                        ctx.moveTo(
+                            particles[a].x,
+                            particles[a].y
+                        );
+
+                        ctx.lineTo(
+                            particles[b].x,
+                            particles[b].y
+                        );
+
                         ctx.stroke();
                     }
                 }
             }
         };
 
-        const animate = () => {
-            animationFrameId = requestAnimationFrame(animate);
-            ctx.clearRect(0, 0, innerWidth, innerHeight);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
+        const animate = (): void => {
+            animationFrameId =
+                requestAnimationFrame(animate);
+
+            ctx.clearRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+            for (const particle of particles) {
+                particle.update();
             }
+
             connect();
         };
-        
-        const handleMouseMove = (event) => {
+
+        const handleMouseMove = (
+            event: MouseEvent
+        ): void => {
             mouse.x = event.clientX;
             mouse.y = event.clientY;
         };
-        
-        const handleMouseOut = () => {
+
+        const handleMouseOut = (): void => {
             mouse.x = null;
             mouse.y = null;
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        window.addEventListener('mouseout', handleMouseOut);
+        window.addEventListener(
+            "resize",
+            resizeCanvas
+        );
 
-        init();
+        window.addEventListener(
+            "mousemove",
+            handleMouseMove
+        );
+
+        window.addEventListener(
+            "mouseout",
+            handleMouseOut
+        );
+
+        resizeCanvas();
         animate();
 
         return () => {
-            window.removeEventListener('resize', resizeCanvas);
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('mouseout', handleMouseOut);
+            window.removeEventListener(
+                "resize",
+                resizeCanvas
+            );
+
+            window.removeEventListener(
+                "mousemove",
+                handleMouseMove
+            );
+
+            window.removeEventListener(
+                "mouseout",
+                handleMouseOut
+            );
+
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
 
-    return <div className="absolute hero top-0 w-full flex flex-col items-center justify-center overflow-hidden z-10 h-[700px] md:h-[880px]">
-        <canvas ref={canvasRef} className="bg-transparent absolute top-0 left-0 w-full h-full"></canvas>
-        <HeroNew/>
-    </div>
+    return (
+        <div className="absolute hero top-0 w-full flex flex-col items-center justify-center overflow-hidden z-10 h-[700px] md:h-[880px]">
+            <canvas
+                ref={canvasRef}
+                className="bg-transparent absolute top-0 left-0 w-full h-full"
+            />
+
+            <HeroNew />
+        </div>
+    );
 };
 
 export default AppFlow;

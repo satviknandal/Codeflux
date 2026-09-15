@@ -1,4 +1,4 @@
-const BreadCrumbNav = ({label}) => {
+const BreadCrumbNav = ({label}: {label: string}) => {
     return <nav aria-label="Breadcrumb" className="flex items-center space-x-1 text-sm mb-4 text-gray-500">
     <ol className="flex items-center flex-wrap gap-1">
         <li className="flex items-center">

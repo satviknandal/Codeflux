@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from "framer-motion";
 import { CodeIcon } from '../shared/svg/CodeIcon'
 import { PhoneIcon } from '../shared/svg/PhoneIcon'
 import { WandIcon } from '../shared/svg/WandIcon'
 import { CloudIcon } from '../shared/svg/CloudIcon'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+
 
 const edgeServices: Array<{
   icon: ReactNode
@@ -44,7 +45,7 @@ const edgeServices: Array<{
   }
 ]
 
-const containerVariants = {
+const containerVariants : Variants= {
   hidden: {},
   show: {
     transition: {
@@ -53,7 +54,7 @@ const containerVariants = {
   },
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 60,

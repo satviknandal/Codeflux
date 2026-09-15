@@ -3,19 +3,11 @@ import BlogCardComponent from "./shared/BlogCardComponent";
 import CompHeader from "./shared/CompHeader";
 import { CardContainerVariant } from "../shared/MotionSetting";
 
-interface Card {
-    title: string;
-    description: string;
-    img: string;
-    href: string;
-}
-
 interface BlogsProps {
     title?: string;
     subheading: string;
     data: any[];
     type?: "default" | 'gradient' | 'aiblog';  
-    width?: string;
     isBg?: boolean;
     bgclass?: string;
     columns: number;
@@ -27,7 +19,6 @@ const Blogs = ({
     subheading = "",
     data,
     type = "default",
-    width = "w-full",
     isBg = false,
     gap,
     columns
@@ -43,40 +34,6 @@ const Blogs = ({
             return "bg-[#fff]";
         }
     };
-
-    const getCardStyles  = () => {
-      switch (type) {
-        case "gradient":
-            return "bg-[#e3f3ff]/10 border-[#c0ddf3]/15";
-        case "aiblog":
-            return "bg-[#f5f5f5] border-[#e5e5e5]";
-        default:
-            return "bg-[#f5f5f5] border-[#e5e5e5]";
-        }
-    };
-
-    const getCardTitleStyles  = () => {
-      switch (type) {
-        case "gradient":
-            return "text-blue-200";
-        case "aiblog":
-          return "text-[#505050]"
-        default:
-            return "text-black";
-        }
-    };
-
-    const getCardTextStyles  = () => {
-      switch (type) {
-        case "gradient":
-            return "text-sky-600 hover:text-sky-900";
-        case "aiblog":
-            return "text-[#E40CD3] hover:text-[#FF5555]";
-        default:
-            return "text-sky-600 hover:text-sky-900";
-        }
-    };
-
 
     const renderCard = () => {
       return (
@@ -97,7 +54,7 @@ const Blogs = ({
                     : undefined,
               } as React.CSSProperties}
             >
-              {data.map((item, index) => <BlogCardComponent key={item.href} post={item} />)}
+              {data.map((item, index) => <BlogCardComponent key={index} post={item} />)}
           </motion.div>
         </section>
       );

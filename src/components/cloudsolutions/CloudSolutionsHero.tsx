@@ -1,9 +1,6 @@
-import React from "react";
 import {
-  Smartphone,
   Award,
   UserRound,
-  CalendarCheck,
   Rocket,
   ArrowRight,
   CloudIcon,

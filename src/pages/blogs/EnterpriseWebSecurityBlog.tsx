@@ -1,4 +1,4 @@
-import { AsteriskIcon, CheckIcon, CircleDotIcon, CloudIcon, CrossIcon, DatabaseArrowUpIcon, DotIcon, HardDriveIcon, IdCardIcon, InfoIcon, UserRoundCogIcon, XIcon } from "lucide-react";
+import { AsteriskIcon, CheckIcon, CloudIcon, DatabaseArrowUpIcon, HardDriveIcon, IdCardIcon, InfoIcon, UserRoundCogIcon, XIcon } from "lucide-react";
 import "../../blog.css";
 import BlogsAside from "../../components/blogs/BlogsAside";
 import BlogSection from "../../components/blogs/BlogSection";

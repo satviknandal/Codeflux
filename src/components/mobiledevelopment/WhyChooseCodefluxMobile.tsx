@@ -11,7 +11,7 @@ interface WhyChooseCodefluxMobileProps {
   onCtaClick?: () => void;
 }
 
-const WhyChooseCodefluxMobile: React.FC<WhyChooseCodefluxMobileProps> = ({ onCtaClick }) => {
+const WhyChooseCodefluxMobile: React.FC<WhyChooseCodefluxMobileProps> = () => {
   const features = [
     {
       icon: FaGlobe,

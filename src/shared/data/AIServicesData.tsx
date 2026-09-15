@@ -4,8 +4,6 @@ import RocketIcon from "../svg/RocketIcon";
 import SoftwareCodeIcon from "../svg/SoftwareCodeIcon";
 import agenticAi from "../../assets/blogs/agentic-ai.png";
 import aiadoption from "../../assets/blogs/ai-adoption.jpg";
-
-import webDesignAI from "../../assets/blogs/aiwebdesign.jpg";
 import aieducation from "../../assets/carousel/aieducation.jpg";
 import aitelecom from "../../assets/carousel/aitelecom.jpg";
 import aifintech from "../../assets/carousel/aifintech.jpg";

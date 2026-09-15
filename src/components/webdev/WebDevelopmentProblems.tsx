@@ -8,8 +8,6 @@ import {
   Search,
   FilePenLine,
 } from "lucide-react";
-import { motion } from "framer-motion";
-import { ItemVariant } from "../../shared/MotionSetting";
 import CompHeader from "../shared/CompHeader";
 
 interface Problem {

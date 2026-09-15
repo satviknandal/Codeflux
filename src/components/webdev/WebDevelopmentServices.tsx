@@ -22,7 +22,7 @@ const WebDevelopmentServices = ({
     gap = 8
 }: WebDevelopmentServicesProps) => {
 
-  const RenderComp = ({children}) => {
+  const RenderComp = ({children}: {children: React.ReactNode}) => {
     return <section className="py-6 md:py-16 relative overflow-hidden bg-sky-500 py-[90px]">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(12,11,29,0.92)_0%,rgba(12,11,29,0.72)_50%,rgba(12,11,29,0.92)_100%)]"/>
       {/* Dot pattern */}

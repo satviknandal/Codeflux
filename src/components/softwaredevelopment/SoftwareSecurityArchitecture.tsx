@@ -64,7 +64,7 @@ const SoftwareSecurityArchitecture = ({
                 <p className={`text-xs md:text-[14px] text-blue-200`}>{item.description}</p>
                 <div className="mt-6 flex flex-wrap"> 
                     {item.tags && item.tags.length > 0 && item.tags.map((tag, index) => {
-                        return <div className="text-xs md:text-sm font-medium mb-1 mr-1 py-1 px-2 bg-[#d4e6ff] text-[#005295] rounded-md">{tag}</div> 
+                        return <div key={index} className="text-xs md:text-sm font-medium mb-1 mr-1 py-1 px-2 bg-[#d4e6ff] text-[#005295] rounded-md">{tag}</div> 
                     })}
                 </div>
               </motion.div>

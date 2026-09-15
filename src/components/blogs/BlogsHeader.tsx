@@ -18,7 +18,7 @@ const BlogsHeader = ({data}: BlogsHeaderProps) => {
         <a href="/blogs" className="block text-xs mb-16 text-gray-900">← All Blogs</a>
         <div className="text-xs text-gray-800">
             <span className="text-sky-500 font-bold mr-4">{category}</span>
-            <time datetime="2026-08-10" className="mr-4">{date}</time>
+            <time className="mr-4">{date}</time>
             <span>5 minute read</span>
         </div>
         <h1 className="text-[#01182e] blogh1">{title}</h1>

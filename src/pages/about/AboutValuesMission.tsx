@@ -1,42 +1,7 @@
-import { motion } from "framer-motion";
 import CardsHolder from "../../components/shared/CardsHolder";
 import AutomationPlatformIcon from "../../shared/svg/AutomationIcon";
 import OptimisationIcon from "../../shared/svg/OptimisationIcon";
 import ExpandIcon from "../../shared/svg/ExpandIcon";
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.25,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
-const paragraphContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.18,
-    },
-  },
-};
 
 const valueMissionData = [
     {

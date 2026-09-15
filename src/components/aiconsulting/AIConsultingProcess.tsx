@@ -5,12 +5,8 @@ import {
   Code2,
   Bug,
   Rocket,
-  Wrench,
-  Clock,
   ArrowRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
-import { ItemVariant } from "../../shared/MotionSetting";
 import CompHeader from "../shared/CompHeader";
 
 interface ProcessStep {
@@ -253,8 +249,6 @@ const AIConsultingProcess = () => {
         {/* Mobile Process */}
         <div className="grid gap-6 md:hidden">
           {processSteps.map((step, index) => {
-            const Icon = step.icon;
-
             return (
               <div key={step.number} className="relative">
                 {/* Vertical line */}

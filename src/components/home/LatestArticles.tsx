@@ -42,7 +42,7 @@ const LatestArticles = ({
               } as React.CSSProperties
             }
           >
-            {data.map((item, index) => <BlogCardComponent key={item.href} post={item} />)}
+            {data.map((item, index) => <BlogCardComponent key={index} post={item} />)}
           </motion.div>
         </section>
       );

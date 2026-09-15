@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react';
-import Hero from './Hero';
+// import Hero from './Hero';
 import HeroNew from './HeroNew';
 import AppFlow from './home/AppFlow';
 

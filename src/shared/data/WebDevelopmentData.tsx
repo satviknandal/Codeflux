@@ -1,4 +1,4 @@
-import { BlocksIcon, ComponentIcon, GlobeCheckIcon, LayersPlusIcon, ProportionsIcon, ShoppingBasketIcon, TabletSmartphoneIcon } from "lucide-react";
+import { BlocksIcon, ComponentIcon, GlobeCheckIcon, LayersPlusIcon, TabletSmartphoneIcon } from "lucide-react";
 import AutomationPlatformIcon from "../svg/AutomationIcon";
 import DesignIcon from "../svg/DesignIcon";
 import ExpandIcon from "../svg/ExpandIcon";

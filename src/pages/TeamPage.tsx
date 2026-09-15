@@ -91,7 +91,7 @@ const TeamMembers = ({ members }: TeamMembersProps) => {
   return ( 
     <section className="w-full mb-[60px]"> 
       <div className=" grid grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " > 
-        {members.map((member) => ( 
+        {members?.map((member) => ( 
           <article key={member.name} className=" relative flex flex-col items-start gap-5 " >
             <div className="group relative w-full overflow-hidden rounded-[15px]">
               <Link to={member.href ?? "#"} className="block w-full">
@@ -137,7 +137,7 @@ const TeamMembers = ({ members }: TeamMembersProps) => {
                 group-hover:pointer-events-auto
               "
             >
-                  <SocialLink href={member.linkedin} label="LinkedIn" > 
+                  <SocialLink href={member.linkedin || ""} label="LinkedIn" > 
                     <LinkedinIcon color='white'/>
                   </SocialLink>
             </div>

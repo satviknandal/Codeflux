@@ -117,7 +117,7 @@ const MobileSecurityCompliance = () => {
 
               return (
                 <div
-                  key={item.title}
+                  key={index}
                   className="group relative flex flex-col overflow-hidden rounded-[14px] border border-[#c8d0e0] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#2563eb]/45 hover:shadow-[0_14px_36px_rgba(12,11,29,0.08),0_4px_10px_rgba(37,99,235,0.08)]"
                 >
                   {/* Top Hover Line */}

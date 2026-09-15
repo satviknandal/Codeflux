@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { CardContainerVariant, ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
+import { CardContainerVariant, ContainerVariant } from "../../shared/MotionSetting";
 import MobileAppServiceCard from "../MobileAppServiceCard";
 import CompHeader from "../shared/CompHeader";
 
@@ -9,14 +8,11 @@ interface MobileServicesProps {
     highlighter?: string;
     title?: string;
     subheading: string;
-    data: [];
+    data: Array<any>;
     width?: string;
 }
 
 const MobileServices = ({
-    highlighter = "",
-    title = "",
-    subheading = "",
     data,
     width = "w-full"
 }: MobileServicesProps) => {

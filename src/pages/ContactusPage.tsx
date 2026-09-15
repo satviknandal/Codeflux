@@ -1,8 +1,7 @@
 import maps from "../assets/maps.png";
-import ContactForm from "../components/ContactForm";
+// import ContactForm from "../components/ContactForm";
 import BrandsFullGreyComponent from "../components/shared/BrandsFullGreyComponent";
 import { useEffect, useState } from "react";
-import CompHeader from "../components/shared/CompHeader";
 import ContactHero from "../components/contact/ContactHero";
 import ContactForm1 from "../components/contact/ContactForm1";
 
@@ -73,11 +72,13 @@ const ContactusPage = () => {
   const [address, setAddress] = useState<LocationAddress | null>(null);
 
   useEffect(() => {
-    if (selectedAddress) {
-      const addressObj: LocationAddress | undefined = addressDetails.find(x => x.name === selectedAddress);
-      setAddress(addressObj) 
-    }
-  }, [selectedAddress])
+      if (selectedAddress) {
+          const addressObj = addressDetails.find(x => x.name === selectedAddress);
+          setAddress(addressObj ?? null);
+      } else {
+          setAddress(null);
+      }
+  }, [selectedAddress]);
 
   return (
     <>
@@ -96,7 +97,7 @@ const ContactusPage = () => {
                   <img src={maps} alt="office locations map" className="w-full max-w-full"/>
                 </figure>
 
-                {locations.map((location, index) => (
+                {locations.map((location) => (
                   <div
                     key={location.name}
                     className={`

@@ -8,7 +8,6 @@ import ServicesPage from "./pages/ServicesPage";
 import SoftwareDevelopmentServices from "./pages/services/SoftwareDevelopmentServices";
 import CloudSolutionServices from "./pages/services/CloudSolutionServices";
 import WebDesignUX from "./pages/services/WebDesignUX";
-import WebDevelopmentServices from "./pages/services/WebsiteDevelopmentServices";
 import ContactusPage from "./pages/ContactusPage";
 import TeamPage from "./pages/TeamPage";
 import CareersPage from "./pages/CareersPage";

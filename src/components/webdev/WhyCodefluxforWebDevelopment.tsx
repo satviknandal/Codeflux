@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
+import { ContainerVariant } from "../../shared/MotionSetting";
 import whyus from "../../assets/1.jpg";
 import { CircleCheckIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 
-const WhyCodefluxforWebDevelopment = ({pointers, pointerClass, title, desc}) => {
+interface WhyCodefluxforWebDevelopmentProps {
+    pointers: any, 
+    pointerClass: any
+}
+
+const WhyCodefluxforWebDevelopment = ({pointers, pointerClass}: WhyCodefluxforWebDevelopmentProps) => {
     const [activePointer, setActivePointer] = useState<number | null>(null); 
     
 
     const renderPointers = () => { 
         return <div className="w-full md:w-[60%] md:max-w-4xl"> 
-            {pointers.map((pointer, index) => { 
+            {pointers.map((pointer: any, index: number) => { 
                 const isActive = activePointer === index; 
                 return <div key={index} className="border-b border-[#063559]/15" > 
                     <button type="button" onClick={() => setActivePointer(isActive ? null : index) } className="w-full flex items-center gap-2 md:gap-4 py-3 md:py-5 text-left" aria-expanded={isActive} > 

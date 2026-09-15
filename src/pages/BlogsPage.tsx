@@ -209,7 +209,7 @@ const BlogsPage = () => {
             <p className="text-3xl font-medium text-gray-600 mb-8">
               Latest <span className="text-sky-400">Articles</span>
             </p>
-          {latestBlogPosts && latestBlogPosts.length > 0 && latestBlogPosts.map((post, index) => {
+          {latestBlogPosts && latestBlogPosts.length > 0 && latestBlogPosts.map((post) => {
             return renderLatestArticle(post)
           })}
           

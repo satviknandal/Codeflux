@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import FlyoutNav from './FlyoutNav';
 import MenuIcon from '../../shared/svg/MenuIcon';
 import logo from "../../assets/codeflux-logo.png";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from "framer-motion";
-import HomePage from '../../pages/HomePage';
 
 const Header = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
-  const [headerHeight, setHeaderHeight] = useState(0);
+  // const [headerHeight, setHeaderHeight] = useState(0);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,15 +32,15 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (flyoutOpen) {
-      if (headerRef.current) {
-        setHeaderHeight(headerRef.current.offsetHeight);
-      }
-    } else {
-      setHeaderHeight(0);
-    }
-  }, [flyoutOpen]);
+  // useEffect(() => {
+  //   if (flyoutOpen) {
+  //     if (headerRef.current) {
+  //       setHeaderHeight(headerRef.current.offsetHeight);
+  //     }
+  //   } else {
+  //     setHeaderHeight(0);
+  //   }
+  // }, [flyoutOpen]);
 
 useEffect(() => {
   // Internal pages always use the scrolled header

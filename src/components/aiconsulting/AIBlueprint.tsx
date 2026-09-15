@@ -1,14 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { CardContainerVariant, ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
+import { ContainerVariant } from "../../shared/MotionSetting";
 import { MoveUpIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-
-interface Card {
-    title: string;
-    description: string;
-    icon: React.ReactNode;
-}
 
 const AIBlueprint = ({}) => {
 

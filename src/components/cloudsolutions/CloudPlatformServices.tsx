@@ -5,13 +5,13 @@ import CompHeader from "../shared/CompHeader";
 interface Card {
     title: string;
     description: string;
-    icon: string;
+    icon: any;
     img?: string;
     tags: Array<string>
 }
 
 interface CloudPlatformServicesProps {
-    data: Card[];
+    data: Array<Card>;
     columns?: number;
     gap?: number | string;
     width?: string;

@@ -42,7 +42,7 @@ import mlflowicon from "../../assets/icons/ml-flow.svg";
 import neptuneicon from "../../assets/icons/neptune.svg";
 
 import tensorflowicon from "../../assets/icons/tensorflow.webp";
-import { CardContainerVariant, ContainerVariant, ItemVariant, ItemVariantLeft, ItemVariantRight } from "../../shared/MotionSetting";
+import { CardContainerVariant, ContainerVariant, ItemVariantLeft, ItemVariantRight } from "../../shared/MotionSetting";
 import { motion } from "framer-motion";
 import CompHeader from "../shared/CompHeader";
 
@@ -114,11 +114,11 @@ const AITechnologyStack = ({
     width = "w-full"
 }: AITechnologyStackProps) => {
 
-    const renderTechStack = (title, technologies) => {
+    const renderTechStack = (title: string, technologies: any) => {
         return <div className="w-full p-4 mb-2 border border-pink-100/60 rounded-md bg-white" style={{boxShadow: "0 10px 28px rgba(15, 23, 42, 0.04)"}}>
             <div className="mb-2 md:mb-3 text-sm uppercase font-semibold">{title}</div>
             <div className="flex flex-wrap gap-1 md:gap-2">
-                {technologies.map((tech) => (
+                {technologies.map((tech: any) => (
                 <div
                     key={tech.name}
                     className="flex flex-col md:min-h-[42px] items-center rounded-lg md:rounded-xl border border-[#fff5fe] bg-[#fff5fe]/70 px-4 py-2 md:px-6 md:py-4 transition-colors hover:bg-[#dbeafe]"

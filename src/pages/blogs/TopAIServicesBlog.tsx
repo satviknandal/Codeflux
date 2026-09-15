@@ -2,7 +2,6 @@ import "../../blog.css";
 import BlogsAside from "../../components/blogs/BlogsAside";
 import BlogSection from "../../components/blogs/BlogSection";
 import BlogsHeader from "../../components/blogs/BlogsHeader";
-import securedevops from "../../assets/blogs/secure-devsecops.svg";
 
 const TopAIServicesBlog = () => {
 
