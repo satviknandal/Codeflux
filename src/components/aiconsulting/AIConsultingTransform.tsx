@@ -29,7 +29,7 @@ const AIConsultingTransform: React.FC = () => {
   ]
 
   return (
-   <section className="py-6 md:py-16 relative overflow-hidden bg-white py-[90px] font-sans">
+   <section className="py-6 md:py-20 relative overflow-hidden bg-white font-sans">
       {/* Dark overlay */}
    
       <div className="relative z-[2] mx-auto container-wrapper-transparent">
@@ -60,19 +60,19 @@ const AIConsultingTransform: React.FC = () => {
               return <motion.div
                 variants={ItemVariant} 
                 className="
-                    group relative flex flex-col overflow-hidden rounded-[14px]
+                    group relative flex flex-col overflow-hidden rounded-lg
                     px-5 py-4
                     transition-all duration-300
                     hover:-translate-y-[3px]
-                    hover:bg-[#f84471]
-                    bg-gray-300
-                    hover:shadow-[0_8px_20px_rgba(248,69,110,0.25),0_2px_8px_rgba(232,22,192,0.15)]
+                    hover:bg-[#f7dfff]
+                    bg-gray-100
+                    hover:shadow-[0_8px_20px_rgba(220,174,238,0.15),0_2px_8px_rgba(196,119,226,0.05)]
                   "
                 >
-                <label className={`mb-2 text-3xl font-semibold leading-[1.25] text-gray-600`}>
+                <label className={`mb-2 text-3xl font-semibold leading-[1.25] text-gray-700`}>
                   {obj.count}
                 </label>
-                <p className={`text-sm md:text-md text-gray-700/90 h-[70px]`}>{obj.content}</p>
+                <p className={`text-sm md:text-md text-gray-700 h-[70px]`}>{obj.content}</p>
                 <p className="text-sm text-right text-gray-700/60">{obj.company}</p>
               </motion.div>
             })}

@@ -22,7 +22,7 @@ body {
   background: radial-gradient(circle at 15% 18%, rgb(31 103 159), transparent 34%), radial-gradient(circle at 85% 80%, rgb(33 106 162), transparent 36%), linear-gradient(135deg, #0f3856 0%, #0e3d61 55%, #09375a 100%);
 }
 .radialgradientpink {
-  background: radial-gradient(circle at 15% 18%, rgb(244, 125, 240), transparent 34%), radial-gradient(circle at 85% 80%, #d630f0, transparent 36%), linear-gradient(135deg, #dd58db 0%, #6025F5 55%, #09375a 100%);
+  background: radial-gradient(circle at 15% 18%, rgb(248, 139, 244), transparent 34%), radial-gradient(circle at 85% 80%, #df55f4, transparent 36%), linear-gradient(135deg, #dd58db 0%, #6025F5 55%, #09375a 100%);
 }
 .radialgradientpurple {
   background: radial-gradient(circle at 15% 18%, rgb(101 12 102), transparent 34%), radial-gradient(circle at 85% 80%, rgb(79 20 81), transparent 36%), linear-gradient(135deg, #4f104a 0%, #3e0e3f 55%, #2e0329 100%)
@@ -85,6 +85,45 @@ select {
   @screen lg {
     .container-wrapper-transparent {
       width: min(calc(100% - 144px), 1280px);
+    }
+  }
+}
+
+@theme {
+  --animate-tech-scroll-left: tech-scroll-left 38s linear infinite;
+  --animate-tech-scroll-right: tech-scroll-right 38s linear infinite;
+
+  @keyframes tech-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-25%);
+    }
+  }
+
+  @keyframes tech-scroll-right {
+    from {
+      transform: translateX(-25%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@theme {
+  --animate-shimmer: shimmer 16s linear infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
     }
   }
 }

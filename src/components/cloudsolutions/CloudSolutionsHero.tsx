@@ -5,8 +5,8 @@ import {
   ArrowRight,
   CloudIcon,
 } from "lucide-react";
-// import cloud from "../../assets/cloud.png";
-import cloud from "../../assets/cloud-computing-image2.png";
+// import cloud from "../../assets/hero/cloud.png";
+import cloud from "../../assets/hero/cloud-computing-image2.png";
 
 // bg-[#381b65]
 const CloudSolutionsHero = () => {

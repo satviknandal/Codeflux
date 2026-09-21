@@ -32,7 +32,7 @@ const AboutValuesMission = () => {
         <div className='container-wrapper-transparent'>
           <CardsHolder
             title="Values & Mission"
-            subheading="SoftwareSeni’s Vision is to revolutionise the outsourcing industry, setting new benchmarks in service delivery, customer interaction, and ethical business practices."
+            subheading="Codeflux vision is to revolutionise the outsourcing industry, setting new benchmarks in service delivery, customer interaction, and ethical business practices."
             columns={4}
             gap={16}
             type='white'

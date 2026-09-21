@@ -7,6 +7,7 @@ import GaugeIcon from '../../shared/svg/GaugeIcon';
 import ArtificialIntelligenceIcon from '../../shared/svg/ArtificialIntelligenceIcon';
 import AboutContent from './AboutContent';
 import AboutValuesMission from './AboutValuesMission';
+import AboutServices from './AboutServices';
 
 const AboutusPage = () => {
   const timeline = [
@@ -69,12 +70,16 @@ const AboutusPage = () => {
     },
   ];
 
-  const content = () => {
-    return  <header className="relative overflow-hidden bg-[#3798e3] py-8 md:py-16">
-      <h2 className="mb-8 md:mb-16 text-center text-2xl md:text-3xl font-normal text-white">Our path to success</h2>
+  const Content = ({showcontentonly = false}) => {
+    return  <header className="relative overflow-hidden bg-[#012546] py-8 md:py-20">
+      {/* <header className="relative overflow-hidden bg-[#3798e3] py-8 md:py-20"> */}
+      {!showcontentonly && <h2 className="mb-8 md:mb-16 text-center text-2xl md:text-3xl font-normal text-white">Our path to success</h2>}
       <div className="relative z-20 px-6 lg:px-12">
       <div className="mx-auto max-w-7xl">
-      <div className="pt-0 pb-8 md:pb-24">
+      {/* <div className="pt-0 pb-8 md:pb-24"> */}
+      <div className="">
+
+      {!showcontentonly && 
       <div className="relative w-full flex flex-row justify-center">
       <img src="https://cdn.prod.website-files.com/67ed4ab7f914accf87aa070c/68481825101f19db01fca89e_Group%205329.svg" alt="" className="h-auto absolute left-1/2 top-0 hidden -translate-x-1/2 lg:block"/>
       <div className="w-full flex flex-col gap-0 item-center">
@@ -111,10 +116,12 @@ const AboutusPage = () => {
 
       </div>
       </div>
+    }
 
 
       {/* How we think */}
-      <section className="mt-16 md:mt-32">
+        {/* <section className="mt-16 md:mt-32"> */}
+      <section className="">
 
       <div className="text-center">
         <h3 className="text-2xl md:text-3xl font-normal text-white">How we think</h3>
@@ -163,7 +170,8 @@ const AboutusPage = () => {
   return (
     <>
       <AboutContent/>
-      {content()}
+      <Content showcontentonly={true}/>
+      <AboutServices/>
       <AboutValuesMission/>
       <BrandsFullGreyComponent/>
       <main className="container-wrapper">

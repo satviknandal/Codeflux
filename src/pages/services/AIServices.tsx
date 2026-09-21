@@ -6,12 +6,12 @@ import FAQs from '../../components/faq/FAQs';
 import Blogs from '../../components/Blogs';
 import TechAIDifference from '../../components/aiservices/TechAIDifference';
 import Carousel from '../../components/carousel/Carousel';
-import chatbot from "../../assets/chatbot.png";
+import chatbot from "../../assets/ai/chatbot.png";
 import AIDevelopmentProcess from '../../components/aiservices/AIDevelopmentProcess';
-import WhyCodefluxforWebDevelopment from '../../components/webdev/WhyCodefluxforWebDevelopment';
 import { AIBlogsData, AIDevelopmentServices, AIIndustryDrivenData, WhyCodefluxForAIDevelopmentData } from '../../shared/data/AIServicesData';
 import AIServicesHero from '../../components/aiservices/AIServicesHero';
 import AIBusinessBanner from '../../components/aiservices/AIBusinessBanner';
+import WhyCodefluxforAI from '../../components/aiservices/WhyCodefluxforAI';
 
 const AIServices = () => {
   
@@ -46,7 +46,7 @@ const AIServices = () => {
   return <>
       <AIServicesHero/>
       <CustomAIServices/>
-      <WhyCodefluxforWebDevelopment
+      <WhyCodefluxforAI
         pointers={WhyCodefluxForAIDevelopmentData}
         pointerClass={'bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)] bg-clip-text text-transparent'}
       />

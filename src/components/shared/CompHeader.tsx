@@ -22,7 +22,7 @@ const CompHeader = ({
         case "pinkdefault":
             return "#fb64b6";
         case "pinkgradient":
-            return "#fb64b6";
+            return "#fda5d5";
         default:
             return "#0089f1";
         }
@@ -61,7 +61,7 @@ const CompHeader = ({
         case "pinkdefault":
             return "text-[#215275]";
         case "pinkgradient":
-            return "text-gray-300";
+            return "text-gray-50";
         default:
             return "text-[#215275]";
         }

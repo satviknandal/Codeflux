@@ -6,7 +6,7 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import webbg from "../../assets/softwarebg.png";
+import webbg from "../../assets/hero/softwarebg.png";
 
 
 const WebDevelopmentHero = () => {

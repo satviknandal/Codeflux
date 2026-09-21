@@ -75,7 +75,7 @@ const CardsHolder = ({
         case "bluegradient":
             return "mt-2 text-gray-400";
         case "pinkgradient":
-            return "mt-2 text-gray-100";
+            return "mt-2 text-gray-50";
         case "white":
             return "mt-2 text-[#215275]";
         default:

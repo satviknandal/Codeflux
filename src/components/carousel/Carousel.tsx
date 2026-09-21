@@ -42,7 +42,7 @@ const Carousel = ({ data, width = "w-full" }: CarouselProps) => {
               <h2 className="text-2xl font-normal md:text-4xl text-white">
                 Industries We Transform with AI
               </h2>
-              <p className="mt-4 leading-5 md:text-center text-sm md:text-md text-gray-200">
+              <p className="mt-4 leading-5 md:text-center text-sm md:text-md text-gray-50">
                 AI is not one-size-fits-all. Every industry has unique data patterns,
                 regulatory requirements, and operational challenges.
               </p>

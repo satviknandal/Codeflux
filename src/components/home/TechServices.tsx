@@ -130,7 +130,7 @@ const TechServices: React.FC = () => {
         <div className="container-wrapper-transparent">
           <CompHeader
             highlighter="How We Work"
-            title={<p>Bridging Innovation & Excellence With <span className="text-sky-600">Modern Tech Solutions</span></p>}
+            title={<p>Bridging Innovation & Excellence With  <span className="font-normal bg-[linear-gradient(to_right,#3b99fd_0%,#0084d1_55%,#1d66fc_70%,#01a4fe_100%)] bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">Modern Tech Solutions</span></p>}
             subheading="We build custom digital solutions that solve real problems from streamlining operations and automating workflows to launching new products and services.  And now, AI-powered Accelerated Innovation, we're helping teams test ideas faster, deliver results sooner, and stay ahead of the competition without the cost or complexity of traditional software projects."
             variant="default"
           />

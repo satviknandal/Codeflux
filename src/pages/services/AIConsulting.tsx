@@ -24,6 +24,7 @@ import AIConsultingProcess from '../../components/aiconsulting/AIConsultingProce
 import WhyChooseCodefluxAIConsulting from '../../components/aiconsulting/WhyChooseCodefluxAIConsulting';
 import AIDevelopmentProcess from '../../components/aiservices/AIDevelopmentProcess';
 import { AIBlogsData } from '../../shared/data/AIServicesData';
+import AITechStack from '../../components/aiconsulting/AITechStack';
 
 const AIConsulting = () => {
 
@@ -188,6 +189,7 @@ const AIConsulting = () => {
     </div>
     <IndustryDrivenSolutions/>
     <AIDevelopmentBlogs/>
+    <AITechStack/>
     <TechAIDifference/>
       <div className="container-wrapper">
         <FAQs title="AI Development FAQs" faqs={AIDevelopmentFaqs}/>

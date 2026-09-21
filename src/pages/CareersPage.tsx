@@ -1,5 +1,5 @@
 import BrandsFullGreyComponent from '../components/shared/BrandsFullGreyComponent';
-import careersbg from "../assets/banner/careersbg.webp";
+import careersbg from "../assets/hero/careersbg.webp";
 import CompHeader from '../components/shared/CompHeader';
 
 const CareersPage = () => {

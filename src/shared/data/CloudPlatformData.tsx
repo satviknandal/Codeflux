@@ -2,12 +2,12 @@ import DesignIcon from "../svg/DesignIcon";
 import MaintenanceIcon from "../svg/MaintenanceIcon";
 import RocketIcon from "../svg/RocketIcon";
 import SoftwareCodeIcon from "../svg/SoftwareCodeIcon";
-import cloudMigration from "../../assets/cloudservices/cloudMigration.jpg";
-import cloudoptimization from "../../assets/cloudservices/cloudoptimization.jpg";
-import devops from "../../assets/cloudservices/devops.jpg";
-import enterprisesecurity from "../../assets/cloudservices/enterprisesecurity.jpg";
-import multicloud from "../../assets/cloudservices/multicloud.jpg";
-import cloudstorage from "../../assets/cloudservices/cloudstorage.jpg";
+import cloudMigration from "../../assets/cloud/cloudMigration.jpg";
+import cloudoptimization from "../../assets/cloud/cloudoptimization.jpg";
+import devops from "../../assets/cloud/devops.jpg";
+import enterprisesecurity from "../../assets/cloud/enterprisesecurity.jpg";
+import multicloud from "../../assets/cloud/multicloud.jpg";
+import cloudstorage from "../../assets/cloud/cloudstorage.jpg";
 
 const CloudServicesData = [
     {

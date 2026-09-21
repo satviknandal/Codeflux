@@ -1,6 +1,6 @@
 import React from "react";
 import webuiuxbg from "../../assets/hero/webuiuxbg.svg";
-import uxbannerbg from "../../assets/uxbg.webp";
+import uxbannerbg from "../../assets/hero/uxbg.webp";
 import { PaletteIcon } from "lucide-react";
 
 interface UIUXHeroProps {

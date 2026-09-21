@@ -22,7 +22,7 @@ const HomeCta = () => {
             </div>
             <motion.h2 variants={ItemVariant} className="mt-1 text-xl md:text-5xl font-normal leading-tight text-white">
               <div className="text-white">Let's accelerate your</div>
-              <span className="font-normal pb-1 md:pb-4 inline-block text-4xl md:text-6xl bg-[linear-gradient(to_right,#0084d1_0%,#0084d1_55%,#22d3ee_70%,#e0f2fe_100%)] bg-clip-text text-transparent">Digital Transformation</span>
+              <span className="font-normal pb-1 md:pb-4 inline-block text-4xl md:text-6xl bg-[linear-gradient(to_right,#0084d1_0%,#0084d1_55%,#22d3ee_70%,#e0f2fe_100%)] bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">Digital Transformation</span>
             </motion.h2>
             <div className="mt-2 md:mt-6 text-sm md:text-lg font-normal leading-tight text-white">Bring your ideas to reality with our Digital Transformation Services</div>
           </div>
