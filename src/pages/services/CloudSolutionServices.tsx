@@ -31,36 +31,17 @@ const CloudSolutionServices = () => {
   }
 
   return <>
-  <CloudSolutionsHero/>
-  {/* <div className="overflow-hidden blogsbg text-white pt-32 pb-16 lg:pt-24 lg:pb-24 inset-0 -z-10 bg-gradient-to-br from-[#022c82] via-surface-container-lowest to-[#2b115b] pointer-events-none">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
-          <div className='w-full'>
-            <BreadCrumbNav label="All Services"/>
-            <h1 className="text-4xl sm:text-5xl font-headline font-bold tracking-tighter mb-6 max-w-3xl">
-              Cloud & Platform Engineering Services
-            </h1>
-             <p className='mt-6 text-xl text-gray-300 font-semibold'>AI-led Transformation for Scalable Cloud and Modern Infrastructure</p>
-              <ul className='text-base text-gray-300 max-w-2xl font-normal mt-6 text-md list-disc ml-8'>
-                <li>As AI becomes the bedrock of digital transformation, cloud infrastructure emerges as a critical enabler. From infrastructure to innovation, we enable you to harness the full power of cloud and AI with speed and scale for impactful outcomes.</li>
-                <li>Build secure, cost-efficient, and scalable cloud-native platforms. Our engineering-led approach reduces provisioning time by up to 40% and embeds compliance and observability from day one.</li>
-              </ul>
-          </div>
-          <div>
-            <img src={cloud} width={500}/>
-          </div>
-        </div>
-      </div> */}
-      {/* <DigitalBanner/> */}
-      <CloudServices/>
-      <div className="container-wrapper">
-        <WhyCloudServices/>
-      </div>
-      <KeyCloudPartners/>
-      <main className="container-wrapper">
-        <FAQs title="Cloud & Infrastructure Services FAQs" faqs={CloudServicesFaqs}/>
-      </main>
-      <div className="container-wrapper">
-        <NeedTeam/>
+    <CloudSolutionsHero/>
+    <CloudServices/>
+    <div className="container-wrapper">
+      <WhyCloudServices/>
+    </div>
+    <KeyCloudPartners/>
+    <main className="container-wrapper">
+      <FAQs title="Cloud & Infrastructure Services FAQs" faqs={CloudServicesFaqs}/>
+    </main>
+    <div className="container-wrapper">
+      <NeedTeam/>
     </div>
   </>
 }

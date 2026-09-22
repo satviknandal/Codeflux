@@ -14,7 +14,7 @@ const AboutServices = () => {
            <motion.h3 variants={ItemVariant} className="font-normal text-2xl md:text-3xl mb-6 md:leading-11">Pioneer the AI Revolution through <span className="font-semibold">CodefluxAI</span></motion.h3>
           <motion.p variants={ItemVariant} className="mb-12 text-sm md:text-base">Integrity is our foundation. We uphold honesty, transparency, and ethical conduct in all our business activities, ensuring a trust-based relationship with all stakeholders.</motion.p>
           <MotionLink variants={ItemVariant} className="
-            cursor-pointer]
+            cursor-pointer
             min-h-5
             md:min-h-10
             items-center

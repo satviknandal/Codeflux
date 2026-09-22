@@ -33,8 +33,6 @@ const CardsHolder = ({
     isGreyBg = false,
 }: CardsHolderProps) => {
 
-    
-
     const getDotStyles  = () => {
       switch (type) {
         case "pinkgradient":
@@ -108,7 +106,7 @@ const CardsHolder = ({
         case "pinkgradient":
             return "bg-[#e3f3ff]/10 hover:bg-[#e3f3ff]/20 border-[#c0ddf3]/15";
         case "white":
-            return "bg-white border-[#3798e3]";
+            return "bg-white border-[#3798e3]/50";
         default:
             return "bg-[#f5f5f5] border-[#e5e5e5]";
         }
@@ -195,7 +193,7 @@ const CardsHolder = ({
               <motion.div
                 key={index}
                 variants={ItemVariant} 
-                className={`flex flex-col items-start rounded-xl border p-4 md:p-[30px] text-[#1b1b1b] ${getCardStyles()}`}
+                className={`flex flex-col items-start rounded-lg md:rounded-xl border p-4 md:p-[30px] text-[#1b1b1b] ${getCardStyles()}`}
               >
                 <div className={`mb-4 md:mb-[30px] rounded-md md:rounded-lg ${getIconStyles()} px-1.5 md:px-2 py-1 md:py-1.5`}>
                   {item.icon}

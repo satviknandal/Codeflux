@@ -1,7 +1,17 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Link, useNavigate } from "react-router-dom";
-import CloseXIcon from "../../shared/svg/CloseXIcon";
+import logo from "../../assets/codeflux-logo.png";
+import {
+  XIcon,
+  Sparkles,
+  BrainCircuit,
+  Code2,
+  Globe2,
+  Palette,
+  Smartphone,
+  Cloud,
+} from "lucide-react";
 
 interface FlyoutNavProps {
   open: boolean;
@@ -13,66 +23,80 @@ interface FlyoutLinkProps {
   children: React.ReactNode;
 }
 
-const footerLinks = {
+const navigationlinks = {
   Services: [
     {
       label: "Our Services",
-      path: "/services",
+      link: "/services",
+      icon: BrainCircuit,
     },
     {
       label: "AI Consulting",
-      path: "/services/aiconsulting"
+      link: "/services/aiconsulting",
+      icon: BrainCircuit,
     },
     {
       label: "AI Services",
-      path: "/services/aiservices"
+      link: "/services/aiservices",
+      icon: Sparkles,
     },
     {
       label: "Software Development",
-      path: "/services/softwaredevelopmentservices"
+      link: "/services/softwaredevelopmentservices",
+      icon: Code2,
     },
     {
       label: "Web Development",
-      path: "/services/webdevelopmentservices"
+      link: "/services/webdevelopmentservices",
+      icon: Globe2,
     },
     {
       label: "Web Design UI/UX",
-      path: "/services/webdesignuiux"
+      link: "/services/webdesignuiux",
+      icon: Palette,
     },
     {
       label: "Mobile App Services",
-      path: "/services/mobileappservices"
+      link: "/services/mobileappservices",
+      icon: Smartphone,
     },
     {
       label: "Cloud Solutions",
-      path: "/services/cloudsolutionsservices"
+      link: "/services/cloudsolutionsservices",
+      icon: Cloud,
     },
   ],
 
   Company: [
     {
       label: "About Us",
-      path: "/aboutus",
+      link: "/aboutus",
+      icon: BrainCircuit,
     },
     {
       label: "Team",
-      path: "/team",
+      link: "/team",
+      icon: BrainCircuit,
     },
     {
       label: "Blogs",
-      path: "/blogs",
+      link: "/blogs",
+      icon: BrainCircuit,
     },
     {
       label: "Client Stories",
-      path: "/clientstories",
+      link: "/clientstories",
+      icon: BrainCircuit,
     },
     {
       label: "Careers",
-      path: "/careers",
+      link: "/careers",
+      icon: BrainCircuit,
     },
     {
       label: "Contact Us",
-      path: "/contactus",
+      link: "/contactus",
+      icon: BrainCircuit,
     },
   ],
 };
@@ -135,20 +159,21 @@ const FlyoutNav = ({
       }}
     >
 
-      <nav className="relative flex flex-col p-6 left-0 top-0 h-[100dvh] w-full overflow-y-auto bg-gradient-to-br from-[#0a4985] to-[#012546]" style={{zIndex: 1000000}}>
-        <div className="h-[100px] max-h-[100px] text-right">
+      <nav className="relative flex flex-col left-0 top-0 h-[100dvh] w-full overflow-y-auto bg-gradient-to-br from-[#0a4985] to-[#012546]" style={{zIndex: 1000000}}>
+        <div className="flex justify-between p-5 h-[100px] max-h-[100px] text-right border-b-[1px] border-b-black/25 bg-black/20">
+          <img src={logo} className="h-10"/>
           <button
             type="button"
             aria-label="Close menu"
             onClick={() => setOpen(false)}
             className="z-[1000001] text-white transition hover:text-cyan-300"
           >
-            <CloseXIcon className="h-8 w-8" />
+            <XIcon className="h-8 w-8"/>
           </button>
 
         </div>
 
-        <div className="h-[calc(100vh - 200px)] overflow-scroll">
+        <div className="h-[calc(100vh - 200px)] p-5 overflow-scroll">
           <div className="mb-8 space-y-3">
             <FlyoutLink to="/">Home</FlyoutLink>
             {/* <FlyoutLink to="/services">Services</FlyoutLink>
@@ -159,7 +184,7 @@ const FlyoutNav = ({
 
           <div className="flex flex-col gap-8 text-white">
 
-            {Object.entries(footerLinks).map(
+            {Object.entries(navigationlinks).map(
               ([heading, links]) => (
                 <div key={heading}>
 
@@ -176,7 +201,7 @@ const FlyoutNav = ({
                       after:left-0
                       after:-bottom-2
                       after:h-[2px]
-                      after:w-[108px]
+                      after:w-full
                       after:bg-[#a1b8ff]
                     "
                   >
@@ -185,19 +210,25 @@ const FlyoutNav = ({
 
                   <div className="flex flex-col gap-3">
 
-                    {links.map((link) => (
-                      <button
-                        key={link.path}
+                    {links.map((link) => {
+                      const Icon = link.icon;
+
+                      return <button
+                        key={link.link}
                         type="button"
                         onClick={() => {
                           setOpen(false);
-                          navigate(link.path);
+                          navigate(link.link);
                         }}
-                        className="text-left text-sm text-[#f3f5f8] transition hover:text-[#7be2fc]"
+                        className="flex gap-2.5 py-3 border-b border-b-amber-50/10 text-left text-sm text-[#f3f5f8] transition hover:text-[#7be2fc]"
                       >
+                        <Icon size={16} strokeWidth={0.8} className={`transition-transform duration-300 group-hover:scale-110 
+                          group-hover:text-white"
+                        `}/>
                         {link.label}
                       </button>
-                    ))}
+                    }
+                    )}
 
                   </div>
                 </div>
@@ -210,7 +241,7 @@ const FlyoutNav = ({
 
         </div>
 
-        <div className="bottom-0 pt-8 h-[75px] max-h-[75px]">
+        <div className="p-5 h-[100px] max-h-[100px]">
            <button
               type="button"
               className="

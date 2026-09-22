@@ -16,7 +16,8 @@ const CloudSolutionsHero = () => {
         relative
         overflow-hidden
         bg-[#2d1255]
-        py-20
+        py-6
+        md:py-20
         font-sans
         text-white
         before:pointer-events-none
@@ -66,8 +67,8 @@ const CloudSolutionsHero = () => {
               rounded-full
               border border-purple-400/20
               bg-purple-500/10
-              px-4 py-2
-              text-sm
+              px-0 pr-3 md:px-4 md:py-2
+              text-xs md:text-sm
               font-medium
               text-purple-300
             "
@@ -98,24 +99,15 @@ const CloudSolutionsHero = () => {
             </span>
           </h1>
 
-          <p className=" mt-6 max-w-xl text-base leading-6.5 text-gray-200 sm:text-base">
+          <p className=" mt-6 max-w-xl text-sm md:text-base leading-5 md:leading-6.5 text-gray-200 sm:text-base">
             At Codeflux, we build AI-led Transformation for Scalable Cloud and Modern Infrastructure
           </p>
 
           <div className="mt-8 flex flex-col gap-4">
             {/* Point 1 */}
-            <div className="flex items-center gap-3 text-sm text-gray-200">
+            <div className="flex items-start md:items-center gap-3 text-sm text-gray-200">
               <div
-                className="
-                  flex h-9 w-9 shrink-0
-                  items-center justify-center
-                  rounded-lg
-                  border border-purple-400/20
-                  bg-purple-500/10
-                  text-purple-400
-                  -mt-5
-                "
-              >
+                className="flex w-7 h-7 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg border border-purple-400/20 bg-purple-500/10 text-purple-400 md:-mt-5">
                 <Award size={18} />
               </div>
 
@@ -123,18 +115,9 @@ const CloudSolutionsHero = () => {
             </div>
 
             {/* Point 2 */}
-            <div className="flex items-center gap-3 text-sm text-gray-200">
+            <div className="flex items-start md:items-center gap-3 text-sm text-gray-200">
               <div
-                className="
-                  flex h-9 w-9 shrink-0
-                  items-center justify-center
-                  rounded-lg
-                  border border-purple-400/20
-                  bg-purple-500/10
-                  text-purple-400
-                  -mt-5
-                "
-              >
+                className="flex w-7 h-7 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg border border-purple-400/20 bg-purple-500/10 text-purple-400 md:-mt-5">
                 <UserRound size={18} />
               </div>
 

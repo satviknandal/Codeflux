@@ -14,6 +14,7 @@ import {
   Cloud,
 } from "lucide-react";
 import FlyoutNav from "./FlyoutNav";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
@@ -429,9 +430,13 @@ const Header = () => {
           </button>
 
             {flyoutOpen && (
-              <FlyoutNav
-                open={flyoutOpen}
-                setOpen={setFlyoutOpen}
+              // <FlyoutNav
+              //   open={flyoutOpen}
+              //   setOpen={setFlyoutOpen}
+              // />
+              <MobileMenu
+                isOpen={flyoutOpen}
+                onClose={() => setFlyoutOpen(false)}
               />
             )}
 
