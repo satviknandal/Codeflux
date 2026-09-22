@@ -21,7 +21,7 @@ const ContactForm = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<ContactFormData>({
     mode: "onSubmit",
     defaultValues: {

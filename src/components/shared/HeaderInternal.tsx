@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import FlyoutNav from './FlyoutNav';
 import ChevronDownIcon from '../../shared/svg/ChevronDown';
 import MenuIcon from '../../shared/svg/MenuIcon';
@@ -8,18 +8,6 @@ import logo from "../../assets/codeflux-logo.png";
 const HeaderInternal = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
-  const [headerHeight, setHeaderHeight] = useState(0);
-
-
- useEffect(() => {
-  if (flyoutOpen) {
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight);
-    }
-  } else {
-    setHeaderHeight(0);
-  }
-}, [flyoutOpen]);
 
 
   const Logo = () => {
@@ -87,7 +75,7 @@ const HeaderInternal = () => {
         </button>
       </div>
 
-      <FlyoutNav open={flyoutOpen} setOpen={setFlyoutOpen} headerHeight={headerHeight}/>
+      <FlyoutNav open={flyoutOpen} setOpen={setFlyoutOpen}/>
       <Actions />
     </header>
   );

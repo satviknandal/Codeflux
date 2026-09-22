@@ -3,7 +3,7 @@ import maps from "../assets/maps.png";
 import BrandsFullGreyComponent from "../components/shared/BrandsFullGreyComponent";
 import { useEffect, useState } from "react";
 import ContactHero from "../components/contact/ContactHero";
-import ContactForm1 from "../components/contact/ContactForm1";
+// import ContactForm1 from "../components/contact/ContactForm1";
 import ContactForm from "../components/ContactForm";
 
 interface LocationAddress {
