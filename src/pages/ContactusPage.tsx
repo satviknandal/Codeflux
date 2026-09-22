@@ -4,6 +4,7 @@ import BrandsFullGreyComponent from "../components/shared/BrandsFullGreyComponen
 import { useEffect, useState } from "react";
 import ContactHero from "../components/contact/ContactHero";
 import ContactForm1 from "../components/contact/ContactForm1";
+import ContactForm from "../components/ContactForm";
 
 interface LocationAddress {
    name: string; 
@@ -82,12 +83,12 @@ const ContactusPage = () => {
 
   return (
     <>
-    <div className="relative">
+    <div className="relative flex flex-col">
       <ContactHero/>
-      <section className="absolute -bottom-140  px-4 py-16 sm:px-6 lg:px-8 w-full mx-auto">
-        <div className="container-wrapper-transparent rounded-[23px] border border-purple-200 p-5 shadow-[rgba(167,174,255,0.4)_0_15px_53.7px] backdrop-blur-[36.5px]">
-          <div className="flex gap-6 rounded-[20px] border border-[#85859e] bg-white px-6 py-10 sm:px-10 sm:py-12">
-            <div className="w-1/2 md:mb-16 max-md:w-full">
+      <section className="absolute top-50 md:top-60 py-4 md:py-16 sm:px-6 lg:px-8 w-full mx-auto">
+        <div className="container-wrapper-transparent rounded-[23px] border border-purple-200 shadow-[rgba(167,174,255,0.4)_0_15px_53.7px] backdrop-blur-[36.5px]">
+          <div className="flex flex-col md:flex-row gap-6 rounded-xl md:rounded-[20px] border border-[#85859e] bg-white px-4 py-4 md:px-6 md:py-10 sm:px-10 sm:py-12">
+            <div className="w-full md:w-1/2 md:mb-16 max-md:w-full">
               <label className="block text-xs md:text-sm font-semibold uppercase text-[#6e24fb] text-left">
                 Our Offices
               </label>
@@ -126,65 +127,14 @@ const ContactusPage = () => {
                 {address?.phone}
               </div>
             </div>
-            <ContactForm1/>
+            <ContactForm/>
           </div>
       </div>
       </section>
     </div>
-      <div className="h-[400px]"></div>
+      <div className="h-[600px] md:h-[400px]"></div>
       <main className="container-wrapper">
-        {/* <CompHeader
-            highlighter=""
-            title={<p>Got a Vision ?  <span className="text-sky-600">Let's Build Together</span></p>}
-            subheading="Grow your team or grow online with Codeflux. Complete the contact form and our client support team will get in touch with you."
-            variant="default"
-        /> */}
-
-        {/* <div className="flex flex-col md:flex-row gap-0 md:mb-3xl max-md:flex-col">
-          <div className="md:w-1/2 bg-[#f4f9f9] rounded-[10px] p-4 md:p-6 md:mb-16 max-md:w-full">
-            <label className="block text-xs md:text-sm font-bold uppercase text-[#3798e3] text-left">
-              Our Offices
-            </label>
-
-            <div className="relative w-full mt-2">
-              <figure className="m-0 p-0">
-                <img src={maps} alt="office locations map" className="w-full max-w-full"/>
-              </figure>
-
-              {locations.map((location, index) => (
-                <div
-                  key={location.name}
-                  className={`
-                    absolute cursor-pointer
-                    ${location.className}
-                    ${location.name === selectedAddress ? "scale-[1.4]" : ""}
-                    transition-all
-                    duration-300
-                  `}
-                  onClick={() => setSelectedAddress(location.name)}
-                >
-                  <PinIcon color={location.name === selectedAddress ? "white" : "#00AFAA"}/>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-xs md:text-sm font-normal leading-[160%] text-[#10405a] mt-2 md:mt-6">
-              <h3 className="text-xl md:text-2xl font-bold leading-[150%] md:mb-2 text-[#07324a]">
-                {address?.name.toUpperCase()}
-              </h3>
-
-              {address?.street}
-              <br />
-              {address?.state}, {address?.pin}
-              <br />
-              {address?.phone}
-            </div>
-          </div>
-
-          <div className="md:w-1/2 pt-6 md:pt-6 md:pb-6 px-0 md:px-6 max-md:w-full">
-            <ContactForm />
-          </div>
-        </div> */}
+       
       </main>
       
 

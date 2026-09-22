@@ -1,4 +1,5 @@
 import footerbg from "../../assets/footerbg.png";
+import logo from "../../assets/codeflux-logo.png";
 import { useNavigate } from "react-router-dom";
 import LinkedinIcon from "../../shared/svg/social/LinkedinIcon";
 import FacebookIcon from "../../shared/svg/social/FacebookIcon";
@@ -89,18 +90,19 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full overflow-hidden bg-[#012546] text-[#f7f9fc]">
-      <img src={footerbg} alt="" className="absolute top-[60px] w-full object-cover" />
+      <img src={footerbg} alt="" className="hidden md:block absolute top-[60px] w-full object-cover" />
+      <img src={logo} alt="" className="md:hidden absolute top-[60px] left-5 w-[140px]" />
 
-      <div className="relative mx-auto w-[90%] max-w-[1400px] pt-[300px] pb-0">
+      <div className="relative mx-auto w-[90%] max-w-[1400px] pt-36 md:pt-[300px] pb-0">
 
-        <div className="relative z-10 grid grid-cols-1 gap-12 
+        <div className="relative z-10 grid grid-cols-1 gap-10 md:gap-12 
           md:grid-cols-2 
           lg:grid-cols-[1.2fr_repeat(2,0.7fr)] 
           xl:grid-cols-[1.2fr_repeat(3,0.7fr)]"
         >
           {/* Brand */}
           <div className="max-w-[350px]">
-            <div className="mb-10">
+            <div className="md:mb-10">
               <h3 className="relative mb-6 text-[16px] font-semibold uppercase text-[#77d8ff]">Follow us</h3>
 
               <p className="mb-6 text-sm leading-[1.45] text-[#f3f5f8]">
@@ -172,15 +174,15 @@ const Footer = () => {
       </div>
       <div className="bg-[#01182e]">
         <div
-          className="mx-auto w-[90%] max-w-[1400px] mt-20 grid w-screen
-          grid-cols-1 gap-4 py-5 text-xs font-normal text-[#4d666b]
+          className="mx-auto w-full md:w-[90%] md:max-w-[1400px] mt-20 grid w-screen
+          grid-cols-1 gap-2 md:gap-4 py-5 text-xs font-normal text-[#4d666b]
           md:grid-cols-2 md:items-center"
         >
          
-          <span className="text-left">
+          <span className="text-center md:text-left">
             © 2026 Codeflux Pty Ltd. All rights reserved.
           </span>
-          <div className="flex flex-row gap-6 justify-end">
+          <div className="flex flex-row gap-6 justify-center md:justify-end">
             <span 
               className="cursor-pointer transition hover:text-[#7be2fc]" 
               onClick={() => {

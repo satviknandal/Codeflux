@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AboutServices = () => {
 
   const RenderAICard = () => {
-    return <div className="relative p-8 bg-[#425ffd] w-full rounded-xl text-white overflow-hidden h-[800px]">
+    return <div className="relative p-8 bg-[#ffd0fe] w-full rounded-xl overflow-hidden h-[800px]">
         <div className="mb-16">
           <h3 className="font-normal text-3xl mb-6 leading-11">Pioneer the AI Revolution through <span className="font-semibold">CodefluxAI</span></h3>
           <p className="mb-12">Integrity is our foundation. We uphold honesty, transparency, and ethical conduct in all our business activities, ensuring a trust-based relationship with all stakeholders.</p>
@@ -36,8 +36,8 @@ const AboutServices = () => {
     </div>
   }
 
-  const RenderDigitakCard = () => {
-    return <div className="relative p-8 bg-[#ffd0fe] w-full rounded-xl overflow-hidden h-[800px]">
+  const RenderDigitalCard = () => {
+    return <div className="relative p-8 bg-[#3761fc] w-full rounded-xl text-white overflow-hidden h-[800px]">
         <div className="mb-16">
           <h3 className="font-normal text-3xl mb-6 leading-11">Amplify Your Market Presence with <span className="font-semibold">Codeflux Digital</span></h3>
           <p className="mb-12">We believe in the power of collective dreams, daring, and collaboration. Our vision involves forging strong, transparent partnerships with co-workers, clients, and partners, fostering trust and long-term alliances for impactful results.</p>
@@ -72,8 +72,8 @@ const AboutServices = () => {
     <div className='bg-white py-8 md:py-16'>
         <div className='container-wrapper-transparent'>
           <div className="flex gap-4 w-full justify-between">
+            <RenderDigitalCard/>
             <RenderAICard/>
-            <RenderDigitakCard/>
           </div>
         </div>
       </div>

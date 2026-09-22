@@ -3,7 +3,7 @@ import heroBackground from "../../assets/hero/contactbg.webp";
 
 const ContactHero = () => {
     return (
-        <section className="relative overflow-hidden bg-cover bg-center py-24 h-[800px]" style={{backgroundImage: `url(${heroBackground})`}}>
+        <section className="relative overflow-hidden bg-cover bg-center py-10 md:py-24 h-[900px] md:h-[800px]" style={{backgroundImage: `url(${heroBackground})`}}>
             <div className="relative z-10 mx-auto w-full max-w-6xl px-4">
                 <div className="flex items-center justify-center">
                     <div className="flex flex-col items-center justify-center text-center">
@@ -60,7 +60,8 @@ const ContactHero = () => {
                 className="
                     absolute
                     left-[12%]
-                    top-[35%]
+                    top-[50%]
+                    md:top-[35%]
                     z-10
                     flex
                     h-3

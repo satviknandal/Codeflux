@@ -49,7 +49,7 @@ const latestBlogPosts: Array<BlogPost> = [
     category: "Business Software",
     readTime: "7 min read",
     description: "Learn the complete on-premise to cloud migration process, including strategies, costs, migration steps, checklists, and post-migration optimisation tips.",
-    date: "December 15, 2025",
+    date: "Dec 15, 2025",
     href: "/inframigrationblog",
     image: inframigration
   },
@@ -117,7 +117,7 @@ const BlogsPage = () => {
 
   const renderLatestArticle = (post: BlogPost) => {
     return <div className="mb-6">
-      <article className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+      <article className="grid grid-cols-1 lg:grid-cols-[40%_60%] md:gap-4 bg-white rounded-lg md:rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
         <div className="aspect-video relative overflow-hidden">
           <img
             src={post.image}
@@ -126,23 +126,23 @@ const BlogsPage = () => {
           />
         </div>
 
-        <div className="flex flex-col justify-center py-4 pr-4">
+        <div className="flex flex-col justify-center p-3 md:py-4 pr-4">
           <div className="flex items-center gap-3 mb-4">
-            <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-sky-100 text-sky-700">
+            <span className="inline-flex items-center rounded-full px-3 py-1 text-[11px] md:text-xs font-semibold bg-sky-100 text-sky-700">
               {post.category}
             </span>
 
-            <span className="flex items-center gap-1 text-xs text-gray-400">
+            <span className="flex items-center gap-1 text-[11px] md:text-xs text-gray-400">
               <Clock className="w-3 h-3" />
               {post.readTime}
             </span>
-            <span className="flex items-center gap-1 text-xs text-gray-400">
+            <span className="flex items-center gap-1 text-[11px] md:text-xs text-gray-400">
               <Clock className="w-3 h-3" />
               {post.date}
             </span>
           </div>
 
-          <h2 className="text-lg font-headline font-bold tracking-tighter text-gray-900 mb-2">
+          <h2 className="text-[14px] md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
             <a
               // href={post.href}
               onClick={() => navigate('blog1')}
@@ -152,7 +152,7 @@ const BlogsPage = () => {
             </a>
           </h2>
 
-          <p className="text-gray-600 text-sm mb-2">
+          <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mb-4">
             {post.description}
           </p>
 
@@ -160,9 +160,9 @@ const BlogsPage = () => {
             <a
               href={post.href}
               aria-label={`Read: ${post.title}`}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 hover:text-sky-700"
+              className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1"
             >
-              Read article
+              Read
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -174,15 +174,15 @@ const BlogsPage = () => {
     <>
     <main id="main-content" tabIndex={-1}>
       {/* Hero */}
-      <div className="blogsbg text-white pt-32 pb-16 lg:pt-24 lg:pb-24 inset-0 -z-10 bg-gradient-to-br from-[#173c5a] via-surface-container-lowest to-[#030b12] pointer-events-none">
+      <div className="blogsbg text-white py-8 md:pt-32 md:pb-16 lg:pt-24 lg:pb-24 inset-0 -z-10 bg-gradient-to-br from-[#173c5a] via-surface-container-lowest to-[#030b12] pointer-events-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <BreadCrumbNav label="Blogs"/>
-            <h1 className="text-4xl sm:text-5xl font-headline font-extrabold tracking-tighter mb-6 max-w-2xl">
+            <h1 className="text-2xl md:text-4xl sm:text-5xl font-headline font-medium md:font-extrabold tracking-tighter mb-4 md:mb-6 max-w-2xl">
               Blogs & Insights
             </h1>
 
-            <p className="text-base text-gray-300 max-w-2xl">
+            <p className="text-sm md:text-base text-gray-300 max-w-2xl">
               Explore expert insights on software development, AI, product engineering, and digital transformation, created to help startups and enterprise teams make smarter technology decisions, accelerate execution, and build scalable business solutions with confidence.
             </p>
           </div>
@@ -191,10 +191,10 @@ const BlogsPage = () => {
       </div>
 
       {/* Blog Content */}
-      <section className="py-16 bg-white">
+      <section className="py-6 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Featured Article */}
-          <p className="text-3xl font-medium text-gray-600 mb-8">
+          <p className="text-xl md:text-3xl font-medium text-gray-600 mb-4 md:mb-8">
             Featured <span className="text-sky-400">Articles</span>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -204,9 +204,9 @@ const BlogsPage = () => {
           </div>
         </div>
 
-      <div className="flex flex-row gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="w-3/4">
-            <p className="text-3xl font-medium text-gray-600 mb-8">
+      <div className="flex flex-col-reverse md:flex-row gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div className="w-full md:w-3/4">
+            <p className="text-xl md:text-3xl font-medium text-gray-600 mb-4 md:mb-8">
               Latest <span className="text-sky-400">Articles</span>
             </p>
           {latestBlogPosts && latestBlogPosts.length > 0 && latestBlogPosts.map((post) => {
@@ -214,7 +214,7 @@ const BlogsPage = () => {
           })}
           
         </div>
-        <div className="w-1/4">
+        <div className="w-full md:w-1/4">
           <div className="flex flex-col pb-8 border-b border-gray-200 mb-8">
             <h3 className="text-gray-900 font-bold text-md mb-4">Browse by <span className="text-gray-500">Topics</span></h3>
             <div className="flex gap-3 flex-wrap text-gray-700" aria-label="Browse blog categories"> 

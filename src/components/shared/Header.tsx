@@ -13,6 +13,7 @@ import {
   Smartphone,
   Cloud,
 } from "lucide-react";
+import FlyoutNav from "./FlyoutNav";
 
 const Header = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
@@ -372,24 +373,24 @@ const Header = () => {
   };
 
   return (
-    <div
-      ref={headerRef}
-      className={`
-        fixed
-        left-0
-        right-0
-        ${isHomePage ? "top-0" : ""}
-        z-[100]
-        flex
-        items-center
-        justify-between
-        md:px-4
-        py-3
-        transition-all
-        duration-300
-        ${getContainerClass()}
-      `}
-    >
+      <div
+        ref={headerRef}
+        className={`
+          fixed
+          left-0
+          right-0
+          ${isHomePage ? "top-0" : ""}
+          z-[100]
+          flex
+          items-center
+          justify-between
+          md:px-4
+          py-3
+          transition-all
+          duration-300
+          ${getContainerClass()}
+        `}
+      >
       <header className={`container-wrapper-transparent flex items-center justify-between ${getHeaderClass()}`}>
 
         <div className="w-1/2 md:w-1/3 py-3">
@@ -409,7 +410,7 @@ const Header = () => {
             type="button"
             name="Menu"
             aria-label="Menu"
-            onClick={() => setFlyoutOpen(!flyoutOpen)}
+            onClick={() => setFlyoutOpen(true)}
             className="
               -mr-2
               inline-flex
@@ -424,14 +425,15 @@ const Header = () => {
               lg:hidden
             "
           >
-            <MenuIcon
-              className="
-                h-10
-                w-10
-                text-white
-              "
-            />
+            <MenuIcon className="h-10 w-10 text-white" />
           </button>
+
+            {flyoutOpen && (
+              <FlyoutNav
+                open={flyoutOpen}
+                setOpen={setFlyoutOpen}
+              />
+            )}
 
           {/* Start a Project */}
           <Actions />
