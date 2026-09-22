@@ -13,7 +13,7 @@ import {
   Smartphone,
   Cloud,
 } from "lucide-react";
-import FlyoutNav from "./FlyoutNav";
+// import FlyoutNav from "./FlyoutNav";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
