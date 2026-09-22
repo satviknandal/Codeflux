@@ -10,12 +10,7 @@ import CloudSolutionsHero from '../../components/cloudsolutions/CloudSolutionsHe
 const CloudSolutionServices = () => {
 
   const CloudServices = () => {
-    return <CloudPlatformServices
-      data={CloudServicesData}
-      columns={3}
-      gap={16}
-      width='w-[100%]'
-    />
+    return <CloudPlatformServices data={CloudServicesData} gap={16} width='w-[100%]'/>
   }
 
   const WhyCloudServices = () => {
