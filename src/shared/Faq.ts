@@ -179,18 +179,18 @@ const AIDevelopmentFaqs = [
 const CloudServicesFaqs = [
   {
     question: "What are cloud and infrastructure services?",
-    answer: `<p>Cloud and infrastructure services are the backbone of modern IT. In simple terms, they provide the infrastructure, platforms, data storage, and ease of networking that businesses need to run applications and deliver services. Instead of buying and maintaining physical hardware (on-prem), companies may prefer to use cloud platforms like Azure, AWS, or GCP etc to get flexible and on-demand infrastructure.</p><p>At NewVision, we help enterprises plan, strategize, design, deploy, and manage these cloud environments so they’re reliable, secure, and aligned with business goals.</p>`,
+    answer: `<p>Cloud and infrastructure services are the backbone of modern IT. In simple terms, they provide the infrastructure, platforms, data storage, and ease of networking that businesses need to run applications and deliver services. Instead of buying and maintaining physical hardware (on-prem), companies may prefer to use cloud platforms like Azure, AWS, or GCP etc to get flexible and on-demand infrastructure.</p><p>At Codeflux, we help enterprises plan, strategize, design, deploy, and manage these cloud environments so they’re reliable, secure, and aligned with business goals.</p>`,
   },
   {
     question: "What business benefits does cloud infrastructure enable?",
     answer: `<p>Moving to the cloud isn’t just about technological adoption; it’s about business agility. Here are a few of the notable benefits businesses have seen after cloud adoption:</p><ul><li>Launch products faster with agile and cloud-native deployments</li><li>Move from CapEx to OpEx by paying only for what they use</li><li>Build resilience with in-built disaster recovery and redundancy</li><li>Ease of access to AI tools, analytics, and automation  in one place</li><li>Scale globally and enter new markets without heavy upfront investment</li></ul><p>In other words, cloud offers a solution to transition from a cost center into a driver of growth, scalability, and innovation.</p>`,
   },
   {
-    question: "How does NewVision ensure cost-efficiency in cloud deployments?",
+    question: "How does Codeflux ensure cost-efficiency in cloud deployments?",
     answer: "One of the biggest concerns about cloud is overspending or identifying the areas where spending is more than needed. We tackle this with a practice called “FinOps” which typically covers monitoring, analyzing, and optimizing spend across all workloads. Our engineers use AI-powered insights to right-size resources, automate scaling, and eliminate waste.",
   },
   {
-    question: "What kinds of cloud infrastructure solutions does NewVision support?",
+    question: "What kinds of cloud infrastructure solutions does Codeflux support?",
     answer: `<p>We cover the full cloud journey end-to-end, including:</p>
     <ul>
       <li>Cloud readiness assessments</li>
@@ -203,8 +203,8 @@ const CloudServicesFaqs = [
     Whether you’re starting fresh or modernizing existing systems, we build a cloud foundation aligned with your long-term business goals.`,
   },
   {
-    question: "What does NewVision offer in cloud infrastructure?",
-    answer: `<p>We go beyond basic migration. Every customer’s needs are different based on their business goals. NewVision designs and operates cloud environments in a customized way.</p>
+    question: "What does Codeflux offer in cloud infrastructure?",
+    answer: `<p>We go beyond basic migration. Every customer’s needs are different based on their business goals. Codeflux designs and operates cloud environments in a customized way.</p>
     <p>Our Core Services include:</p>
     <ul>
       <li>Cloud Advisory</li>
@@ -214,7 +214,7 @@ const CloudServicesFaqs = [
     Apart, we also help organizations with multi-cloud strategies to DevOps automation, from AI-based monitoring to compliance frameworks. We don’t just modernize infrastructure; we keep optimizing it, so it continuously delivers value.`,
   },
   {
-    question: "How does NewVision accelerate cloud adoption?",
+    question: "How does Codeflux accelerate cloud adoption?",
     answer: `<p>Our framework keeps the process structured yet flexible:</p>
     <ul>
       <li>Assess & Plan – Map out current workloads and design a migration roadmap</li>
@@ -235,7 +235,7 @@ const CloudServicesFaqs = [
     </ul>`
   },
   {
-    question: "What’s included in NewVision’s IT infrastructure modernization services?",
+    question: "What’s included in Codeflux’s IT infrastructure modernization services?",
     answer: `<p>We modernize IT infra step by step, covering:</p>
     <ul>
       <li>Workload migration</li>
