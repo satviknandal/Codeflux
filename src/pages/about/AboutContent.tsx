@@ -14,7 +14,7 @@ const AboutContent = () => {
         {/* H1 */}
         <motion.h1
           variants={ItemVariant}
-          className="mb-0 text-lg md:text-2xl"
+          className="mb-0 text-base md:text-2xl"
         >
           We are Codeflux:
         </motion.h1>
@@ -22,7 +22,7 @@ const AboutContent = () => {
         {/* Blue Heading */}
         <motion.div
           variants={ItemVariant}
-          className="text-[#3798e3] text-xl md:text-3xl"
+          className="text-[#3798e3] text-2xl md:text-3xl"
         >
           Creating Technology That Moves Businesses Forward
         </motion.div>
@@ -30,7 +30,7 @@ const AboutContent = () => {
         {/* Content */}
         <motion.div
           variants={ParagraphContainerVariant}
-          className="mt-4 md:mt-8 flex flex-col md:flex-row gap-4 md:gap-8 text-xs md:text-[14px]"
+          className="mt-4 md:mt-8 flex flex-col md:flex-row gap-4 md:gap-8 text-sm md:text-[14px]"
         >
           <div className="flex flex-col gap-2 md:gap-4 md:w-1/2 font-normal">
             <motion.p variants={ItemVariant}>

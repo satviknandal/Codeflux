@@ -201,11 +201,11 @@ const CardsHolder = ({
                   {item.icon}
                 </div>
 
-                <label className={`mb-2 md:mb-4 text-sm md:text-lg font-semibold text-black ${getCardTitleStyles()}`}>
+                <label className={`mb-2 md:mb-4 text-md md:text-lg font-medium md:font-semibold text-black ${getCardTitleStyles()}`}>
                   {item.title}
                 </label>
 
-              <p className={`${getCardTextStyles()} text-xs md:text-[14px]`}>{item.description}</p>
+              <p className={`${getCardTextStyles()} text-sm md:text-[14px] leading-5`}>{item.description}</p>
               </motion.div>
             ))}
           </motion.div>

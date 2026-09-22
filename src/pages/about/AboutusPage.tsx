@@ -8,6 +8,8 @@ import ArtificialIntelligenceIcon from '../../shared/svg/ArtificialIntelligenceI
 import AboutContent from './AboutContent';
 import AboutValuesMission from './AboutValuesMission';
 import AboutServices from './AboutServices';
+import { ContainerVariant, ItemVariant } from '../../shared/MotionSetting';
+import { motion } from 'framer-motion';
 
 const AboutusPage = () => {
   const timeline = [
@@ -70,6 +72,24 @@ const AboutusPage = () => {
     },
   ];
 
+  const keystrengths = [
+      {
+        icon: <IntelligenceIcon className="w-8 h-8 text-yellow-400" />,
+        title: "Intelligence drives performance.",
+        text: "We believe in scalable solutions something that connect—visually, emotionally, and strategically. That’s not art for art’s sake. That’s intelligence with a job to do.",
+      },
+      {
+        icon: <GaugeIcon className="w-8 h-8 text-yellow-400" />,
+        title: "Speed wins.",
+        text: "The faster you launch, the faster you learn. In a landscape that changes daily, slow isn’t safe—it’s expensive.",
+      },
+      {
+        icon: <ArtificialIntelligenceIcon className="w-8 h-8 text-yellow-400" />,
+        title: "AI is the baseline.",
+        text: "AI should help you make better decisions before launch. Smartly’s AI doesn’t just optimize. It orchestrates.",
+      },
+    ];
+
   const Content = ({showcontentonly = false}) => {
     return  <header className="relative overflow-hidden bg-[#012546] py-8 md:py-20">
       {/* <header className="relative overflow-hidden bg-[#3798e3] py-8 md:py-20"> */}
@@ -121,44 +141,29 @@ const AboutusPage = () => {
 
       {/* How we think */}
         {/* <section className="mt-16 md:mt-32"> */}
-      <section className="">
+        <motion.section
+            variants={ContainerVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
 
-      <div className="text-center">
-        <h3 className="text-2xl md:text-3xl font-normal text-white">How we think</h3>
-      </div>
-
-      <div className="mt-4 md:mt-10 grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-        {[
-          {
-            icon: <IntelligenceIcon className="w-8 h-8 text-yellow-400" />,
-            title: "Intelligence drives performance.",
-            text: "We believe in scalable solutions something that connect—visually, emotionally, and strategically. That’s not art for art’s sake. That’s intelligence with a job to do.",
-          },
-          {
-            icon: <GaugeIcon className="w-8 h-8 text-yellow-400" />,
-            title: "Speed wins.",
-            text:
-              "The faster you launch, the faster you learn. In a landscape that changes daily, slow isn’t safe—it’s expensive.",
-          },
-          {
-            icon: <ArtificialIntelligenceIcon className="w-8 h-8 text-yellow-400" />,
-            title: "AI is the baseline.",
-            text:
-              "AI should help you make better decisions before launch. Smartly’s AI doesn’t just optimize. It orchestrates.",
-          },
-        ].map((item, index) => (
-          <div key={index} className="rounded-xl md:rounded-3xl bg-white/2 border md:border-2 border-white/3 p-4 md:p-8 backdrop-blur">
-            <div className='mb-3 md:mb-4'>{item.icon}</div>
-            <h4 className="mb-2 md:mb-4 text-md md:text-xl font-normal text-[#71c1ff]">{item.title}</h4>
-            <p className="text-sm md:text-md text-white/80">{item.text}</p>
-          </div>
-        ))}
-
-      </div>
-
-      </section>
-
+      
+        <div className="text-center">
+          <motion.h3 variants={ItemVariant} className="text-2xl md:text-3xl font-normal text-white">
+            How we think
+          </motion.h3>
+        </div>
+        <motion.div variants={ContainerVariant} className="mt-4 md:mt-10 grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {keystrengths.map((item, index) => (
+            <motion.div key={index} variants={ItemVariant} className="rounded-xl md:rounded-3xl bg-white/2 border md:border-2 border-white/3 p-4 md:p-8 backdrop-blur">
+              <div className="mb-3 md:mb-4">{item.icon}</div>
+              <h4 className="mb-2 md:mb-4 text-md md:text-xl font-normal text-[#71c1ff]">{item.title}</h4>
+              <p className="text-sm md:text-md text-white/80">{item.text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
       </div>
       </div>
       </div>
