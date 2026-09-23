@@ -16,7 +16,7 @@ const WebDevelopmentHero = () => {
         relative
         overflow-hidden
         bg-[#0b1a29]
-        py-20
+        py-6 md:py-20
         font-sans
         text-white
         before:pointer-events-none
@@ -56,26 +56,12 @@ const WebDevelopmentHero = () => {
       >
         {/* LEFT */}
         <div className="flex flex-col items-start">
-          {/* Eyebrow */}
-          <div
-            className="
-              mb-5
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border border-sky-400/20
-              bg-sky-500/10
-              px-4 py-2
-              text-sm
-              font-medium
-              text-sky-300
-            "
-          >
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-500/20">
+
+          <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/15 bg-sky-400/10 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-sky-300">
+              <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-sky-500/20">
               <Smartphone size={15} />
-            </div>
-            Web Development
+              </div>
+              Web Development
           </div>
 
           {/* Heading */}
@@ -110,23 +96,14 @@ const WebDevelopmentHero = () => {
           </h1>
 
           {/* Description */}
-          <p
-            className="
-              mt-6
-              max-w-2xl
-              text-base
-              leading-6.5
-              text-slate-300
-              sm:text-base
-            "
-          >
+          <p className="mt-4 md:mt-6 max-w-xl text-[14px] md:text-base leading-6 md:leading-6.5">
             At Codeflux, we’re more than just a web development company—we’re problem solvers, engineers, and creative thinkers driven by a passion for creating innovative solutions that help businesses thrive. Our approach to web development is agile, collaborative, and deeply aligned with your unique goals.
           </p>
 
           {/* Trust points */}
           <div className="mt-8 flex flex-col gap-4">
             {/* Point 1 */}
-            <div className="flex items-center gap-3 text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex h-9 w-9 shrink-0
@@ -144,7 +121,7 @@ const WebDevelopmentHero = () => {
             </div>
 
             {/* Point 2 */}
-            <div className="flex items-center gap-3 text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex h-9 w-9 shrink-0
@@ -162,7 +139,7 @@ const WebDevelopmentHero = () => {
             </div>
 
             {/* Point 3 */}
-            <div className="flex items-center gap-3 text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex h-9 w-9 shrink-0

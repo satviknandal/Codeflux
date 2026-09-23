@@ -46,7 +46,7 @@ const WhyCodefluxforWebDevelopment = ({pointers, pointerClass}: WhyCodefluxforWe
                         </label> 
                     </button> 
                     <motion.div initial={false} animate={{ height: isActive ? "auto" : 0, opacity: isActive ? 1 : 0, }} transition={{ duration: 0.3, ease: "easeInOut", }} className="overflow-hidden" > 
-                        <p className="pb-4 md:pb-5 md:pr-8 text-sm md:text-md leading-6 text-[#494949]"> {pointer.description} </p> 
+                        <p className="pb-4 md:pb-5 md:pr-8 text-sm md:text-md leading-5 md:leading-6 text-[#494949]"> {pointer.description} </p> 
                     </motion.div> 
                 </div> 
         })} 

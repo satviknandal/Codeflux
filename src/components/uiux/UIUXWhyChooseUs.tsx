@@ -110,7 +110,7 @@ const UIUXWhyChooseUs = () => {
                         index !== 2 ? "border-r border-[#eceef4]" : ""
                         }`}
                     >
-                        <strong className="block text-xl font-bold leading-[1.1] tracking-[-0.3px] text-sky-600">
+                        <strong className="block text-lg md:text-xl font-semibold md:font-bold leading-[1.1] tracking-[-0.3px] text-sky-600">
                         {value}
                         </strong>
 
@@ -130,22 +130,16 @@ const UIUXWhyChooseUs = () => {
                     return (
                     <div
                         key={reason.title}
-                        className="group flex flex-1 items-center gap-3.5 rounded-xl border border-[#e8ebf3] bg-white px-5 py-[18px] transition-all duration-300 ease-out hover:translate-x-1 hover:border-sky-600 hover:shadow-[0_10px_22px_-8px_rgba(37,99,235,0.12)]"
+                        className="group flex flex-1 items-start md:items-center gap-3.5 rounded-xl border border-[#e8ebf3] bg-white px-5 py-[18px] transition-all duration-300 ease-out hover:translate-x-1 hover:border-sky-600 hover:shadow-[0_10px_22px_-8px_rgba(37,99,235,0.12)]"
                     >
                         {/* Icon */}
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-gradient-to-br from-[#eef3ff] to-[#dde7fb] text-sky-600 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-sky-600 group-hover:to-sky-700 group-hover:text-white">
                         <Icon size={17} strokeWidth={2} />
                         </div>
 
-                        {/* Content */}
                         <div className="min-w-0 flex-1">
-                        <h3 className="m-0 mb-1 text-base font-semibold leading-[1.3] text-[#0c0b1d]">
-                            {reason.title}
-                        </h3>
-
-                        <p className="m-0 text-[13.5px] font-normal leading-[1.45] text-[#5b5f75]">
-                            {reason.description}
-                        </p>
+                            <h3 className="m-0 mb-1 text-md md:text-base font-medium md:font-semibold leading-[1.3] text-[#0c0b1d]">{reason.title}</h3>
+                            <p className="m-0 text-sm md:text-[13.5px] font-normal leading-[1.45] text-[#5b5f75]">{reason.description}</p>
                         </div>
                     </div>
                     );

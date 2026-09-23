@@ -9,7 +9,7 @@ export interface SoftwareArchitectureProps {
 const SoftwareArchitecture: React.FC<
   SoftwareArchitectureProps
 > = ({
-  width = "100%",
+  width = "",
   height = "auto",
   className,
 }) => {
@@ -18,7 +18,7 @@ const SoftwareArchitecture: React.FC<
       className={className}
       width={width}
       height={height}
-      viewBox="0 0 300 420"
+      viewBox="0 0 520 420"
       role="img"
       aria-labelledby="security-svg-title security-svg-desc"
       xmlns="http://www.w3.org/2000/svg"

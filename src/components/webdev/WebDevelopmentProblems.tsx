@@ -65,7 +65,7 @@ const WebDevelopmentProblems = () => {
         relative
         overflow-hidden
         bg-white
-        py-20
+        py-6 md:py-20
         font-sans
         text-white
         before:pointer-events-none
@@ -98,7 +98,7 @@ const WebDevelopmentProblems = () => {
         />
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1fr_1.55fr]">
+        <div className="grid grid-cols-1 items-stretch gap-2 md:gap-6 lg:grid-cols-[1fr_1.55fr]">
           {/* Image */}
           <div
             className="
@@ -106,7 +106,8 @@ const WebDevelopmentProblems = () => {
               relative
               min-h-[360px]
               overflow-hidden
-              rounded-[18px]
+              rounded-lg
+              md:rounded-[18px]
               shadow-[0_0_0_1px_rgba(222,222,222,0.2),0_0_20px_rgba(222,222,222,0.12),0_20px_50px_rgba(0,0,0,0.2)]
               transition-shadow
               duration-300
@@ -129,7 +130,8 @@ const WebDevelopmentProblems = () => {
                 inset-0
                 h-full
                 w-full
-                rounded-[18px]
+                rounded-lg
+                md:rounded-[18px]
                 object-cover
                 transition-transform
                 duration-500
@@ -168,7 +170,7 @@ const WebDevelopmentProblems = () => {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 content-start gap-3.5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 content-start gap-2 md:gap-3.5 sm:grid-cols-2">
             {problems.map((problem) => {
               const Icon = problem.icon;
 
@@ -179,16 +181,15 @@ const WebDevelopmentProblems = () => {
                     group
                     relative
                     overflow-hidden
-                    rounded-2xl
+                    rounded-lg md:rounded-2xl
                     border
                     border-sky-600/[0.18]
                     bg-white/[0.2]
-                    p-6
+                    p-4 md:p-6
                     shadow-[0_4px_20px_rgba(0,0,0,0.1)]
                     transition-all
                     duration-300
                     ease-out
-
                     before:absolute
                     before:left-0
                     before:right-0
@@ -201,7 +202,6 @@ const WebDevelopmentProblems = () => {
                     before:to-sky-600/30
                     before:transition-transform
                     before:duration-500
-
                     hover:-translate-y-[5px]
                     hover:border-sky-600/[0.45]
                     hover:bg-sky-600/[0.08]
@@ -244,7 +244,7 @@ const WebDevelopmentProblems = () => {
                       mb-[9px]
                       font-semibold
                       leading-[1.2]
-                      text-lg
+                      text-base md:text-lg
                       text-[#063559]
                     "
                   >

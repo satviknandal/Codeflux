@@ -104,7 +104,7 @@ const CardsHolder = ({
         case "bluegradient":
             return "bg-[#e3f3ff]/10 border-[#c0ddf3]/15";
         case "pinkgradient":
-            return "bg-[#e3f3ff]/10 hover:bg-[#e3f3ff]/20 border-[#c0ddf3]/15";
+            return "bg-[#e3f3ff]/25 hover:bg-[#e3f3ff]/35 border-[#fff]/15";
         case "white":
             return "bg-white border-[#3798e3]/50";
         default:

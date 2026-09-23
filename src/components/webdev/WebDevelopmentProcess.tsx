@@ -217,7 +217,7 @@ const WebDevelopmentProcess = () => {
   const secondRow = processSteps.slice(3, 6);
 
   return (
-    <section className="py-6 md:py-16 relative overflow-hidden bg-white py-[90px] font-sans">
+    <section className="py-6 md:py-20 relative overflow-hidden bg-white font-sans">
 
       {/* Dark overlay */}
       <div
@@ -288,13 +288,13 @@ const WebDevelopmentProcess = () => {
             const Icon = step.icon;
 
             return (
-              <div key={step.number} className="relative">
+              <div key={step.number} className="relative flex justify-between">
                 {/* Vertical line */}
                 {index !== processSteps.length - 1 && (
                   <div
                     className="
                       absolute
-                      left-7 top-14
+                      left-5 top-10
                       h-[calc(100%+24px)]
                       w-[2px]
                       bg-gradient-to-b
@@ -309,13 +309,13 @@ const WebDevelopmentProcess = () => {
                   className="
                     relative z-[2]
                     mb-3
-                    flex h-14 w-14
+                    flex w-[40px] h-[40px] 
                     items-center justify-center
                     rounded-full
-                    border-2 border-gray-600
-                    bg-gray-400
-                    text-[18px]
-                    font-semibold
+                    border-2 border-sky-600
+                    bg-sky-600
+                    text-lg
+                    font-medium
                     text-white
                   "
                 >
@@ -328,9 +328,10 @@ const WebDevelopmentProcess = () => {
                     ml-0
                     rounded-[14px]
                     border border-white/[0.07]
-                    border-t-2 border-t-gray-600/35
-                    bg-white/[0.04]
-                    p-5
+                    border-t-2 border-t-sky-600/35
+                    bg-[linear-gradient(160deg,rgba(166,220,255,0.08)_0%,rgba(166,220,255,0.04)_50%,rgba(166,220,255,0.1)_100%)]
+                    w-[85%]
+                    p-4
                   "
                 >
                   <div className="mb-4 flex items-center justify-between gap-2">
@@ -339,13 +340,13 @@ const WebDevelopmentProcess = () => {
                         flex h-9 w-9 shrink-0
                         items-center justify-center
                         rounded-[9px]
-                        border border-gray-600/25
-                        bg-blue-600/15
+                        border border-sky-600/25
+                        bg-sky-600/15
                       "
                     >
                       <Icon
                         size={16}
-                        className="text-gray-400"
+                        className="text-sky-600"
                       />
                     </div>
 
@@ -353,12 +354,12 @@ const WebDevelopmentProcess = () => {
                       className="
                         inline-flex items-center gap-[5px]
                         rounded-full
-                        border border-gray-sky/20
-                        bg-gray-200/10
+                        border border-sky-600/20
+                        bg-sky-200/10
                         px-[10px] py-[3px]
                         text-[11px]
-                        font-semibold
-                        text-gray-400
+                        font-medium md:font-semibold
+                        text-sky-600
                       "
                     >
                       <Clock size={9} />
@@ -366,11 +367,11 @@ const WebDevelopmentProcess = () => {
                     </span>
                   </div>
 
-                  <h3 className="mb-2 text-[18px] font-semibold text-white">
+                  <h3 className="mb-2 text-base font-medium text-white">
                     {step.title}
                   </h3>
 
-                  <p className="text-[14px] leading-[1.65] text-gray-800">
+                  <p className="text-sm leading-[1.4] text-gray-800">
                     {step.description}
                   </p>
 
@@ -413,7 +414,7 @@ const WebDevelopmentProcess = () => {
               rounded-lg
               bg-sky-600
               px-8 py-[15px]
-              text-[15px]
+              text-sm md:text-[15px]
               font-semibold
               text-white
               no-underline

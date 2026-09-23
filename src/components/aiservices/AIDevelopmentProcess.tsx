@@ -101,8 +101,8 @@ const AIDevelopmentProcess = ({}: AIDevelopmentProcessProps) => {
                                 </div>
                                 {/* ,#E40CD3,#FF5555 */}
                                 <div className="flex-1 bg-[#fff4fe]/50 border border-[#ffe5fd]/50 rounded-md md:rounded-xl p-3 md:py-4 md:px-6 -mt-1">
-                                    <h4 className="text-lg md:text-xl font-medium mb-1 md:mb-2 text-[#E40CD3]">{step.title}</h4>
-                                    <p className="text-xs md:text-md text-[#4b5563]">{step.description}</p>
+                                    <h4 className="text-base md:text-xl font-medium mb-1 md:mb-2 text-[#E40CD3]">{step.title}</h4>
+                                    <p className="text-sm md:text-md text-[#4b5563]">{step.description}</p>
                                 </div>
                             </motion.li>
                         ))}

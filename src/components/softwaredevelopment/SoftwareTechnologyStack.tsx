@@ -99,12 +99,12 @@ const SoftwareTechnologyStack = ({width = "w-full"}: SoftwareTechnologyStackProp
 
     const renderTechStack = (title: string, technologies: any) => {
         return <div className="w-full p-4 mb-2 md:mb-4 border border-gray-100 rounded-md bg-white" style={{boxShadow: "0 10px 28px rgba(15, 23, 42, 0.04)"}}>
-            <div className="mb-3 text-sm uppercase font-semibold">{title}</div>
+            <div className="mb-3 text-xs md:text-sm uppercase font-medium md:font-semibold">{title}</div>
             <div className="flex flex-wrap gap-2">
                 {technologies.map((tech: any) => (
                 <div
                     key={tech.name}
-                    className="flex min-h-[42px] items-center rounded-xl border border-[#e2e8f0] bg-[#f8fbff] px-4 py-2 transition-colors hover:bg-[#dbeafe]"
+                    className="flex min-h-[42px] items-center rounded-lg md:rounded-xl border border-[#e2e8f0] bg-[#f8fbff] px-2 md:px-4 py-2 transition-colors hover:bg-[#dbeafe]"
                 >
                     {tech.icon && <img
                         src={tech.icon}
@@ -113,7 +113,7 @@ const SoftwareTechnologyStack = ({width = "w-full"}: SoftwareTechnologyStackProp
                         decoding="async"
                         className="mr-2 w-5 h-5 md:h-[22px] md:w-[22px]"
                     />}
-                    <span className="text-xs md:text-sm font-semibold md:font-medium text-[#0f172a]">
+                    <span className="text-xs md:text-sm font-medium md:font-semibold md:font-medium text-[#0f172a]">
                       {tech.name}
                     </span>
                 </div>

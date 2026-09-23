@@ -98,7 +98,7 @@ const TechRow: React.FC<TechRowProps> = ({
 
       <div
         className={`
-          flex w-max gap-4
+          flex w-max gap-2
           will-change-transform
           md:gap-5
           ${
@@ -113,13 +113,13 @@ const TechRow: React.FC<TechRowProps> = ({
             key={`${technology.name}-${index}`}
             className="
               group
-              flex h-32 w-32
+              flex h-20 w-20
               shrink-0
               flex-col
               items-center
               justify-center
-              gap-3
-              rounded-2xl
+              gap-1 md:gap-3
+              rounded-lg
               border
               border-white/10
               bg-white/[0.05]
@@ -137,10 +137,10 @@ const TechRow: React.FC<TechRowProps> = ({
               src={technology.src}
               alt={technology.name}
               loading="lazy"
-              className={`max-w-[60%] object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert opacity-50 ${technology.wide ? "h-7 md:h-8" : "h-10 md:h-10"}`}
+              className={`max-w-[35%] md:max-w-[60%] object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert opacity-50 ${technology.wide ? "h-7 md:h-8" : "h-10 md:h-10"}`}
             />
 
-            <span className="whitespace-nowrap text-xs font-semibold tracking-[-0.01em] text-white/70 md:text-sm">
+            <span className="whitespace-nowrap text-xs font-medium md:font-semibold tracking-[-0.01em] text-white/70 md:text-sm">
               {technology.name} 
             </span>
           </div>
@@ -159,15 +159,12 @@ const AITechStack: React.FC = () => {
         border-t
         border-[var(--border)]
         bg-[var(--bg)]
-        py-20
-        md:py-24
+        py-12
+        md:py-20
         bg-purple-950
-
-
-            
-            bg-gradient-to-br
-            from-purple-950
-            to-[#0b2862]
+        bg-gradient-to-br
+        from-purple-950
+        to-[#0b2862]
       "
     >
       {/* Section Header */}
@@ -181,7 +178,7 @@ const AITechStack: React.FC = () => {
       </div>
 
       {/* Marquees */}
-      <div className="mt-12 flex flex-col gap-5">
+      <div className="mt-12 flex flex-col gap-2 md:gap-5">
         <TechRow
           technologies={techRow1}
           direction="left"

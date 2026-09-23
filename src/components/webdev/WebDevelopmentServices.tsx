@@ -23,7 +23,7 @@ const WebDevelopmentServices = ({
 }: WebDevelopmentServicesProps) => {
 
   const RenderComp = ({children}: {children: React.ReactNode}) => {
-    return <section className="py-6 md:py-16 relative overflow-hidden bg-sky-500 py-[90px]">
+    return <section className="py-6 md:py-16 relative overflow-hidden bg-sky-500">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(12,11,29,0.92)_0%,rgba(12,11,29,0.72)_50%,rgba(12,11,29,0.92)_100%)]"/>
       {/* Dot pattern */}
       <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:30px_30px]"/>
@@ -41,11 +41,16 @@ const WebDevelopmentServices = ({
 
   const renderCard = () => {
     return <motion.div
-        variants={ContainerVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+      variants={ContainerVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{
+        once: true,
+        amount: 0.1,
+        margin: "0px 0px -50px 0px",
+      }}
+    >
+
       <section className="mx-auto flex flex-col items-center">
         <CompHeader
           highlighter="Our Services"
@@ -53,35 +58,35 @@ const WebDevelopmentServices = ({
           subheading="Our web development services deliver modern, user-focused digital solutions that leave a lasting impression on your audience."
           variant="bluegradient"
         />
-        <motion.div variants={CardContainerVariant}
-          className={`mt-4 md:mt-8 grid grid-cols-1 gap-1 md:gap-[var(--grid-gap)] w-full md:w-full`}
-          style={{
-              "--grid-gap": typeof gap === "number" ? `${gap}px` : gap,
-            gridTemplateColumns:
-              window.innerWidth >= 768
-                ? `repeat(${columns}, minmax(0, 1fr))`
-                : undefined,
-          } as React.CSSProperties}
+        <motion.div
+          variants={CardContainerVariant}
+          className="mt-4 md:mt-8 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4"
+          style={
+            {
+              "--grid-gap":
+                typeof gap === "number" ? `${gap}px` : gap,
+            } as React.CSSProperties
+          }
         >
           {data.map((item, index) => {
             return (
-            <motion.div
+             <motion.div
               key={index}
-              variants={ItemVariant} 
+              variants={ItemVariant}
               className="
-                  group relative flex flex-col overflow-hidden rounded-[14px]
-                  border border-white/[0.07]
-                  border-t-2 border-t-sky-600/35
-                  bg-white/[0.04]
-                  px-5 pb-5 pt-[22px]
-                  transition-all duration-300
-                  hover:-translate-y-[3px]
-                  hover:border-sky-600/60
-                  hover:border-t-sky-600
-                  hover:bg-white/[0.06]
-                  hover:shadow-[0_16px_40px_rgba(0,0,0,0.3),0_4px_12px_rgba(37,99,235,0.15)]
-                "
-              >
+                group relative flex flex-col overflow-hidden rounded-[14px]
+                border border-white/[0.07]
+                border-t-2 border-t-sky-600/35
+                bg-white/[0.04]
+                px-5 pb-5 pt-[22px]
+                transition-all duration-300
+                hover:-translate-y-[3px]
+                hover:border-sky-600/60
+                hover:border-t-sky-600
+                hover:bg-white/[0.06]
+                hover:shadow-[0_16px_40px_rgba(0,0,0,0.3),0_4px_12px_rgba(37,99,235,0.15)]
+              "
+            >
                 <div className="mb-4 md:mb-[16px] ">
                   <span className="
                       flex h-9 w-9 shrink-0 items-center justify-center

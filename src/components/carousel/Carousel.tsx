@@ -34,7 +34,7 @@ const Carousel = ({ data, width = "w-full" }: CarouselProps) => {
   };
 
   return (
-    <section className="radialgradientpink py-14 text-black">
+    <section className="radialgradientpink py-12 md:py-14 text-black">
       <div className={`container-wrapper-transparent items-center justify-center`}>
         <div className={`flex flex-col mx-auto ${width}`}>
           <div className={`mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between`}>
@@ -70,14 +70,14 @@ const Carousel = ({ data, width = "w-full" }: CarouselProps) => {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-2 md:gap-4 md:grid-cols-3">
             {visibleItems.map((item) => (
               <article
                 key={item.title}
                 className="rounded-lg border border-[#c0ddf3]/25 bg-[#e3f3ff]/10 shadow-sm"
               >
                 <img src={item.image} className="rounded-tl-lg rounded-tr-lg"/>
-                <div className="p-6">
+                <div className="p-3 md:p-6">
                   <h3 className="text-md md:text-xl font-medium text-pink-100">
                     {item.title}
                   </h3>

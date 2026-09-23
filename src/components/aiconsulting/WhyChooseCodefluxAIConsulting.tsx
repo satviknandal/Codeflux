@@ -54,29 +54,23 @@ const WhyChooseCodefluxAIConsulting: React.FC = () => {
             variant="pinkgradient"
         />
 
-        <div className="mb-[22px] grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-[22px] grid grid-cols-1 gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.1] px-[22px] py-7 transition-all duration-300 hover:-translate-y-[5px] hover:border-pink-400/20 hover:bg-white/[0.15] hover:shadow-[0_20px_52px_rgba(255,255,255,0.05),0_4px_14px_rgba(255,255,255,0.12)]"
+                className="group relative overflow-hidden rounded-xl md:rounded-2xl border border-white/[0.07] bg-white/[0.1] px-[22px] py-7 transition-all duration-300 hover:-translate-y-[5px] hover:border-pink-400/20 hover:bg-white/[0.15] hover:shadow-[0_20px_52px_rgba(255,255,255,0.05),0_4px_14px_rgba(255,255,255,0.12)]"
               >
                 <span className="absolute left-0 top-0 h-[2px] w-0 rounded-t-2xl bg-pink-400 transition-all duration-500 ease-out group-hover:w-full" />
 
                 <span className="pointer-events-none absolute inset-0 z-0" style={{backgroundImage: "radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "18px 18px"}}/>
 
                 <div className="relative z-[1]">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-pink-300/30 bg-pink-200/15 transition-all duration-300 group-hover:scale-[1.08] group-hover:border-pink-400 group-hover:bg-pink-500">
-                    {/* <Icon className="text-[20px] text-pink-200 transition-colors duration-300 group-hover:text-white" /> */}
-
-                    <Icon
-                      size={20}
-                      strokeWidth={2}
-                      className="text-pink-100 transition-colors duration-300 group-hover:text-white"
-                    />
+                  <div className="mb-4 flex w-8 h-8 md:h-12 md:w-12 items-center justify-center rounded-md md:rounded-xl border border-pink-300/30 bg-pink-200/15 transition-all duration-300 group-hover:scale-[1.08] group-hover:border-pink-400 group-hover:bg-pink-500">
+                    <Icon size={20} strokeWidth={2} className="text-pink-100 transition-colors duration-300 group-hover:text-white"/>
                   </div>
-                  <h3 className="mb-2.5 text-[18px] font-medium leading-[1.25] text-white">{feature.title}</h3>
+                  <h3 className="mb-2.5 text-md md:text-[18px] font-medium leading-[1.25] text-white">{feature.title}</h3>
                   <p className="text-sm font-normal leading-[1.5] text-gray-200/90">{feature.description}</p>
                 </div>
               </div>

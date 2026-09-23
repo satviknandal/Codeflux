@@ -16,7 +16,7 @@ const services = [
 const UiUXServices = () => {
   return (
     <section className="mx-auto bg-white font-sans text-[#0c0b1d]">
-        <div className="container-wrapper-transparent py-12 sm:py-[50px] lg:py-20">
+        <div className="container-wrapper-transparent py-6 sm:py-[50px] lg:py-20">
             <CompHeader
               highlighter="What We Do"
               title={<p>Comprehensive{" "}<span className="text-sky-600">UI/UX Design Services</span></p>}
@@ -25,7 +25,7 @@ const UiUXServices = () => {
             />
       <div
         className="
-          group relative mb-6 grid overflow-hidden rounded-[24px]
+          group relative mb-2 md:mb-6 grid overflow-hidden rounded-lg md:rounded-[18px]
           border border-white/10
           radialgradient
           shadow-[0_40px_80px_-24px_rgba(12,11,29,0.45),0_16px_32px_-12px_rgba(37,99,235,0.15),inset_0_1px_0_rgba(255,255,255,0.06)]
@@ -69,12 +69,12 @@ const UiUXServices = () => {
         </div>
 
         {/* Featured Content */}
-        <div className="relative z-[1] flex flex-col justify-center px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-[52px]">
+        <div className="relative z-[1] flex flex-col justify-center px-4 py-4 md:px-6 md:py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-[52px]">
           {/* Icon */}
           <div
             className="
-              mb-6 flex h-[60px] w-[60px] items-center justify-center
-              rounded-2xl border border-blue-300/40
+              mb-6 flex h-11 w-11 md:h-[60px] md:w-[60px] items-center justify-center
+              rounded-xl md:rounded-2xl border border-blue-300/40
               bg-[linear-gradient(135deg,rgba(37,99,235,0.35)_0%,rgba(37,99,235,0.15)_100%)]
               text-2xl text-white
               shadow-[0_8px_24px_-6px_rgba(37,99,235,0.4),inset_0_1px_0_rgba(255,255,255,0.15)]
@@ -83,11 +83,11 @@ const UiUXServices = () => {
             <Boxes size={18} strokeWidth={2} className="text-white"/>
           </div>
 
-          <h3 className="mb-[18px] text-2xl font-medium leading-[1.2] tracking-[-0.4px] text-white">
+          <h3 className="mb-[18px] text-base md:text-2xl font-semibold md:font-medium leading-[1.2] tracking-[-0.4px] text-white">
             SaaS Product Design
           </h3>
 
-          <p className="mb-7 text-[15px] leading-[1.75] text-[#d8dcee]">
+          <p className="mb-4 md:mb-7 text-[14px] md:text-[15px] leading-[1.4] md:leading-[1.75] text-[#d8dcee]">
             End-to-end design for onboarding, billing, settings, and feature
             workflows. Every screen accounts for multi-role permissions and
             the jobs your customers do every day.
@@ -121,7 +121,7 @@ const UiUXServices = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-[18px] lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-2 md:gap-4 sm:grid-cols-2 sm:gap-[18px] lg:grid-cols-4">
         {services.map((service) => {
             const Icon = service.icon;
             return(
@@ -163,7 +163,7 @@ const UiUXServices = () => {
             />
 
             {/* Icon */}
-            <div className="relative mb-[18px] h-12 w-12">
+            <div className="relative mb-[18px] h-11 w-11 md:h-12 md:w-12">
               <div
                 className="
                   absolute inset-0 rounded-xl
@@ -179,7 +179,7 @@ const UiUXServices = () => {
                 className="
                   absolute inset-0 z-[1]
                   flex items-center justify-center
-                  text-[18px] text-sky-600
+                  text-sky-600
                   transition-all duration-500
                   group-hover:rotate-6 group-hover:text-white
                 "
@@ -192,7 +192,7 @@ const UiUXServices = () => {
             <h3
               className="
                 relative z-[1] mb-2
-                text-xl font-medium leading-[1.25]
+                text-base md:text-xl font-medium leading-[1.25]
                 text-[#0c0b1d]
                 transition-colors duration-300
                 group-hover:text-sky-600
@@ -202,7 +202,7 @@ const UiUXServices = () => {
             </h3>
 
             {/* Card text */}
-            <p className="relative z-[1] m-0 text-[13.5px] leading-[1.65] text-[#5b5f75]">
+            <p className="relative z-[1] m-0 text-[14px] md:text-[15px] leading-[1.4] md:leading-[1.65] text-[#5b5f75]">
               {service.text}
             </p>
           </div>

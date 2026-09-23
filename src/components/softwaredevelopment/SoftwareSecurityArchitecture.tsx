@@ -45,7 +45,7 @@ const SoftwareSecurityArchitecture = ({
               </motion.div>
             </div>
             <motion.div variants={ItemVariantRight} className="w-full md:w-[50%] flex justify-start md:items-end md:justify-end">
-              <SoftwareArchitecture height={350} className="h-[240px] md:h-[350px]"/>
+              <SoftwareArchitecture className="w-full h-auto max-w-[520px] mx-auto"/>
             </motion.div>
           </div> 
           <motion.div variants={CardContainerVariant} className={`mt-4 md:mt-8 flex flex-col md:flex-row gap-2 md:gap-4 w-full md:${width}`}>

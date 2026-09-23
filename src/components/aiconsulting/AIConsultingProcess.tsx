@@ -201,7 +201,7 @@ const AIConsultingProcess = () => {
   const secondRow = processSteps.slice(4, 8);
 
   return (
-    <section className="py-6 md:py-16 relative overflow-hidden bg-white py-[90px] font-sans">
+    <section className="py-6 md:py-16 relative overflow-hidden bg-white">
       {/* Top right glow */}
       <div
         className="
@@ -250,13 +250,13 @@ const AIConsultingProcess = () => {
         <div className="grid gap-6 md:hidden">
           {processSteps.map((step, index) => {
             return (
-              <div key={step.number} className="relative">
+              <div key={step.number} className="relative flex justify-between ">
                 {/* Vertical line */}
                 {index !== processSteps.length - 1 && (
                   <div
                     className="
                       absolute
-                      left-7 top-14
+                      left-5 top-10
                       h-[calc(100%+24px)]
                       w-[2px]
                       bg-gradient-to-b
@@ -271,13 +271,14 @@ const AIConsultingProcess = () => {
                   className="
                     relative z-[2]
                     mb-3
-                    flex h-14 w-14
+                    flex
+                    w-[40px] h-[40px] 
                     items-center justify-center
                     rounded-full
-                    border-2 border-gray-600
-                    bg-gray-400
-                    text-[18px]
-                    font-semibold
+                    border-2 border-pink-600
+                    bg-pink-600
+                    text-lg
+                    font-medium
                     text-white
                   "
                 >
@@ -290,17 +291,18 @@ const AIConsultingProcess = () => {
                     ml-0
                     rounded-[14px]
                     border border-white/[0.07]
-                    border-t-2 border-t-gray-600/35
-                    bg-white/[0.04]
-                    p-5
+                    border-t-2 border-t-pink-600/50
+                    bg-[linear-gradient(160deg,rgba(255,186,228,0.08)_0%,rgba(255,186,228,0.04)_50%,rgba(255,186,228,0.1)_100%)]
+                    w-[85%]
+                    p-4
                   "
                 >
 
-                  <h3 className="mb-2 text-[18px] font-semibold text-white">
+                  <h3 className="mb-2 text-base font-medium text-pink-600">
                     {step.title}
                   </h3>
 
-                  <p className="text-[14px] leading-[1.65] text-gray-800">
+                  <p className="text-sm leading-[1.4] text-gray-700">
                     {step.description}
                   </p>
 
@@ -333,7 +335,7 @@ const AIConsultingProcess = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-[52px] flex justify-center">
+        <div className="mt-[30px] md:mt-[52px] flex justify-center">
           <a
             href="#contact-us"
             className="
@@ -343,7 +345,7 @@ const AIConsultingProcess = () => {
               rounded-lg
               bg-pink-600
               px-8 py-[15px]
-              text-[15px]
+              text-sm md:text-[15px]
               font-semibold
               text-white
               no-underline

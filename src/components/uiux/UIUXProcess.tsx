@@ -281,21 +281,21 @@ const UIUXProcess: React.FC = () => {
           {/* Icon */}
           <div
             className="
-              mb-5 inline-flex h-[54px] w-[54px]
+              mb-3 md:mb-5 inline-flex h-[40px] w-[40px] md:h-[54px] md:w-[54px]
               items-center justify-center self-start
-              rounded-[14px]
+              rounded-lg md:rounded-[14px]
               bg-gradient-to-br from-sky-600 to-sky-700
               text-white
               shadow-[0_12px_28px_-8px_rgba(37,99,235,0.45),inset_0_1px_0_rgba(255,255,255,0.2)]
             "
           >
-            <ActiveIcon className="h-[22px] w-[22px]" />
+            <ActiveIcon className="w-[16px] h-[16px] md:h-[22px] md:w-[22px]" />
           </div>
 
           <h3 className="m-0 mb-[18px] text-[22px] font-nmedium leading-[1.2] tracking-[-0.4px] text-[#0c0b1d] sm:text-[26px] lg:text-[32px]">
             {activeProcess.title}
           </h3>
-          <p className="m-0 mb-8 text-[14.5px] leading-[1.75] text-gray-600 sm:text-[15.5px]">
+          <p className="m-0 mb-4 md:mb-8 text-sm md:text-[14.5px] leading-[1.45] md:leading-[1.75] text-gray-600 sm:text-[15.5px]">
             {activeProcess.description}
           </p>
 
@@ -304,8 +304,8 @@ const UIUXProcess: React.FC = () => {
             <p className="mb-4 text-xs font-bold uppercase tracking-[1.4px] text-gray-500">You get:</p>
             <ul className="m-0 flex list-none flex-col gap-3 p-0">
               {activeProcess.deliverables.map((item) => (
-                <li key={item} className="flex items-center gap-3.5 text-md font-medium text-gray-900 sm:text-base">
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-600 to-sky-700 text-white shadow-[0_4px_10px_-2px_rgba(37,99,235,0.4)]">
+                <li key={item} className="flex items-center gap-2 md:gap-3.5 text-sm md:text-md font-semibold md:font-medium text-gray-900 sm:text-base">
+                  <span className="inline-flex w-5 h-5 md:h-6 md:w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-600 to-sky-700 text-white shadow-[0_4px_10px_-2px_rgba(37,99,235,0.4)]">
                     <Check className="h-[11px] w-[11px]" strokeWidth={3} />
                   </span>
                   {item}

@@ -59,26 +59,12 @@ const SoftwareDevelopmentHero = () => {
       >
         {/* LEFT */}
         <div className="flex flex-col items-start">
-          {/* Eyebrow */}
-          <div
-            className="
-              mb-4 md:mb-5
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border border-sky-400/20
-              bg-sky-500/10
-              px-3 md:px-4 py-2
-              text-xs md:text-sm
-              font-medium
-              text-sky-300
-            "
-          >
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-500/20">
+          
+          <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/15 bg-sky-400/10 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-sky-300">
+              <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-sky-500/20">
               <Smartphone size={15} />
-            </div>
-            Software Development
+              </div>
+              Software Development
           </div>
 
           {/* Heading */}
@@ -107,7 +93,7 @@ const SoftwareDevelopmentHero = () => {
 
           <div className="mt-8 flex flex-col gap-4">
             {/* Point 1 */}
-            <div className="flex items-center gap-3 text-xs md:text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex w-7 h-7 md:h-9 md:w-9 shrink-0
@@ -125,7 +111,7 @@ const SoftwareDevelopmentHero = () => {
             </div>
 
             {/* Point 2 */}
-            <div className="flex items-center gap-3 text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex w-7 h-7 md:h-9 md:w-9 shrink-0
@@ -143,7 +129,7 @@ const SoftwareDevelopmentHero = () => {
             </div>
 
             {/* Point 3 */}
-            <div className="flex items-center gap-3 text-sm text-slate-300">
+            <div className="flex items-center gap-3 text-sm text-white">
               <div
                 className="
                   flex w-7 h-7 md:h-9 md:w-9 shrink-0
@@ -196,9 +182,9 @@ const SoftwareDevelopmentHero = () => {
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-10 rounded-full bg-blue-500/20 blur-[90px]"/>
           <div className='flex items-end justify-end'>
-          <img src={watch} className='w-[50px] md:w-[70px] h-auto'/>
-          <img src={laptop} className='w-[250px] md:w-[400px]'/>
-          <img src={mobile} className='w-[70px] md:w-[100px]'/>
+          <img src={watch} className='w-[40px] md:w-[70px] h-auto'/>
+          <img src={laptop} className='w-[230px] md:w-[400px]'/>
+          <img src={mobile} className='w-[60px] md:w-[100px]'/>
         </div>
         </div>
       </div>

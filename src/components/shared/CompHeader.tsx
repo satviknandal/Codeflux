@@ -206,7 +206,7 @@ const CompHeader = ({
       {subheading && (
         <motion.span
           variants={ItemVariant}
-          className={`text-center text-sm leading-5 md:w-[80%] md:text-[14px] ${getSubheadingStyles()}`}
+          className={`text-center text-sm leading-5 w-[90%] md:w-[80%] md:text-[14px] ${getSubheadingStyles()}`}
         >
           {subheading}
         </motion.span>

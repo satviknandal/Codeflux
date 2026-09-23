@@ -21,41 +21,41 @@ const AIBlueprint = ({}) => {
             subheading="AI creates lasting impact when strategy, technology, and people work together. Our approach helps you align on vision, build the right foundations, and empower your teams. It is supported by trusted, secure, and ethical AI practices throughout."
             variant="pinkgradient"
         />
-        <div className="flex flex-col gap-4 w-[90%] mx-auto">
-            <div className="border-2 border-dashed border-white p-6">
-                <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Business & <br/>Customer Value</h3>
-                <p className="text-white text-base leading-5">Drive measurable growth through AI-enabled innovation and insight.</p>
+        <div className="flex flex-col gap-1 md:gap-4 w-full md:w-[90%] mx-auto">
+            <div className="border md:border-2 border-dashed border-white p-2 md:p-6 w-full">
+                <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-5 tracking-widest">Business & <br/>Customer Value</h3>
+                <p className="text-white text-sm md:text-base leading-4 md:leading-5">Drive measurable growth through AI-enabled innovation and insight.</p>
             </div>
             <div className="flex justify-baseline gap-4 py-2">
                 <div className="flex w-1/3"><MoveUpIcon size={30} className="mx-auto text-white"/></div>
                 <div className="flex w-1/3"><MoveUpIcon size={30} className="mx-auto text-white"/></div>
                 <div className="flex w-1/3"><MoveUpIcon size={30} className="mx-auto text-white"/></div>
             </div>
-            <div className="flex gap-4">
-                <div className="flex flex-col gap-4">
-                    <div className="flex gap-4">
-                        <div className="border-2 border-dashed border-white p-6">
-                            <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Workforce & <br/>organization</h3>
-                            <p className="text-white text-base leading-5">Empower people and teams with AI-ready skills and leadership.</p>
+            <div className="flex gap-1 md:gap-4">
+                <div className="flex flex-col gap-1 md:gap-4">
+                    <div className="flex gap-1 md:gap-4">
+                        <div className="border md:border-2 border-dashed border-white px-1.5 py-2 md:p-6">
+                            <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-4.5 tracking-widest">Workforce <br/>& organization</h3>
+                            <p className="text-white text-sm md:text-base leading-4 md:leading-5">Empower people and teams with AI-ready skills and leadership.</p>
                         </div>
-                        <div className="border-2 border-dashed border-white p-6">
-                            <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Experience & <br/>Process</h3>
-                            <p className="text-white text-base leading-5">Redesign experiences and workflows to amplify human-AI collaboration.</p>
+                        <div className="border md:border-2 border-dashed border-white px-1.5 py-2 md:p-6">
+                            <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-5 tracking-widest">Experience & <br/>Process</h3>
+                            <p className="text-white text-sm md:text-base leading-4 md:leading-5">Redesign experiences and workflows to amplify human-AI collaboration.</p>
                         </div>
                     </div>
-                    <div className="border-2 border-dashed border-white p-6">
-                <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Technology & <br/>Data</h3>
-                <p className="text-white text-base leading-5">Deploy scalable AI tools, data and automation capabilities.</p>
+                    <div className="border md:border-2 border-dashed border-white px-1.5 py-2 md:p-6">
+                <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-5 tracking-widest">Technology & <br/>Data</h3>
+                <p className="text-white text-sm md:text-base leading-4 md:leading-5">Deploy scalable AI tools, data and automation capabilities.</p>
             </div>
-            <div className="border-2 border-dashed border-white p-6">
-                <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Strategic Alignment & <br/>Governance</h3>
-                <p className="text-white text-base leading-5">Establish shared vision, strategy and disciplined governance - grounded in clear business and customer value - to guide AI transformation.</p>
+            <div className="border md:border-2 border-dashed border-white px-1.5 py-2 md:p-6">
+                <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-5 tracking-widest">Strategic Alignment & <br/>Governance</h3>
+                <p className="text-white text-sm md:text-base leading-4 md:leading-5">Establish shared vision, strategy and disciplined governance - grounded in clear business and customer value - to guide AI transformation.</p>
             </div>
 
                 </div>
-                <div className="flex  flex-col border-2 border-dashed border-white p-6 justify-center">
-                    <h3 className="mb-4 uppercase text-white text-xl font-semibold leading-5 tracking-widest">Trust & <br/>Security</h3>
-                    <p className="text-white text-base leading-5">Embed trusted, secure, and ethical practices in AI delivery.</p>
+                <div className="flex  flex-col border md:border-2 border-dashed border-white p-2 md:p-6 justify-center">
+                    <h3 className="mb-4 uppercase text-white text-sm md:text-xl font-medium md:font-semibold leading-4 md:leading-5 tracking-widest">Trust & <br/>Security</h3>
+                    <p className="text-white text-sm md:text-base leading-4 md:leading-5">Embed trusted, secure, and ethical practices in AI delivery.</p>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@ const AIBlueprint = ({}) => {
     }
 
   return <div className={`py-6 md:py-16 radialgradientpink`}>
-      <div className='container-wrapper-transparent'>
+      <div className='container-wrapper-transparent mx-[16px] md:mx-auto'>
         {renderCard()}
       </div>
     </div>;

@@ -89,7 +89,7 @@ const UIUXIndustries: React.FC = () => {
             />
 
             {/* Industries Grid */}
-            <div className="grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {industries.map((industry) => (
                 <a
                     key={industry.title}
@@ -99,7 +99,7 @@ const UIUXIndustries: React.FC = () => {
                     group relative
                     flex flex-col
                     overflow-hidden
-                    rounded-2xl
+                    rounded-xl md:rounded-2xl
                     border border-white/[0.08]
                     bg-white/[0.07]
                     text-inherit no-underline
@@ -144,61 +144,17 @@ const UIUXIndustries: React.FC = () => {
                     />
 
                     {/* Image gradient */}
-                    <div
-                        className="
-                        pointer-events-none
-                        absolute inset-0
-                        bg-gradient-to-b
-                        from-[#0c0b1d]/0
-                        via-[#0c0b1d]/10
-                        to-[#0f0e22]/85
-                        "
-                    />
-
-                    {/* Arrow */}
-                    {/* <span
-                        className="
-                        absolute right-3.5 top-3.5
-                        z-20
-                        flex h-[38px] w-[38px]
-                        items-center justify-center
-                        rounded-full
-                        bg-sky-500/95
-                        text-white
-                        opacity-0
-                        shadow-[0_8px_20px_-4px_rgba(37,99,235,.5)]
-                        transition-all duration-300
-                        group-hover:translate-y-0
-                        group-hover:scale-100
-                        group-hover:opacity-100
-                        translate-y-[-8px]
-                        scale-[0.85]
-                        max-sm:translate-y-0
-                        max-sm:scale-100
-                        max-sm:opacity-100
-                        "
-                    >
-                        <ArrowRight size={13} />
-                    </span> */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0c0b1d]/0 via-[#0c0b1d]/10 to-[#0f0e22]/85"/>
                     </div>
 
                     {/* Card Body */}
-                    <div className="flex flex-1 flex-col px-[22px] pb-6 pt-[22px]">
-                    <h3 className="m-0 mb-1 text-lg font-medium leading-[1.3] text-white transition-colors duration-300 group-hover:text-sky-400">
-                        {industry.title}
-                    </h3>
-
-                    <p
-                        className="
-                        m-0
-                        text-sm
-                        leading-[1.35]
-                        tracking-[0.2px]
-                        text-gray-300/90
-                        "
-                    >
-                        {industry.description}
-                    </p>
+                    <div className="flex flex-1 flex-col p-3 md:p-6 gap-2">
+                      <h3 className="text-base md:text-lg font-medium leading-[1.3] text-white transition-colors duration-300 group-hover:text-sky-400">
+                          {industry.title}
+                      </h3>
+                      <p className="m-0 text-sm leading-[1.35] tracking-[0.2px] text-gray-300/90">
+                          {industry.description}
+                      </p>
                     </div>
                 </a>
                 ))}
