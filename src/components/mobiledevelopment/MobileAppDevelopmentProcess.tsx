@@ -233,7 +233,8 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
             <div
               className="
                 relative z-[2]
-                flex h-14 w-14
+                flex 
+                h-14 w-14
                 items-center justify-center
                 rounded-full
                 border-2 border-sky-600
@@ -348,18 +349,18 @@ const MobileAppDevelopmentProcess = () => {
         </div>
 
         {/* Mobile Process */}
-        <div className="grid gap-6 md:hidden">
+        <div className="grid gap-4 md:hidden">
           {processSteps.map((step, index) => {
             const Icon = step.icon;
 
             return (
-              <div key={step.number} className="relative">
+              <div key={step.number} className="relative flex justify-between">
                 {/* Vertical line */}
                 {index !== processSteps.length - 1 && (
                   <div
                     className="
                       absolute
-                      left-7 top-14
+                      left-5 md:left-7 top-10 md:top-14
                       h-[calc(100%+24px)]
                       w-[2px]
                       bg-gradient-to-b
@@ -374,13 +375,13 @@ const MobileAppDevelopmentProcess = () => {
                   className="
                     relative z-[2]
                     mb-3
-                    flex h-14 w-14
+                    flex w-[40px] h-[40px] md:h-14 md:w-14
                     items-center justify-center
                     rounded-full
-                    border-2 border-sky-600
+                    border-2 border-sky-400 md:border-sky-600
                     bg-sky-400
-                    text-[18px]
-                    font-semibold
+                    text-lg
+                    font-medium
                     text-white
                   "
                 >
@@ -395,6 +396,7 @@ const MobileAppDevelopmentProcess = () => {
                     border border-white/[0.07]
                     border-t-2 border-t-sky-600/35
                     bg-white/[0.04]
+                    w-[85%]
                     p-5
                   "
                 >
@@ -431,11 +433,11 @@ const MobileAppDevelopmentProcess = () => {
                     </span>
                   </div>
 
-                  <h3 className="mb-2 text-[18px] font-semibold text-white">
+                  <h3 className="mb-2 text-base font-semibold text-white">
                     {step.title}
                   </h3>
 
-                  <p className="text-[14px] leading-[1.65] text-white/50">
+                  <p className="text-sm leading-[1.4] text-white/50">
                     {step.description}
                   </p>
 

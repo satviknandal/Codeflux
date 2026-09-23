@@ -83,12 +83,12 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
     <div
       className={`
         group relative flex flex-col
-        bg-white px-7 pb-8 pt-9
+        bg-white p-5 md:px-7 md:pb-8 md:pt-9
         transition-all duration-500
         ${
           card.featured
             ? `
-              z-10 overflow-visible rounded-[20px]
+              mt-2 md:mt-0 z-10 overflow-visible rounded-xl md:rounded-2xl
               border-t-3
               lineargradientblue
               text-white
@@ -98,10 +98,9 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
               hover:scale-[1.025]
               hover:bg-[linear-gradient(160deg,#1e2548_0%,#0f1530_55%,#0b1025_100%)]
               hover:shadow-[0_0_0_1px_#0068a8,0_36px_96px_rgba(37,99,235,.45),0_12px_32px_rgba(0,0,0,.5)]
-              
               border-t-sky-600
             `
-            : `rounded-[20px] border-t-4 border-r border-sky-400 border-r-white hover:z-[2] hover:-translate-y-1 hover:scale-[1.02] hover:bg-[#f4f7ff] hover:shadow-[0_20px_48px_rgba(12,11,29,.12),0_4px_12px_rgba(37,99,235,.06)]`
+            : `rounded-xl md:rounded-2xl border-t-4 border-r border-sky-400 border-r-white hover:z-[2] hover:-translate-y-1 hover:scale-[1.02] hover:bg-[#f4f7ff] hover:shadow-[0_20px_48px_rgba(12,11,29,.12),0_4px_12px_rgba(37,99,235,.06)]`
         }
       `}
     >
@@ -119,7 +118,7 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
         {card.tier}
       </span>
 
-      <h3 className={`text-2xl font-semibold leading-tight ${card.featured ? "text-white" : "text-[#0c0b1d]"}`}>
+      <h3 className={`text-xl md:text-2xl font-medium md:font-semibold leading-tight ${card.featured ? "text-white" : "text-[#0c0b1d]"}`}>
         {card.title}
       </h3>
 
@@ -128,7 +127,7 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
           from
         </span>
 
-        <span className={`text-2xl font-semibold ${card.featured ? "text-white" : "text-[#0c0b1d]"}`}>
+        <span className={`text-xl md:text-2xl font-medium md:font-semibold ${card.featured ? "text-white" : "text-[#0c0b1d]"}`}>
           {card.price}
         </span>
       </div>
@@ -167,11 +166,11 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
 const CostFactor = ({icon, title, items}: {icon: any; title: string; items: string[]}) => {
   return (
     <div className="flex-1">
-      <div className="mb-5 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2563eb]/10 text-lg text-sky-700">
+      <div className="mb-5 flex items-center gap-2 md:gap-3">
+        <div className="flex h-7 w-7 md:h-10 md:w-10 items-center justify-center rounded-full bg-[#2563eb]/10 text-lg text-sky-700">
           {icon}
         </div>
-        <h4 className="text-lg font-semibold text-[#0c0b1d]">{title}</h4>
+        <h4 className="text-base md:text-lg font-medium md:font-semibold text-[#0c0b1d]">{title}</h4>
       </div>
 
       <ul className="space-y-1">
@@ -207,9 +206,9 @@ const MobileAppCost = () => {
         {/* Pricing Cards */}
         <div
           className="
-            mb-10 grid
+            mb-4 md:mb-10 grid
             overflow-visible
-            rounded-[20px]
+            rounded-xl md:rounded-2xl
             border border-[#dde3f0]
             shadow-[0_8px_40px_rgba(12,11,29,.08),0_2px_8px_rgba(12,11,29,.04)]
             md:grid-cols-3
@@ -228,7 +227,7 @@ const MobileAppCost = () => {
             rounded-2xl
             border border-[#dde3f0]
             bg-white
-            p-8
+            p-4 md:p-8
             shadow-[0_8px_30px_rgba(12,11,29,.05)]
             md:flex-row
             max-md:flex-col

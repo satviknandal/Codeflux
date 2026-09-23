@@ -46,26 +46,11 @@ const MobileAppHero = () => {
       >
         {/* LEFT */}
         <div className="flex flex-col items-start">
-          {/* Eyebrow */}
-          <div
-            className="
-              mb-5
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border border-blue-400/20
-              bg-sky-500/10
-              px-4 py-2
-              text-sm
-              font-medium
-              text-blue-300
-            "
-          >
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/20">
+          <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-blue-400/15 bg-blue-400/10 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-blue-300">
+              <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-blue-500/20">
               <Smartphone size={15} />
-            </div>
-            Mobile App Development
+              </div>
+              Mobile App Development
           </div>
 
           {/* Heading */}

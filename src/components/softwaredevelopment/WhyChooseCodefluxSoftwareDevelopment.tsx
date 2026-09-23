@@ -98,7 +98,7 @@ const WhyChooseCodefluxSoftwareDevelopment: React.FC<WhyChooseCodefluxSoftwareDe
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs md:text-sm font-normal leading-[1.4] md:leading-[1.5] text-gray-300/80">
+                  <p className="text-sm md:text-sm font-normal leading-[1.4] md:leading-[1.5] text-gray-300/80">
                     {feature.description}
                   </p>
                 </div>

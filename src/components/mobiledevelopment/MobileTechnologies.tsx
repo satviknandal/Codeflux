@@ -223,7 +223,7 @@ const MobileTechnologies: React.FC = () => {
         />
 
         {/* Technology Cards */}
-        <div className="grid grid-cols-1 gap-[18px] md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {technologyCategories.map((category) => {
             const Icon = category.icon;
 
@@ -236,7 +236,7 @@ const MobileTechnologies: React.FC = () => {
                   flex
                   flex-col
                   overflow-hidden
-                  rounded-2xl
+                  rounded-xl md:rounded-2xl
                   border
                   border-gray-200
                   border-t-[3px]
@@ -267,12 +267,14 @@ const MobileTechnologies: React.FC = () => {
                   <div
                     className={`
                       flex
-                      h-[42px]
-                      w-[42px]
+                      w-[36px]
+                      h-[36px]
+                      md:h-9
+                      md:w-9
                       shrink-0
                       items-center
                       justify-center
-                      rounded-[10px]
+                      rounded-md md:rounded-lg
                       border
                       transition-transform
                       duration-300
@@ -281,20 +283,16 @@ const MobileTechnologies: React.FC = () => {
                       ${category.color.iconBorder}
                     `}
                   >
-                    <Icon
-                      size={18}
-                      strokeWidth={1.8}
-                      className={category.color.iconText}
-                    />
+                    <Icon size={18} strokeWidth={1.8} className={category.color.iconText}/>
                   </div>
 
-                  <h3 className="text-[20px] font-semibold leading-[1.2] text-[#0c0b1d]">
+                  <h3 className="text-base md:text-lg font-semibold leading-[1.2] text-[#0c0b1d]">
                     {category.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="relative z-10 mb-4 text-[15px] font-normal leading-[1.68] text-gray-500">
+                <p className="relative z-10 mb-4 text-[14px] font-normal leading-[1.65] text-gray-500">
                   {category.description}
                 </p>
 
@@ -302,7 +300,7 @@ const MobileTechnologies: React.FC = () => {
                 <div className="relative z-10 mb-[14px] h-px bg-[#eef0f8]" />
 
                 {/* Technology Tags */}
-                <div className="relative z-10 flex flex-wrap gap-[7px]">
+                <div className="relative z-10 flex flex-wrap gap-1.5">
                   {category.technologies.map((technology) => (
                     <span
                       key={technology}
@@ -337,30 +335,9 @@ const MobileTechnologies: React.FC = () => {
         </div>
 
         {/* Official Docs */}
-        <div
-          className="
-            mt-8
-            flex
-            flex-wrap
-            items-center
-            justify-center
-            gap-2
-            border-t
-            border-gray-200
-            pt-6
-          "
-        >
-          <span
-            className="
-              mr-1.5
-              whitespace-nowrap
-              text-[11px]
-              font-bold
-              uppercase
-              tracking-[0.08em]
-              text-gray-400
-            "
-          >
+       
+        <div className=" mt-8 flex flex-wrap items-center justify-center gap-2 border-t border-gray-200 pt-6">
+          <span className="mr-1.5 whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.08em] text-gray-400">
             Official Docs
           </span>
 

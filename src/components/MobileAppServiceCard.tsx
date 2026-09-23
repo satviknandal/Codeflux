@@ -13,7 +13,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
         grid grid-cols-1 md:grid-cols-2
         min-h-[380px]
         overflow-hidden
-        rounded-[20px]
+        rounded-xl md:rounded-[20px]
         border border-[#e4eaf4]
         bg-white
         shadow-[0_8px_40px_rgba(12,11,29,0.08)]
@@ -23,7 +23,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
       "
     >
       {/* Image */}
-      <div className={`relative min-h-[300px] overflow-hidden ${index % 2 !== 0 ? "md:order-2" : "md:order-1"}`}>
+      <div className={`relative min-h-[200px] md:min-h-[300px] overflow-hidden ${index % 2 !== 0 ? "md:order-2" : "md:order-1"}`}>
         <img
           src={data.image}
           alt="Native iOS app development"
@@ -65,7 +65,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
           {data.tag}
         </span>
 
-        <h3 className="mb-3 text-2xl font-semibold leading-[1.25] text-[#0c0b1d]">{data.title}</h3>
+        <h3 className="mb-3 text-lg md:text-2xl font-medium md:font-semibold leading-[1.25] text-[#0c0b1d]">{data.title}</h3>
 
         <span
           className="
@@ -89,7 +89,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
           {data.code}
         </span>
 
-        <p className="mb-5 text-[15px] font-normal leading-[1.72] text-gray-500">
+        <p className="mb-3 md:mb-5 text-sm md:text-[15px] font-normal leading-[1.5] md:leading-[1.72] text-gray-700">
           {data.description}
         </p>
 

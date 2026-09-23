@@ -79,7 +79,7 @@ const MobileSecurityCompliance = () => {
         />
 
         {/* Content */}
-        <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="grid grid-cols-1 items-stretch gap-2 md:gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Image */}
           <div className="relative flex flex-col">
             <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-[18px] shadow-[0_24px_64px_rgba(12,11,29,0.1)]">
@@ -111,7 +111,7 @@ const MobileSecurityCompliance = () => {
           </div>
 
           {/* Security Cards */}
-          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-2 md:gap-3.5 sm:grid-cols-2">
             {securityItems.map((item, index) => {
               const Icon = item.icon;
 

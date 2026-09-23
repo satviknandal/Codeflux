@@ -64,7 +64,7 @@ const MobileTechComparison = () => {
         />
 
         {/* Comparison Table */}
-        <div className="mb-5 overflow-hidden rounded-2xl border border-[#dde3f0] shadow-[0_4px_24px_rgba(12,11,29,0.06)]">
+        <div className="mb-2 md:mb-5 overflow-hidden rounded-xl md:rounded-2xl border border-[#dde3f0] shadow-[0_4px_24px_rgba(12,11,29,0.06)]">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[760px] border-collapse">
               <thead>
@@ -123,9 +123,9 @@ const MobileTechComparison = () => {
         </div>
 
         {/* Recommendation Cards */}
-        <div className="grid grid-cols-1 gap-[14px] md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2 md:gap-4 md:grid-cols-3">
           {/* Native */}
-          <div className="group relative flex flex-col overflow-hidden rounded-[14px] border border-[#dde3f0] bg-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(37,99,235,0.4)] hover:shadow-[0_14px_36px_rgba(12,11,29,0.08),0_4px_10px_rgba(37,99,235,0.07)]">
+          <div className="group relative flex flex-col overflow-hidden rounded-xl md:rounded-2xl border border-[#dde3f0] bg-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(37,99,235,0.4)] hover:shadow-[0_14px_36px_rgba(12,11,29,0.08),0_4px_10px_rgba(37,99,235,0.07)]">
             {/* Top Line */}
             <span className="absolute left-0 top-0 h-[3px] w-0 rounded-t-[14px] bg-[#2563eb] transition-all duration-500 ease-out group-hover:w-full" />
 
@@ -133,17 +133,17 @@ const MobileTechComparison = () => {
               Choose Native When
             </span>
 
-            <h3 className="mb-2 text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
+            <h3 className="mb-2 text-base md:text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
               Maximum Performance
             </h3>
 
-            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.62] text-[#6b7280]">
+            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.5] md:leading-[1.62] text-[#6b7280]">
               Deep device integration or absolute performance ceiling required.
             </p>
           </div>
 
           {/* Flutter - Featured */}
-          <div className="group relative flex flex-col overflow-hidden rounded-[14px] border border-[#2563eb] bg-gradient-to-br from-[#f0f5ff] to-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(37,99,235,0.14),0_4px_12px_rgba(37,99,235,0.1)]">
+          <div className="group relative flex flex-col overflow-hidden rounded-xl md:rounded-2xl border border-[#2563eb] bg-gradient-to-br from-[#f0f5ff] to-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(37,99,235,0.14),0_4px_12px_rgba(37,99,235,0.1)]">
             {/* Top Line */}
             <span className="absolute left-0 top-0 h-[3px] w-full rounded-t-[14px] bg-[#2563eb]" />
 
@@ -152,11 +152,11 @@ const MobileTechComparison = () => {
               Our Recommendation
             </span>
 
-            <h3 className="mb-2 text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
+            <h3 className="mb-2 text-base md:text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
               Flutter: Fastest to Market
             </h3>
 
-            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.62] text-[#6b7280]">
+            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.5] md:leading-[1.62] text-[#6b7280]">
               Our default for most new projects. Polished app on both
               platforms, launched faster.
             </p>
@@ -171,7 +171,7 @@ const MobileTechComparison = () => {
           </div>
 
           {/* React Native */}
-          <div className="group relative flex flex-col overflow-hidden rounded-[14px] border border-[#dde3f0] bg-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(37,99,235,0.4)] hover:shadow-[0_14px_36px_rgba(12,11,29,0.08),0_4px_10px_rgba(37,99,235,0.07)]">
+          <div className="group relative flex flex-col overflow-hidden rounded-xl md:rounded-2xl border border-[#dde3f0] bg-white p-5 pt-6 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(37,99,235,0.4)] hover:shadow-[0_14px_36px_rgba(12,11,29,0.08),0_4px_10px_rgba(37,99,235,0.07)]">
             {/* Top Line */}
             <span className="absolute left-0 top-0 h-[3px] w-0 rounded-t-[14px] bg-[#2563eb] transition-all duration-500 ease-out group-hover:w-full" />
 
@@ -179,11 +179,11 @@ const MobileTechComparison = () => {
               Choose RN When
             </span>
 
-            <h3 className="mb-2 text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
+            <h3 className="mb-2 text-base md:text-xl font-semibold leading-[1.25] text-[#0c0b1d]">
               JavaScript-Heavy Teams
             </h3>
 
-            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.62] text-[#6b7280]">
+            <p className="mb-[18px] flex-1 text-[14px] font-normal leading-[1.5] md:leading-[1.62] text-[#6b7280]">
               Strong JS/React experience or extending a web product into
               mobile.
             </p>

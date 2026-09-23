@@ -33,7 +33,7 @@ const MobileServices = ({
             subheading="Codeflux delivers custom mobile app development services for iOS, Android, and cross-platform applications. Our team builds secure, scalable, and user-ready mobile products for startups and enterprises worldwide."
             variant="default"
           />
-          <motion.div variants={CardContainerVariant} className={`mt-4 md:mt-8 flex flex-col gap-6 w-full md:${width}`}>
+          <motion.div variants={CardContainerVariant} className={`mt-0 md:mt-8 flex flex-col gap-6 w-full md:${width}`}>
             {data.map((item, index) => <MobileAppServiceCard key={index} index={index} data={item}/>)}
           </motion.div>
         </section>

@@ -95,7 +95,7 @@ const WhyChooseCodefluxMobile: React.FC<WhyChooseCodefluxMobileProps> = () => {
         />
 
         {/* Feature Cards */}
-        <div className="mb-[22px] grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
@@ -119,17 +119,17 @@ const WhyChooseCodefluxMobile: React.FC<WhyChooseCodefluxMobileProps> = () => {
 
                 <div className="relative z-[1]">
                   {/* Icon */}
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-[#2563eb]/30 bg-[#2563eb]/15 transition-all duration-300 group-hover:scale-[1.08] group-hover:border-sky-600 group-hover:bg-sky-400">
-                    <Icon className="text-[20px] text-sky-400 transition-colors duration-300 group-hover:text-white" />
+                  <div className="mb-4 flex w-10 h-10 md:h-12 md:w-12 items-center justify-center rounded-xl border border-[#2563eb]/30 bg-[#2563eb]/15 transition-all duration-300 group-hover:scale-[1.08] group-hover:border-sky-600 group-hover:bg-sky-400">
+                    <Icon className="text-[16px] md:text-[20px] text-sky-400 transition-colors duration-300 group-hover:text-white" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="mb-2.5 text-[18px] font-medium leading-[1.25] text-white">
+                  <h3 className="mb-2.5 text-base md:text-[18px] font-medium leading-[1.25] text-white">
                     {feature.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm font-normal leading-[1.5] text-gray-300/80">
+                  <p className="text-sm md:text-sm font-normal leading-[1.4] md:leading-[1.5] text-gray-300/80">
                     {feature.description}
                   </p>
                 </div>
