@@ -12,13 +12,11 @@ interface Card {
 
 interface WebDevelopmentServicesProps {
     data: Card[];
-    columns?: number;
     gap?: number | string;
 }
 
 const WebDevelopmentServices = ({
     data,
-    columns = 4,
     gap = 8
 }: WebDevelopmentServicesProps) => {
 

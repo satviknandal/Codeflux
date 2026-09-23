@@ -12,7 +12,7 @@ import WhyCodefluxforWebDevelopment from '../../components/webdev/WhyCodefluxfor
 const WebsiteDevelopmentServices = () => {
   
     const DigitalServices = () => {
-        return <WebDevelopmentServices columns={3} gap={16} data={DigitalServicesData}/>
+        return <WebDevelopmentServices gap={16} data={DigitalServicesData}/>
     }
 
   const pointers = [ 
