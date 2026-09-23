@@ -1,7 +1,7 @@
 import React from "react";
 import webuiuxbg from "../../assets/hero/webuiuxbg.svg";
 import uxbannerbg from "../../assets/hero/uxbg.webp";
-import { PaletteIcon, Smartphone } from "lucide-react";
+import { PaletteIcon } from "lucide-react";
 
 interface UIUXHeroProps {
   children?: React.ReactNode;
