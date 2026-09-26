@@ -34,6 +34,8 @@ const ContactForm = () => {
     },
   });
 
+  const initialSuccessMsg = { refNumber: "", message: "" };
+  const [successMsg, setSuccessMsg] = useState(initialSuccessMsg);
   const [successMessage, setSuccessMessage] = useState("");
   const [apiErrors, setApiErrors] = useState<ApiError[]>([]);
 
@@ -50,6 +52,7 @@ const ContactForm = () => {
 
   const onSubmit = async (formData: ContactFormData) => {
     setSuccessMessage("");
+    setSuccessMsg(initialSuccessMsg);
     setApiErrors([]);
 
     try {
@@ -85,6 +88,8 @@ const ContactForm = () => {
       setSuccessMessage(
         result.message || "Your message has been sent successfully."
       );
+      setSuccessMsg({ refNumber: result.id, message: result.message || "Your message has been sent successfully."})
+      
 
       reset();
     } catch (error) {
@@ -285,6 +290,8 @@ const ContactForm = () => {
           <p className="text-sm text-green-600">
             {successMessage}
           </p>
+          <p>
+            <strong>Reference Number</strong> {successMsg.refNumber}</p>
         </div>
       )}
 

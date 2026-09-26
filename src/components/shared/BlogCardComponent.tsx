@@ -34,7 +34,7 @@ const BlogCardComponent = ({ post }: { post: BlogPost }) => {
           </span>
         </div>
 
-        <h2 className="text-[14px] md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
+        <h2 className="text-[14px] md:text-base md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
           <a href={post.href}>{post.title}</a>
         </h2>
         <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mb-4">

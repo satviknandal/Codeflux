@@ -8,6 +8,33 @@ import {
 // import cloud from "../../assets/hero/cloud.png";
 import cloud from "../../assets/hero/cloud-computing-image2.png";
 
+
+{/* <section
+      className="
+        relative
+        overflow-hidden
+        bg-[#2d1255]
+        py-6
+        md:py-20
+        font-sans
+        text-white
+        before:pointer-events-none
+        before:absolute
+        before:inset-0
+        before:z-0
+        before:opacity-40
+        before:[background-image:radial-gradient(rgba(65,95,252,0.15)_1px,transparent_1px)]
+        before:[background-size:36px_36px]
+        after:absolute
+        after:left-0
+        after:right-0
+        after:top-0
+        after:z-[1]
+        after:h-px
+        after:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.7)_40%,rgba(255,255,255,0.9)_50%,rgba(255,255,255,0.7)_60%,transparent)]
+      "
+    ></section> */}
+
 // bg-[#381b65]
 const CloudSolutionsHero = () => {
   return (
@@ -15,7 +42,7 @@ const CloudSolutionsHero = () => {
       className="
         relative
         overflow-hidden
-        bg-[#2d1255]
+        bg-[#172250]
         py-6
         md:py-20
         font-sans

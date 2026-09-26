@@ -116,13 +116,13 @@ const BlogsPage = () => {
   const navigate = useNavigate();
 
   const renderLatestArticle = (post: BlogPost) => {
-    return <div className="mb-6">
-      <article className="grid grid-cols-1 lg:grid-cols-[40%_60%] md:gap-4 bg-white rounded-lg md:rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+    return <div className="mb-4 group">
+      <article className="grid grid-cols-1 lg:grid-cols-[40%_60%] md:gap-2 bg-white rounded-lg md:rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
         <div className="aspect-video relative overflow-hidden">
           <img
             src={post.image}
             alt={post.title}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
 
@@ -142,7 +142,7 @@ const BlogsPage = () => {
             </span>
           </div>
 
-          <h2 className="text-[14px] md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
+          <h2 className="text-[14px] md:text-base md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
             <a
               // href={post.href}
               onClick={() => navigate('blog1')}
@@ -197,7 +197,7 @@ const BlogsPage = () => {
           <p className="text-xl md:text-3xl font-medium text-gray-600 mb-4 md:mb-8">
             Featured <span className="text-sky-400">Articles</span>
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredBlogPosts.map((post) => (
               <BlogCardComponent key={post.href} post={post} />
             ))}
@@ -236,9 +236,6 @@ const BlogsPage = () => {
               <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/innovation/">Innovation</a>
               <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/automation/">Automation</a>
               <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/web-uiux/">Web UI/UX</a>
-              {/* <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/product/">App Development</a>
-              <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/odoo-erp/">Software Development</a>
-              <a className="bg-[#f5f7fa] text-xs font-medium border border-gray-200 px-3 py-2 rounded-full" href="/category/app-development/">Enterprise Development</a> */}
             </div>
           </div>
         </div>

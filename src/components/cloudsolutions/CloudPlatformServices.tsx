@@ -66,6 +66,7 @@ const CloudPlatformServices = ({
                 amount: 0.01,
               }}
               className="
+                group
                 flex
                 w-full
                 flex-col
@@ -82,12 +83,12 @@ const CloudPlatformServices = ({
             >
               {item.img && (
                 <div className="w-full overflow-hidden">
-                  <img src={item.img} alt={item.title} className="block h-auto max-h-[350px] w-full object-cover"/>
+                  <img src={item.img} alt={item.title} className="block h-auto max-h-[350px] w-full object-cover group-hover:scale-105 transition-transform duration-500"/>
                 </div>
               )}
 
               <div className="w-full p-4">
-                <div className="mb-2 text-sm font-semibold leading-5 text-black md:mb-4 md:text-lg">
+                <div className="mb-2 text-sm font-semibold leading-5 text-black md:mb-4 md:text-lg group-hover:text-sky-600 transition-colors">
                   {item.title}
                 </div>
 
@@ -110,6 +111,10 @@ const CloudPlatformServices = ({
                           text-xs
                           font-medium
                           text-gray-800
+                          group-hover:text-gray-600 transition-colors
+                          group-hover:bg-gradient-to-r
+                          group-hover:from-[#ebf7ff]
+                          group-hover:to-[#f5f5f5]
                         "
                       >
                         {tag}
