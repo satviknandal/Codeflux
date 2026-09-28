@@ -54,8 +54,8 @@ const ContactForm = () => {
     setSuccessMsg(initialSuccessMsg);
     setApiErrors([]);
 
-    const url = "http://127.0.0.1:8000/api/contact";
-    // const url = "https://codeflux.com.au/api/contact";
+    // const url = "http://127.0.0.1:8000/api/contact";
+    const url = "https://codeflux.com.au/api/contact";
 
     try {
       const response = await fetch(url, {
