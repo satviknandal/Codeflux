@@ -1,3 +1,4 @@
+import { CircleCheckBigIcon } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -34,9 +35,8 @@ const ContactForm = () => {
     },
   });
 
-  const initialSuccessMsg = { refNumber: "", message: "" };
+  const initialSuccessMsg = { refNumber: "", message: "", status: false };
   const [successMsg, setSuccessMsg] = useState(initialSuccessMsg);
-  const [successMessage, setSuccessMessage] = useState("");
   const [apiErrors, setApiErrors] = useState<ApiError[]>([]);
 
   const categories = [
@@ -51,12 +51,14 @@ const ContactForm = () => {
   ];
 
   const onSubmit = async (formData: ContactFormData) => {
-    setSuccessMessage("");
     setSuccessMsg(initialSuccessMsg);
     setApiErrors([]);
 
+    const url = "http://127.0.0.1:8000/api/contact";
+    // const url = "https://codeflux.com.au/api/contact";
+
     try {
-      const response = await fetch("https://codeflux.com.au/api/contact", {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,12 +87,12 @@ const ContactForm = () => {
       }
 
       // Success
-      setSuccessMessage(
-        result.message || "Your message has been sent successfully."
-      );
-      setSuccessMsg({ refNumber: result.id, message: result.message || "Your message has been sent successfully."})
+      setSuccessMsg({ 
+        status: true,
+        refNumber: result.data.referenceNumber,
+        message: result.message || "Your message has been sent successfully."
+      })
       
-
       reset();
     } catch (error) {
       console.error(error);
@@ -105,8 +107,9 @@ const ContactForm = () => {
     }
   };
 
-  return (
-    <form
+
+  const RenderForm = () => {
+    return <form
       noValidate
       className="w-full md:w-1/2 flex flex-col gap-3 md:gap-5"
       onSubmit={handleSubmit(onSubmit)}
@@ -284,16 +287,7 @@ const ContactForm = () => {
         </div>
       )}
 
-      {/* SUCCESS */}
-      {successMessage && (
-        <div className="p-3 rounded-lg bg-green-50 border border-green-200">
-          <p className="text-sm text-green-600">
-            {successMessage}
-          </p>
-          <p>
-            <strong>Reference Number</strong> {successMsg.refNumber}</p>
-        </div>
-      )}
+      
 
       {/* BUTTON */}
       <div className="mt-2 flex w-full justify-start">
@@ -303,7 +297,43 @@ const ContactForm = () => {
         </button>
       </div>
     </form>
-  );
+  }
+
+  const RenderSuccessMsg = () => {
+    return <div className="p-4 md:p-16 rounded-lg bg-gray-50 border border-gray-100 w-full md:w-1/2 flex flex-col items-center gap-3 md:gap-5">
+      <CircleCheckBigIcon className="w-16 h-16 block text-green-600"/>
+      <h3 className="text-2xl font-medium text-green-600">Submission Successful!</h3>
+      <p>Thank You! The form has been submitted successfully. We will reply to you soon! You will receive a confirmation email within the next few mins.</p>
+      <p className="my-4 text-md">
+        Reference Number: <span className="text-md font-semibold mr-2">{successMsg.refNumber}</span>
+      </p>
+      <button className="
+            cursor-pointer
+            hidden
+            md:inline-flex
+            min-h-6
+            md:min-h-12
+            items-center
+            rounded-full
+            bg-green-50
+            border
+            border-green-600
+            text-green-600
+            px-4
+            md:px-7
+            text-xs
+            md:text-[14px]
+            md:font-medium
+            transition-all
+            duration-300
+            hover:scale-[1.03]
+            hover:shadow-[0_0_25px_rgba(0,166,61,0.25)]
+          "
+          onClick={() => setSuccessMsg(initialSuccessMsg)}>Back to Form</button>
+    </div>
+  }
+
+  return successMsg && successMsg.status === false ? <RenderForm/> : <RenderSuccessMsg/>;
 };
 
 export default ContactForm;
