@@ -17,108 +17,70 @@ interface ApiError {
   type: string;
 }
 
-const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ContactFormData>({
-    mode: "onSubmit",
-    defaultValues: {
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      services: [],
-      message: "",
-    },
-  });
+interface SuccessMessage {
+  refNumber: string;
+  message: string;
+  status: boolean;
+}
 
-  const initialSuccessMsg = { refNumber: "", message: "", status: false };
-  const [successMsg, setSuccessMsg] = useState(initialSuccessMsg);
-  const [apiErrors, setApiErrors] = useState<ApiError[]>([]);
+interface RenderFormProps {
+  register: ReturnType<typeof useForm<ContactFormData>>["register"];
+  handleSubmit: ReturnType<typeof useForm<ContactFormData>>["handleSubmit"];
+  errors: ReturnType<typeof useForm<ContactFormData>>["formState"]["errors"];
+  onSubmit: (formData: ContactFormData) => Promise<void>;
+  apiErrors: ApiError[];
+  isSubmitting: boolean;
+}
 
-  const categories = [
-    "AI Consulting",
-    "AI Services",
-    "Software Development",
-    "Web Development",
-    "Web Design UI/UX",
-    "Mobile App Development",
-    "Cloud Solutions",
-    "Other",
-  ];
+interface RenderSuccessMsgProps {
+  successMsg: SuccessMessage;
+  onBackToForm: () => void;
+}
 
-  const onSubmit = async (formData: ContactFormData) => {
-    setSuccessMsg(initialSuccessMsg);
-    setApiErrors([]);
+const categories = [
+  "AI Consulting",
+  "AI Services",
+  "Software Development",
+  "Web Development",
+  "Web Design UI/UX",
+  "Mobile App Development",
+  "Cloud Solutions",
+  "Other",
+];
 
-    // const url = "http://127.0.0.1:8000/api/contact";
-    const url = "https://codeflux.com.au/api/contact";
+/* =========================================================
+   FORM COMPONENT
+========================================================= */
 
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      // FastAPI validation error
-      if (response.status === 422) {
-        setApiErrors(result.detail || []);
-        return;
-      }
-
-      // Other API errors
-      if (!response.ok) {
-        setApiErrors([
-          {
-            loc: [],
-            msg: result.message || "Something went wrong. Please try again.",
-            type: "api_error",
-          },
-        ]);
-        return;
-      }
-
-      // Success
-      setSuccessMsg({ 
-        status: true,
-        refNumber: result.data.referenceNumber,
-        message: result.message || "Your message has been sent successfully."
-      })
-      
-      reset();
-    } catch (error) {
-      console.error(error);
-
-      setApiErrors([
-        {
-          loc: [],
-          msg: "Unable to connect to the server. Please try again later.",
-          type: "network_error",
-        },
-      ]);
-    }
-  };
-
-
-  const RenderForm = () => {
-    return <form
+const RenderForm = ({
+  register,
+  handleSubmit,
+  errors,
+  onSubmit,
+  apiErrors,
+  isSubmitting,
+}: RenderFormProps) => {
+  return (
+    <form
       noValidate
       className="w-full md:w-1/2 flex flex-col gap-3 md:gap-5"
       onSubmit={handleSubmit(onSubmit)}
     >
       {/* NAME */}
       <div className="flex flex-col gap-1 items-start">
-        <label className={`text-sm font-medium text-gray-800 ${errors.name ? "text-red-600" : "text-gray-800"}`}>Name</label>
+        <label
+          htmlFor="name"
+          className={`text-sm font-medium ${
+            errors.name ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          Name
+        </label>
 
         <input
+          id="name"
+          type="text"
+          autoComplete="name"
           {...register("name", {
             required: "Name is required",
             maxLength: {
@@ -136,14 +98,28 @@ const ContactForm = () => {
           }`}
         />
 
-        {errors.name && <span className="text-xs text-red-600">{errors.name.message}</span>}
+        {errors.name && (
+          <span className="text-xs text-red-600">
+            {errors.name.message}
+          </span>
+        )}
       </div>
 
       {/* EMAIL */}
       <div className="flex flex-col gap-1 items-start">
-        <label className={`text-sm font-medium text-gray-800 ${errors.email ? "text-red-600" : "text-gray-800"}`}>Email</label>
+        <label
+          htmlFor="email"
+          className={`text-sm font-medium ${
+            errors.email ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          Email
+        </label>
 
         <input
+          id="email"
+          type="email"
+          autoComplete="email"
           {...register("email", {
             required: "Email is required",
             validate: (value) =>
@@ -158,14 +134,28 @@ const ContactForm = () => {
           }`}
         />
 
-        {errors.email && <span className="text-xs text-red-600">{errors.email.message}</span>}
+        {errors.email && (
+          <span className="text-xs text-red-600">
+            {errors.email.message}
+          </span>
+        )}
       </div>
 
       {/* COMPANY */}
       <div className="flex flex-col gap-1 items-start">
-        <label className={`text-sm font-medium text-gray-800 ${errors.company ? "text-red-600" : "text-gray-800"}`}>Company Name</label>
+        <label
+          htmlFor="company"
+          className={`text-sm font-medium ${
+            errors.company ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          Company Name
+        </label>
 
         <input
+          id="company"
+          type="text"
+          autoComplete="organization"
           {...register("company", {
             required: "Company name is required",
             maxLength: {
@@ -183,14 +173,29 @@ const ContactForm = () => {
           }`}
         />
 
-        {errors.company && <span className="text-xs text-red-600">{errors.company.message}</span>}
+        {errors.company && (
+          <span className="text-xs text-red-600">
+            {errors.company.message}
+          </span>
+        )}
       </div>
 
       {/* PHONE */}
       <div className="flex flex-col gap-1 items-start">
-        <label className={`text-sm font-medium text-gray-800 ${errors.phone ? "text-red-600" : "text-gray-800"}`}>Phone Number</label>
+        <label
+          htmlFor="phone"
+          className={`text-sm font-medium ${
+            errors.phone ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          Phone Number
+        </label>
 
         <input
+          id="phone"
+          type="tel"
+          inputMode="numeric"
+          autoComplete="tel"
           {...register("phone", {
             required: "Phone number is required",
             validate: (value) =>
@@ -198,7 +203,10 @@ const ContactForm = () => {
               "Phone number must contain 8-10 digits",
           })}
           placeholder="Enter your phone number"
-          inputMode="numeric"
+          onInput={(event) => {
+            const input = event.currentTarget;
+            input.value = input.value.replace(/\D/g, "").slice(0, 10);
+          }}
           className={`w-full px-2 md:px-4 py-2 md:py-3 border rounded-sm md:rounded-md text-xs md:text-sm outline-none transition box-border ${
             errors.phone
               ? "border-red-500"
@@ -206,45 +214,67 @@ const ContactForm = () => {
           }`}
         />
 
-        {errors.phone && <span className="text-xs text-red-600">{errors.phone.message}</span>}
+        {errors.phone && (
+          <span className="text-xs text-red-600">
+            {errors.phone.message}
+          </span>
+        )}
       </div>
 
       {/* SERVICES */}
       <div className="flex flex-col gap-3">
-        <label className={`text-sm font-medium text-gray-800 ${errors.services ? "text-red-600" : "text-gray-800"}`}>What are you interested in?</label>
+        <label
+          className={`text-sm font-medium ${
+            errors.services ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          What are you interested in?
+        </label>
 
         <div className="flex flex-wrap gap-3">
           {categories.map((item) => (
-            <div className="w-full md:w-[45%] flex cursor-pointer items-center gap-2.5">
-            <label
+            <div
               key={item}
-              className="flex items-center gap-1 md:gap-2 text-xs md:text-[14px] font-normal text-gray-900 cursor-pointer"
+              className="w-full md:w-[45%] flex cursor-pointer items-center gap-2.5"
             >
-              <input
-                type="checkbox"
-                value={item}
-                {...register("services", {
-                  validate: (value) =>
-                    value?.length > 0 ||
-                    "Please select at least one service",
-                })}
-                className="w-3.5 h-3.5 md:h-5 md:w-5 cursor-pointer appearance-none rounded-[4px] border border-[#4b497e] bg-white transition checked:border-[#632499] checked:bg-[#692cda] focus:ring-2 focus:ring-[#3ca1ff]/30"
-              />
+              <label className="flex items-center gap-1 md:gap-2 text-xs md:text-[14px] font-normal text-gray-900 cursor-pointer">
+                <input
+                  type="checkbox"
+                  value={item}
+                  {...register("services", {
+                    validate: (value) =>
+                      value?.length > 0 ||
+                      "Please select at least one service",
+                  })}
+                  className="w-3.5 h-3.5 md:h-5 md:w-5 cursor-pointer appearance-none rounded-[4px] border border-[#4b497e] bg-white transition checked:border-[#632499] checked:bg-[#692cda] focus:ring-2 focus:ring-[#3ca1ff]/30"
+                />
 
-              {item}
-            </label>
+                {item}
+              </label>
             </div>
           ))}
         </div>
 
-        {errors.services && <span className="text-xs text-red-600">{errors.services.message}</span>}
+        {errors.services && (
+          <span className="text-xs text-red-600">
+            {errors.services.message}
+          </span>
+        )}
       </div>
 
       {/* MESSAGE */}
       <div className="flex flex-col gap-1 items-start mt-2">
-        <label className={`text-sm font-medium text-gray-800 ${errors.message ? "text-red-600" : "text-gray-800"}`}>How Can We Help You?</label>
+        <label
+          htmlFor="message"
+          className={`text-sm font-medium ${
+            errors.message ? "text-red-600" : "text-gray-800"
+          }`}
+        >
+          How Can We Help You?
+        </label>
 
         <textarea
+          id="message"
           {...register("message", {
             required: "Message is required",
             validate: (value) => {
@@ -273,7 +303,11 @@ const ContactForm = () => {
           }`}
         />
 
-        {errors.message && <span className="text-xs text-red-600">{errors.message.message}</span>}
+        {errors.message && (
+          <span className="text-xs text-red-600">
+            {errors.message.message}
+          </span>
+        )}
       </div>
 
       {/* API ERROR */}
@@ -287,53 +321,229 @@ const ContactForm = () => {
         </div>
       )}
 
-      
-
       {/* BUTTON */}
       <div className="mt-2 flex w-full justify-start">
-        <button type="submit" className="cursor-pointer group relative w-full overflow-hidden rounded-full bg-[#271b5a] px-8 py-3.5 text-center text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#433389] hover:shadow-lg sm:w-auto sm:min-w-[180px]">
-            <span className="relative z-10 text-base font-medium">Submit here</span>
-            <span className="absolute inset-0 rounded-[5px] border border-[#1f1e40] transition-all duration-300 group-hover:scale-[1.02]"></span>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={`cursor-pointer group relative w-full overflow-hidden rounded-full bg-[#271b5a] px-8 py-3.5 text-center text-white transition-all duration-300 sm:w-auto sm:min-w-[180px] ${
+            isSubmitting
+              ? "opacity-70 cursor-not-allowed"
+              : "hover:-translate-y-0.5 hover:bg-[#433389] hover:shadow-lg"
+          }`}
+        >
+          <span className="relative z-10 text-base font-medium">
+            {isSubmitting ? "Submitting..." : "Submit here"}
+          </span>
+
+          <span className="absolute inset-0 rounded-[5px] border border-[#1f1e40] transition-all duration-300 group-hover:scale-[1.02]" />
         </button>
       </div>
     </form>
-  }
+  );
+};
 
-  const RenderSuccessMsg = () => {
-    return <div className="p-4 md:p-16 rounded-lg bg-gray-50 border border-gray-100 w-full md:w-1/2 flex flex-col items-center gap-3 md:gap-5">
-      <CircleCheckBigIcon className="w-16 h-16 block text-green-600"/>
-      <h3 className="text-2xl font-medium text-green-600">Submission Successful!</h3>
-      <p>Thank You! The form has been submitted successfully. We will reply to you soon! You will receive a confirmation email within the next few mins.</p>
-      <p className="my-4 text-md">
-        Reference Number: <span className="text-md font-semibold mr-2">{successMsg.refNumber}</span>
+/* =========================================================
+   SUCCESS COMPONENT
+========================================================= */
+
+const RenderSuccessMsg = ({
+  successMsg,
+  onBackToForm,
+}: RenderSuccessMsgProps) => {
+  return (
+    <div className="p-4 md:p-16 rounded-lg bg-gray-50 border border-gray-100 w-full md:w-1/2 flex flex-col items-center gap-3 md:gap-5">
+      <CircleCheckBigIcon className="w-16 h-16 block text-green-600" />
+
+      <h3 className="text-2xl font-medium text-green-600 text-center">
+        Submission Successful!
+      </h3>
+
+      <p className="text-sm md:text-base text-gray-700">
+        Thank You! The form has been submitted successfully. We will reply
+        to you soon! You will receive a confirmation email within the next
+        few mins.
       </p>
-      <button className="
-            cursor-pointer
-            hidden
-            md:inline-flex
-            min-h-6
-            md:min-h-12
-            items-center
-            rounded-full
-            bg-green-50
-            border
-            border-green-600
-            text-green-600
-            px-4
-            md:px-7
-            text-xs
-            md:text-[14px]
-            md:font-medium
-            transition-all
-            duration-300
-            hover:scale-[1.03]
-            hover:shadow-[0_0_25px_rgba(0,166,61,0.25)]
-          "
-          onClick={() => setSuccessMsg(initialSuccessMsg)}>Back to Form</button>
-    </div>
-  }
 
-  return successMsg && successMsg.status === false ? <RenderForm/> : <RenderSuccessMsg/>;
+      {successMsg.message && (
+        <p className="text-sm text-gray-700 text-center">
+          {successMsg.message}
+        </p>
+      )}
+
+      <p className="my-4 text-md">
+        Reference Number:{" "}
+        <span className="text-md font-semibold mr-2">
+          {successMsg.refNumber}
+        </span>
+      </p>
+
+      <button
+        type="button"
+        className="
+          cursor-pointer
+          hidden
+          md:inline-flex
+          min-h-6
+          md:min-h-12
+          items-center
+          rounded-full
+          bg-green-50
+          border
+          border-green-600
+          text-green-600
+          px-4
+          md:px-7
+          text-xs
+          md:text-[14px]
+          md:font-medium
+          transition-all
+          duration-300
+          hover:scale-[1.03]
+          hover:shadow-[0_0_25px_rgba(0,166,61,0.25)]
+        "
+        onClick={onBackToForm}
+      >
+        Back to Form
+      </button>
+    </div>
+  );
+};
+
+/* =========================================================
+   MAIN COMPONENT
+========================================================= */
+
+const ContactForm = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    mode: "onSubmit",
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      services: [],
+      message: "",
+    },
+  });
+
+  const initialSuccessMsg: SuccessMessage = {
+    refNumber: "",
+    message: "",
+    status: false,
+  };
+
+  const [successMsg, setSuccessMsg] =
+    useState<SuccessMessage>(initialSuccessMsg);
+
+  const [apiErrors, setApiErrors] = useState<ApiError[]>([]);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (formData: ContactFormData) => {
+    setSuccessMsg(initialSuccessMsg);
+    setApiErrors([]);
+    setIsSubmitting(true);
+
+    const url = "https://codeflux.com.au/api/contact";
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      let result;
+
+      try {
+        result = await response.json();
+      } catch {
+        result = {};
+      }
+
+      /* =====================================================
+         FASTAPI VALIDATION ERROR
+      ===================================================== */
+
+      if (response.status === 422) {
+        setApiErrors(result.detail || []);
+        return;
+      }
+
+      /* =====================================================
+         OTHER API ERRORS
+      ===================================================== */
+
+      if (!response.ok) {
+        setApiErrors([
+          {
+            loc: [],
+            msg:
+              result.message ||
+              "Something went wrong. Please try again.",
+            type: "api_error",
+          },
+        ]);
+
+        return;
+      }
+
+      /* =====================================================
+         SUCCESS
+      ===================================================== */
+
+      setSuccessMsg({
+        status: true,
+        refNumber: result?.data?.referenceNumber || "",
+        message:
+          result?.message ||
+          "Your message has been sent successfully.",
+      });
+
+      reset();
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      setApiErrors([
+        {
+          loc: [],
+          msg: "Unable to connect to the server. Please try again later.",
+          type: "network_error",
+        },
+      ]);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleBackToForm = () => {
+    setSuccessMsg(initialSuccessMsg);
+    setApiErrors([]);
+  };
+
+  return successMsg.status ? (
+    <RenderSuccessMsg
+      successMsg={successMsg}
+      onBackToForm={handleBackToForm}
+    />
+  ) : (
+    <RenderForm
+      register={register}
+      handleSubmit={handleSubmit}
+      errors={errors}
+      onSubmit={onSubmit}
+      apiErrors={apiErrors}
+      isSubmitting={isSubmitting}
+    />
+  );
 };
 
 export default ContactForm;
