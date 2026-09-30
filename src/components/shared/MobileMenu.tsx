@@ -65,10 +65,10 @@ const navigationOtherlinks: ServiceCategory[] = [
       label: "About Us",
       link: "/aboutus"
     },
-    {
-      label: "Team",
-      link: "/team"
-    },
+    // {
+    //   label: "Team",
+    //   link: "/team"
+    // },
     {
       label: "Blogs",
       link: "/blogs"

@@ -9,7 +9,7 @@ import SoftwareDevelopmentServices from "./pages/services/SoftwareDevelopmentSer
 import CloudSolutionServices from "./pages/services/CloudSolutionServices";
 import WebDesignUX from "./pages/services/WebDesignUX";
 import ContactusPage from "./pages/ContactusPage";
-import TeamPage from "./pages/TeamPage";
+// import TeamPage from "./pages/TeamPage";
 import CareersPage from "./pages/CareersPage";
 import ClientStoriesPage from "./pages/ClientStoriesPage";
 import AIServices from "./pages/services/AIServices";
@@ -30,6 +30,7 @@ import MobileAppServices from "./pages/services/MobileAppServices";
 import WebsiteDevelopmentServices from "./pages/services/WebsiteDevelopmentServices";
 import AgenticAIBlog from "./pages/blogs/AgenticAIBlog";
 import AIAdoptionBlog from "./pages/blogs/AIAdoptionBlog";
+import TalentPage from "./pages/TalentPage";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
             { index: true, element: <HomePage />},
             { path: "/aboutus", element: <AboutusPage /> },
             { path: "/contactus", element: <ContactusPage /> },
-            { path: "/team", element: <TeamPage /> },
+            // { path: "/team", element: <TeamPage /> },
             { path: "/careers", element: <CareersPage /> },
             { path: "/clientstories", element: <ClientStoriesPage /> },
             { path: "/services", element: <ServicesPage /> },
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
             { path: "/services/mobileappservices", element: <MobileAppServices /> },
             { path: "/privacypolicy", element: <PrivacyPolicyPage /> },
             { path: "/termsofservice", element: <TermsofServicePage /> },
+            { path: "/talent", element: <TalentPage /> },
             { path: "/blogs", element: <BlogsPage /> },
             { path: "/blog1", element: <Blog1 /> },
             { path: "/inframigrationblog", element: <InfraMigrationBlog /> },
@@ -63,7 +65,6 @@ const router = createBrowserRouter([
             { path: "/agileinnovationblog", element: <AgileInnovationBlog /> },
             { path: "/agenticaiblog", element: <AgenticAIBlog /> },
             { path: "/aiadoptionblog", element: <AIAdoptionBlog /> },
-            
             { path: "/digitalTranformationBlog", element: <DigitalTransformationBlog /> },
             
             

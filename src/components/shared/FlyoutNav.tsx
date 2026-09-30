@@ -73,11 +73,11 @@ const navigationlinks = {
       link: "/aboutus",
       icon: BrainCircuit,
     },
-    {
-      label: "Team",
-      link: "/team",
-      icon: BrainCircuit,
-    },
+    // {
+    //   label: "Team",
+    //   link: "/team",
+    //   icon: BrainCircuit,
+    // },
     {
       label: "Blogs",
       link: "/blogs",

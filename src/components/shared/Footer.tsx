@@ -48,10 +48,10 @@ const footerLinks = {
       label: "About Us",
       path: "aboutus",
     },
-    {
-      label: "Team",
-      path: "team",
-    },
+    // {
+    //   label: "Team",
+    //   path: "team",
+    // },
     {
       label: "Client Stories",
       path: "clientstories",
