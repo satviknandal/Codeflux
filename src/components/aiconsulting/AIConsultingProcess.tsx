@@ -8,6 +8,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 interface ProcessStep {
   number: string;
@@ -199,6 +201,12 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
 const AIConsultingProcess = () => {
   const firstRow = processSteps.slice(0, 4);
   const secondRow = processSteps.slice(4, 8);
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
 
   return (
     <section className="py-6 md:py-16 relative overflow-hidden bg-white">
@@ -336,9 +344,10 @@ const AIConsultingProcess = () => {
 
         {/* CTA */}
         <div className="mt-[30px] md:mt-[52px] flex justify-center">
-          <a
-            href="#contact-us"
+          <button
+            onClick={handleContactUs}
             className="
+              cursor-pointer
               inline-flex
               items-center
               gap-[9px]
@@ -357,7 +366,7 @@ const AIConsultingProcess = () => {
           >
             Talk to Our AI Consulting Team
             <ArrowRight size={14} />
-          </a>
+          </button>
         </div>
       </div>
     </section>

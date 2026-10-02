@@ -3,7 +3,7 @@ import BreadCrumbNav from '../components/BreadcrumbNav';
 type PrivacyContentBlock =
   | {
       type: "paragraph";
-      text: string;
+      text: React.ReactNode;
     }
   | {
       type: "list";
@@ -20,11 +20,11 @@ const privacyPolicyContent: PrivacySection[] = [
     content: [
       {
         type: "paragraph",
-        text: `Appolo Intelligence Pty Ltd (“Appolo”, “we”, “us”, or “our”) is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and disclose personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).`,
+        text: `Codeflux Pty Ltd is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and disclose personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).`,
       },
       {
         type: "paragraph",
-        text: `This policy applies to information collected through our website www.appolo.com.au and in the course of providing our services.`,
+        text: `This policy applies to information collected through our website www.codeflux.com.au and in the course of providing our services.`,
       },
     ],
   },
@@ -159,11 +159,29 @@ const privacyPolicyContent: PrivacySection[] = [
   {
     title: "11. Contact",
     content: [
-      {
-        type: "paragraph",
-        text: "For privacy enquiries or to exercise your rights, contact us at appolo.com.au/contact or email hello@appolo.com.au.",
-      },
-    ],
+    {
+      type: "paragraph",
+      text: (
+        <>
+          For privacy enquiries or to exercise your rights, contact us at{" "}
+          <a
+            href="/contactus"
+            className="text-[#3692ff] hover:underline"
+          >
+            codeflux.com.au/contactus
+          </a>{" "}
+          or email{" "}
+          <a
+            href="mailto:sales@codeflux.com.au"
+            className="text-[#3692ff] hover:underline"
+          >
+            sales@codeflux.com.au
+          </a>
+          .
+        </>
+      ),
+    },
+  ],
   },
 ];
 

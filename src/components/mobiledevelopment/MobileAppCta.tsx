@@ -1,5 +1,15 @@
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 const MobileAppCta = () => {
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+
+  
   return (
     <section
       id="sdlc-cta-section"
@@ -57,9 +67,10 @@ const MobileAppCta = () => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-[14px]">
-            <a
-              href="#contact-us"
+            <button
+              onClick={handleContactUs}
               className="
+                cursor-pointer
                 group/primary
                 inline-flex
                 items-center
@@ -85,7 +96,7 @@ const MobileAppCta = () => {
               <span>Book a Free Strategy Call</span>
 
               <span className="text-xs">→</span>
-            </a>
+            </button>
           </div>
 
           {/* Trust Points */}

@@ -10,6 +10,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 interface ProcessStep {
   number: string;
@@ -275,6 +277,12 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
 const MobileAppDevelopmentProcess = () => {
   const firstRow = processSteps.slice(0, 3);
   const secondRow = processSteps.slice(3, 6);
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
 
   return (
     <section aria-label="Mobile app development process" className="py-6 md:py-20 relative overflow-hidden bg-sky-500 font-sans">
@@ -471,9 +479,10 @@ const MobileAppDevelopmentProcess = () => {
 
         {/* CTA */}
         <div className="mt-[52px] flex justify-center">
-          <a
-            href="#contact-us"
+          <button
+            onClick={handleContactUs}
             className="
+              cursor-pointer
               inline-flex
               items-center
               gap-[9px]
@@ -492,7 +501,7 @@ const MobileAppDevelopmentProcess = () => {
           >
             Start Your Project
             <ArrowRight size={14} />
-          </a>
+          </button>
         </div>
       </div>
     </section>

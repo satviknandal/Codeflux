@@ -16,7 +16,7 @@ interface LocationAddress {
 
 const locations = [
   { name: "sydney", className: "right-[23.5%] bottom-[16%]" },
-  { name: "delhi", className: "left-[24%] top-[24%]" },
+  { name: "gurugram", className: "left-[24%] top-[24%]" },
   { name: "singapore", className: "left-[41%] top-[46%]" },
   { name: "perth", className: "left-[48.5%] bottom-[18%]" },
 ];
@@ -24,31 +24,31 @@ const locations = [
 const addressDetails: LocationAddress[] = [
   {
     name: 'sydney',
-    street: '55 Pyrmont Bridge Road, Pyrmont,',
+    street: 'Guildford Rd, Guildford',
     state: 'Sydney',
-    pin: '2009',
-    phone: '+61 2 8123 0997'
+    pin: '2161',
+    phone: '+61 478 575 587'
   },
   {
-    name: 'delhi',
-    street: '55 Pyrmont Bridge Road, Pyrmont,',
-    state: 'Delhi',
-    pin: '110043',
-    phone: '+91 2 8123 0997'
+    name: 'gurugram',
+    street: 'Gwal Pahari, Gurugram',
+    state: 'Haryana',
+    pin: '122003',
+    phone: '+91 9717055004'
   },
   {
     name: 'singapore',
-    street: '55 Pyrmont Bridge Road, Pyrmont,',
+    street: '1 stars Avenue, Singapore',
     state: 'Singapore',
-    pin: '34651',
-    phone: '+65 2 8123 0997'
+    pin: '138507',
+    phone: '+65 81133671'
   },
   {
     name: 'perth',
-    street: '55 Pyrmont Bridge Road, Pyrmont,',
-    state: 'Western Austraalia',
-    pin: '2009',
-    phone: '+61 2 8123 0997'
+    street: 'Aquila Loop, Piara Waters',
+    state: 'Western Australia',
+    pin: '6112',
+    phone: '+61 478 575 587'
   }
 ];
 

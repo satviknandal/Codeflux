@@ -31,7 +31,7 @@ const latestBlogPosts: Array<BlogPost> = [
     category: "Tech",
     readTime: "7 min read",
     description: "From strategy and AI assessment to implementation, scaling, and continuous governance, along with real-world best practices and common AI adoption challenges to avoid, this guide offers you a comprehensive, actionable insight on adopting AI successfully.",
-    date: "December 15, 2025",
+    date: "September 15, 2025",
     href: "/aiadoptionblog",
     image: aiadoption
   },

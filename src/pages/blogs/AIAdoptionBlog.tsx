@@ -590,7 +590,7 @@ const AIAdoptionBlog = () => {
       <BlogsHeader
         data={{
           category: 'Tech', 
-          date: '10 August 2026', 
+          date: '15 September 2026', 
           title: 'AI Adoption Framework: How Enterprises Structure Their AI Initiatives',
           desc: ""
         }}

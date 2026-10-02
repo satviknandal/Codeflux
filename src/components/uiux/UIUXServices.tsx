@@ -1,5 +1,7 @@
 import { ArrowRight, Boxes, Check, Gauge, LayoutGrid, Lightbulb, PenTool, RefreshCw, Search, Smartphone, Star, Users, } from "lucide-react"; 
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 const services = [ 
     { icon: Smartphone, title: "Mobile App UI/UX Design", text: "Native iOS and Android interfaces with Figma handoff, auto-layout, and motion specs.", }, 
@@ -14,6 +16,13 @@ const services = [
 
 
 const UiUXServices = () => {
+  const navigate = useNavigate();
+  
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+
   return (
     <section className="mx-auto bg-white font-sans text-[#0c0b1d]">
         <div className="container-wrapper-transparent py-6 sm:py-[50px] lg:py-20">
@@ -211,9 +220,10 @@ const UiUXServices = () => {
 
       {/* CTA */}
       <div className="mt-12 text-center">
-        <a
-          href="#contact-us"
+        <button
+          onClick={handleContactUs}
           className="
+            cursor-pointer
             inline-flex items-center gap-2.5
             rounded-lg bg-sky-600
             px-[30px] py-3.5
@@ -227,7 +237,7 @@ const UiUXServices = () => {
         >
           Start Your UI/UX Project
           <ArrowRight size={18} strokeWidth={2} />
-        </a>
+        </button>
       </div>
         </div>
 

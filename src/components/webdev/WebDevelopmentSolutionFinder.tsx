@@ -10,6 +10,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 type Solution = {
   id: string;
@@ -130,9 +132,14 @@ const solutions: Solution[] = [
 ];
 
 const WebDevelopmentSolutionFinder: React.FC = () => {
+  const navigate = useNavigate();
   const [activeId, setActiveId] = useState("business");
-
   const activeSolution = solutions.find((solution) => solution.id === activeId) ?? solutions[0];
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
 
   return (
    <section className="py-6 md:py-16 relative overflow-hidden bg-sky-500 py-[90px] font-sans">
@@ -289,9 +296,10 @@ const WebDevelopmentSolutionFinder: React.FC = () => {
 
         {/* CTA */}
         <div className="mt-11 text-center">
-          <a
-            href="#contact-us"
+          <button
+            onClick={handleContactUs}
             className="
+              cursor-pointer
               group relative inline-flex items-center gap-[9px]
               overflow-hidden rounded-[10px]
               bg-sky-600 px-[34px] py-[15px]
@@ -324,7 +332,7 @@ const WebDevelopmentSolutionFinder: React.FC = () => {
                 group-hover:translate-x-1
               "
             />
-          </a>
+          </button>
         </div>
       </div>
 

@@ -6,8 +6,17 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 const MobileAppHero = () => {
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+
   return (
     <section
       className="
@@ -159,9 +168,10 @@ const MobileAppHero = () => {
 
           {/* CTA */}
           <div className="mt-9">
-            <a
-              href="#contact-us"
+            <button
+              onClick={handleContactUs}
               className="
+                cursor-pointer
                 group
                 inline-flex
                 items-center
@@ -191,7 +201,7 @@ const MobileAppHero = () => {
                   group-hover:translate-x-1
                 "
               />
-            </a>
+            </button>
           </div>
 
          

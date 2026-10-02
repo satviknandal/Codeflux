@@ -37,7 +37,7 @@ const CareersPage = () => {
               that's you get in touch via{' '}
               <strong>
                 <a
-                  href="mailto:careers@codeflux.com.au"
+                  href="mailto:sales@codeflux.com.au"
                   title="Get in touch"
                   target="_self"
                   rel="noreferrer noopener"
@@ -64,7 +64,7 @@ const CareersPage = () => {
           </div>
           <a
             target="_blank"
-            href="https://au.linkedin.com/company/hatchet-agency"
+            href="https://www.linkedin.com/company/codeflux-com-au"
             rel="noreferrer noopener"
             className="w-full md:w-auto"
           >

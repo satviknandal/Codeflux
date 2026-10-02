@@ -167,7 +167,7 @@ const GenerativeAIBlog = () => {
       <BlogsHeader
         data={{
           category: 'Tech', 
-          date: '10 August 2026', 
+          date: '1 September 2026', 
           title: 'Generative AI: what is it, and how can it impact business?',
           desc: ""
         }}

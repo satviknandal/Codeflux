@@ -7,9 +7,18 @@ import {
   ArrowRight,
 } from "lucide-react";
 import webbg from "../../assets/hero/softwarebg.png";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 
 const WebDevelopmentHero = () => {
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+  
   return (
     <section
       className="
@@ -159,9 +168,10 @@ const WebDevelopmentHero = () => {
 
           {/* CTA */}
           <div className="mt-9">
-            <a
-              href="#contact-us"
+            <button
+              onClick={handleContactUs}
               className="
+                cursor-pointer
                 group
                 inline-flex
                 items-center
@@ -181,7 +191,7 @@ const WebDevelopmentHero = () => {
             >
               <Rocket size={17} />
 
-              Get Website Quote
+              Get Web Development Quote
 
               <ArrowRight
                 size={17}
@@ -191,7 +201,7 @@ const WebDevelopmentHero = () => {
                   group-hover:translate-x-1
                 "
               />
-            </a>
+            </button>
           </div>
 
          

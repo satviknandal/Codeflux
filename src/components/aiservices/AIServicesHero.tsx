@@ -1,7 +1,16 @@
 import { Smartphone } from 'lucide-react';
 import aidevelopment from '../../assets/ai/AI-engineering.webp';
+import { useNavigate } from 'react-router-dom';
+import { contactus } from '../../shared/utility';
 
 const AIServicesHero = () => {
+    const navigate = useNavigate();
+
+    const handleContactUs = () => {
+        contactus();
+        navigate("../../contactus");
+    };
+    
     return (
         <section className="relative overflow-hidden py-8 md:py-20 font-sans ">
             <div className="relative z-[1] container-wrapper-transparent">
@@ -26,7 +35,12 @@ const AIServicesHero = () => {
                         <p className="mb-4 max-w-xl text-[14px] md:text-base leading-6 md:leading-6.5">
                             Our AI development services cover the full project lifecycle: from requirements scoping and model selection to deployment, monitoring, and ongoing optimisation. Every engagement begins with a no-obligation technical consultation where our AI architects assess your data infrastructure, identify the highest-impact use cases, and define a delivery roadmap your board can approve.
                         </p>
-                        <button className="px-6 py-3 rounded-full border border-pink-400 text-sm md:text-base font-medium hover:text-pink-100 cursor-pointer text-white bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)]">Schedule an AI Consultation</button>
+                        <button
+                            onClick={handleContactUs}
+                            className="px-6 py-3 rounded-full border border-pink-400 text-sm md:text-base font-medium hover:text-pink-100 cursor-pointer text-white bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)]"
+                        >
+                            Schedule an AI Consultation
+                        </button>
                     </div>
                     <img src={aidevelopment} alt="" className='hidden md:block md:h-100'/>
                 </div>

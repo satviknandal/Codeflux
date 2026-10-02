@@ -112,7 +112,8 @@ const Footer = () => {
               <div className="flex items-start relative">
 
                 <a
-                  href="/"
+                  href='https://www.linkedin.com/company/codeflux-com-au'
+                  target="_blank"
                   aria-label="Codeflux LinkedIn"
                   className="inline-flex items-center justify-center rounded-full bg-gray-400 w-[48px] h-[48px] p-2 text-black mr-2"
                 >

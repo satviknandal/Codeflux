@@ -4,7 +4,7 @@ import BreadCrumbNav from '../components/BreadcrumbNav';
 type TermsContentBlock =
   | {
       type: "paragraph";
-      text: string;
+      text: React.ReactNode;
     }
   | {
       type: "list";
@@ -21,7 +21,7 @@ const termsConditionsContent: TermsSection[] = [
     content: [
       {
         type: "paragraph",
-        text: `These Terms of Service govern your use of the Appolo Intelligence website at www.appolo.com.au and any services provided by Appolo Intelligence Pty Ltd (ABN available on request), a company registered in Western Australia, Australia (“Appolo”, “we”, “us”, or “our”).`,
+        text: `These Terms of Service govern your use of the Codeflux website at www.codeflux.com.au and any services provided by Codeflux Pty Ltd (ABN available on request), a company registered in Western Australia, Australia.`,
       },
       {
         type: "paragraph",
@@ -34,7 +34,7 @@ const termsConditionsContent: TermsSection[] = [
     content: [
       {
         type: "paragraph",
-        text: "Appolo Intelligence provides custom software development, systems consulting, website development, and AI strategy services. Specific terms for client engagements are set out in individual project agreements or statements of work, which take precedence over these general terms where there is any inconsistency.",
+        text: "Codeflux provides Software development, Web development, AI Consulting, AI development, Mobile App Development, Cloud Solutions and Web Design UI/UX services. Specific terms for client engagements are set out in individual project agreements or statements of work, which take precedence over these general terms where there is any inconsistency.",
       }
     ],
   },
@@ -61,7 +61,7 @@ const termsConditionsContent: TermsSection[] = [
     content: [
       {
         type: "paragraph",
-        text: "All content on this website — including text, graphics, logos, images, and software — is owned by or licensed to Appolo Intelligence and is protected by Australian and international intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.",
+        text: "All content on this website — including text, graphics, logos, images, and software — is owned by or licensed to Codeflux and is protected by Australian and international intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.",
       },
       {
         type: "paragraph",
@@ -74,7 +74,7 @@ const termsConditionsContent: TermsSection[] = [
     content: [
       {
         type: "paragraph",
-        text: "To the maximum extent permitted by law, Appolo Intelligence is not liable for any indirect, incidental, special, or consequential loss or damage arising from your use of this website or our services. Our total liability in any circumstance is limited to the amount paid by you for the services giving rise to the claim.",
+        text: "To the maximum extent permitted by law, Codeflux is not liable for any indirect, incidental, special, or consequential loss or damage arising from your use of this website or our services. Our total liability in any circumstance is limited to the amount paid by you for the services giving rise to the claim.",
       },
       {
         type: "paragraph",
@@ -121,12 +121,30 @@ const termsConditionsContent: TermsSection[] = [
   {
     title: "10. Contact",
     content: [
-      {
-        type: "paragraph",
-        text: "For questions about these terms, contact us at appolo.com.au/contact or email hello@appolo.com.au.",
-      },
-    ],
-  }
+    {
+      type: "paragraph",
+      text: (
+        <>
+          For questions about these term, contact us at{" "}
+          <a
+            href="/contactus"
+            className="text-[#3692ff] hover:underline"
+          >
+            codeflux.com.au/contactus
+          </a>{" "}
+          or email{" "}
+          <a
+            href="mailto:sales@codeflux.com.au"
+            className="text-[#3692ff] hover:underline"
+          >
+            sales@codeflux.com.au
+          </a>
+          .
+        </>
+      ),
+    },
+  ],
+  },
 ];
 
 const TermsofServicePage = () => {

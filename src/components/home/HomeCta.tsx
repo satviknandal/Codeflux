@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HomeCta = () => {
+  const navigate = useNavigate();
   return (
     <motion.div
       variants={ContainerVariant}
@@ -27,7 +29,8 @@ const HomeCta = () => {
             <div className="mt-2 md:mt-6 text-sm md:text-lg font-normal leading-tight text-white">Bring your ideas to reality with our Digital Transformation Services</div>
           </div>
           <div className="mt-4 md:mt-0 w-full md:w-1/4">
-            <div className="w-full text-center cursor-pointer
+            <a href="mailto:sales@codeflux.com.au?subject=Enquiry%20from%20Codeflux%20Website"
+              className="w-full text-center cursor-pointer block
                     rounded-full bg-gray-400 border border-gray-300
                     py-2.5 md:py-3.5
                     text-sm md:text-md font-medium text-gray-900 no-underline
@@ -37,11 +40,10 @@ const HomeCta = () => {
                     hover:-translate-y-0.5
                     hover:bg-gray-700
                     hover:shadow-[0_4px_8px_-6px_rgba(255,255,255,0.2)]
-                  ">sales@codeflux.com.au</div>
+                  ">sales@codeflux.com.au</a>
             <div className="mt-4">
-                <a
-                  href="#contact-us"
-                  className="w-full justify-center items-center
+                <div
+                  className="w-full justify-center items-center cursor-pointer
                     inline-flex gap-2.5
                     rounded-full bg-sky-600 border border-sky-500
                     py-2.5 md:py-3.5
@@ -52,10 +54,11 @@ const HomeCta = () => {
                     hover:bg-sky-700
                     hover:shadow-[0_6px_10px_-6px_rgba(0,132,209,0.5)]
                   "
+                  onClick={() => navigate('contactus')}
                 >
                   Schedule a Consultation
                   <ArrowRight size={18} strokeWidth={2} />
-                </a>
+                </div>
               </div>
                 
           </div>

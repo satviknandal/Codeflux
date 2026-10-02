@@ -9,9 +9,18 @@ import {
 import laptop from "../../assets/software/laptop.png";
 import mobile from "../../assets/software/mobile.png";
 import watch from "../../assets/software/watch.png";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 
 const SoftwareDevelopmentHero = () => {
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+  
   return (
     <section
       className="
@@ -149,9 +158,9 @@ const SoftwareDevelopmentHero = () => {
 
           {/* CTA */}
           <div className="mt-9">
-            <a
-              href="#contact-us"
+            <button
               className="
+                cursor-pointer
                 group
                 inline-flex
                 items-center
@@ -168,11 +177,12 @@ const SoftwareDevelopmentHero = () => {
                 hover:bg-sky-500
                 hover:shadow-[0_0_40px_rgba(0,188,255,0.4)]
               "
+              onClick={handleContactUs}
             >
               <Rocket size={17} />
               Get Software Quote
               <ArrowRight size={17} className="transition-transform duration-300 group-hover:translate-x-1"/>
-            </a>
+            </button>
           </div>
 
          

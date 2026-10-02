@@ -82,7 +82,7 @@ const AIBlogsData = [
         category: "Digital Transformation",
         readTime: "10 min read",
         description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
-        date: "June 8, 2026",
+        date: "September 28, 2026",
         href: "/agenticaiblog",
         image: agenticAi
     },
@@ -91,7 +91,7 @@ const AIBlogsData = [
         category: "Tech",
         readTime: "7 min read",
         description: "From strategy and AI assessment to implementation, scaling, and continuous governance, along with real-world best practices and common AI adoption challenges to avoid, this guide offers you a comprehensive, actionable insight on adopting AI successfully.",
-        date: "December 15, 2025",
+        date: "September 15, 2026",
         href: "/aiadoptionblog",
         image: aiadoption
     },
@@ -100,7 +100,7 @@ const AIBlogsData = [
         category: "Digital Transformation",
         readTime: "10 min read",
         description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
-        date: "June 8, 2026",
+        date: "September 1, 2026",
         href: "/generativeaiblog",
         image: generativeai
     }

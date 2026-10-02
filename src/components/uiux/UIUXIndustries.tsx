@@ -1,6 +1,8 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 interface Industry {
   title: string;
@@ -78,6 +80,13 @@ const industries: Industry[] = [
 ];
 
 const UIUXIndustries: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
+
   return (
     <section className="radialgradient text-white">
         <div className="container-wrapper-transparent py-12 sm:py-[50px] lg:py-20">
@@ -162,9 +171,10 @@ const UIUXIndustries: React.FC = () => {
 
             {/* CTA */}
             <div className="mt-12 text-center">
-                <a
-                href="#contact-us"
-                className="
+                <button
+                  onClick={handleContactUs}
+                  className="
+                    cursor-pointer
                     inline-flex items-center gap-2.5
                     rounded-lg
                     bg-sky-600
@@ -180,7 +190,7 @@ const UIUXIndustries: React.FC = () => {
                 >
                 Hire a UI/UX Designer
                 <ArrowRight size={14} />
-                </a>
+                </button>
             </div>
         </div>
     </section>

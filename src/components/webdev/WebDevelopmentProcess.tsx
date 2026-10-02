@@ -9,6 +9,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
+import { useNavigate } from "react-router-dom";
+import { contactus } from "../../shared/utility";
 
 interface ProcessStep {
   number: string;
@@ -215,6 +217,12 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
 const WebDevelopmentProcess = () => {
   const firstRow = processSteps.slice(0, 3);
   const secondRow = processSteps.slice(3, 6);
+  const navigate = useNavigate();
+
+  const handleContactUs = () => {
+    contactus();
+    navigate("../../contactus");
+  };
 
   return (
     <section className="py-6 md:py-20 relative overflow-hidden bg-white font-sans">
@@ -405,9 +413,10 @@ const WebDevelopmentProcess = () => {
 
         {/* CTA */}
         <div className="mt-[52px] flex justify-center">
-          <a
-            href="#contact-us"
+          <button
+            onClick={handleContactUs}
             className="
+              cursor-pointer
               inline-flex
               items-center
               gap-[9px]
@@ -426,7 +435,7 @@ const WebDevelopmentProcess = () => {
           >
             Talk to Our Web Team
             <ArrowRight size={14} />
-          </a>
+          </button>
         </div>
       </div>
     </section>

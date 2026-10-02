@@ -182,7 +182,7 @@ const AgenticAIBlog = () => {
       <BlogsHeader
         data={{
           category: 'Tech', 
-          date: '10 August 2026', 
+          date: '28 September 2026', 
           title: 'What is Agentic AI?', 
           desc: 'Agentic AI is an autonomous AI system that can act independently to achieve pre-determined goals. Traditional software follows pre-defined rules, and traditional artificial intelligence also requires prompting and step-by-step guidance. However, agentic AI is proactive and can perform complex tasks without constant human oversight. "Agentic" indicates agency — the ability of these systems to act independently, but in a goal-driven manner.'
         }}
