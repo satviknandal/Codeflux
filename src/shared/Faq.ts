@@ -2,12 +2,12 @@ const WebDevelopmentFaqs = [
   {
     question: "How much does web development cost?",
     answer:
-      "The cost of web development depends on the scope, complexity, and features of the project. Smaller, more straightforward websites typically start at under $20,000, while larger, feature-rich, or highly technical projects can range up to $200,000 or more. For a more accurate estimation of your project, get in touch or call us on (08) 9468 7310.",
+      "The cost of web development depends on the scope, complexity, and features of the project. Smaller, more straightforward websites typically start at under $15,000, while larger, feature-rich, or highly technical projects can range up to $200,000 or more. For a more accurate estimation of your project, get in touch or call us on (+61) 478 575 587.",
   },
   {
     question: "Do you offer custom web development?",
     answer:
-      "Yes, we specialise in bespoke web development services tailored to your business needs. Every solution we build is custom-made and belongs entirely to you - no ‘off-the-shelf’ templates or one-size-fits-all approaches. Our goal here at Hatchet is to create a website solution that aligns perfectly with your business objectives and sets you apart from the competition.",
+      "Yes, we specialise in bespoke web development services tailored to your business needs. Every solution we build is custom-made and belongs entirely to you - no ‘off-the-shelf’ templates or one-size-fits-all approaches. Our goal here at Codeflux is to create a website solution that aligns perfectly with your business objectives and sets you apart from the competition.",
   },
   {
     question: "How long does it take to develop a website?",
@@ -17,12 +17,11 @@ const WebDevelopmentFaqs = [
   {
     question: "What technologies do you use?",
     answer:
-      "Keep in mind that whichever tech stack we decide to work with, it's going to be something from the latest advancements. We usually use Laravel, VueJS, and PHP to build robust and scalable web solutions.",
+      "Keep in mind that, regardless of the technology stack we choose, we focus on leveraging the latest advancements and industry best practices. Our expertise spans a broad range of technologies, including Java, .NET, Python, React, Angular, Node.js, Vue.js, REST API's, GraphQL, TypeScript, Azure, AWS, and the design and development of highly scalable web solutions.",
   },
   {
     question: "Can you redesign my existing website?",
-    answer:
-      "Yes, our redesign services always focus on one main question: How can we improve the user experience? We need to understand what you are trying to achieve, and we use that information to craft amazing designs.",
+    answer: "Absolutely. Our website redesign services are focused on one key question: How can we create a better user experience? We first understand your business, goals, audience, and existing challenges. From there, we combine modern design principles, usability, and the latest technologies to create a website that looks great, performs seamlessly, and delivers a more engaging experience for your users.",
   },
   {
     question: "Do you provide search engine optimisation services?",
@@ -57,7 +56,7 @@ const WebDesignFaqs = [
   {
     question: "How secure is custom-built web design?",
     answer:
-      "With Hatchet, your site is secure from common vulnerabilities, and we provide ongoing maintenance to keep it updated. Security is a top priority. We guarantee the implementation of best practices to safeguard your website and user data.",
+      "With Codeflux, your site is secure from common vulnerabilities, and we provide ongoing maintenance to keep it updated. Security is a top priority. We guarantee the implementation of best practices to safeguard your website and user data.",
   },
   {
     question: "Is your web design team local?",

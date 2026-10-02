@@ -26,11 +26,11 @@ const WebsiteDevelopmentServices = () => {
         }, 
         { 
             title: "Diverse Domain Experience", 
-            description: "We have worked with clients from startups to enterprises in over 150 successful web application development projects. Before your project begins, you’ll meet our team of dedicated managers and tech leads to ensure alignment with your vision and expectations. Our experience and commitment will bring you success.", 
+            description: "We have worked with clients from startups to enterprises in over 100+ successful web application development projects. Before your project begins, you’ll meet our team of dedicated managers and tech leads to ensure alignment with your vision and expectations. Our experience and commitment will bring you success.", 
         }, 
         { 
             title: "Technological Agility & Advanced Skillset", 
-            description: "We follow the latest tech, including Microsoft tech, Java, .NET, Python, Angular, React, Node.js, Vue.js, PWA, JavaScript, PHP, GraphQL, and more. Our skilled developers, Project Managers, and Tech Leads excel at crafting tailored, future-ready solutions that meet your business needs. We also leverage AI to add innovative features. With such amazing features, your app will stand out!", 
+            description: "We follow the latest tech, including Microsoft tech, Java, .NET, Python, Angular, React, Node.js, Vue.js, PWA, TypeScript, GraphQL, and more. Our skilled developers, Project Managers, and Tech Leads excel at crafting tailored, future-ready solutions that meet your business needs. We also leverage AI to add innovative features. With such amazing features, your app will stand out!", 
         }, 
         { 
             title: "Performance-Focused Development & Framework Integration", 
@@ -38,7 +38,7 @@ const WebsiteDevelopmentServices = () => {
         }, 
         { 
             title: "Broad Technical Proficiency", 
-            description: "Our team has broad skills in many technical areas, including SOA, cloud, and mobile tech. We work with AWS, Azure, MongoDB, and PostgreSQL, staying up-to-date on industry trends. This is how we offer advanced, tech-forward solutions. With us, you can surely enhance the capabilities of your web apps."
+            description: "Our team brings expertise across a wide range of modern technologies and frameworks, enabling us to build scalable, secure, and high-performing digital solutions. Our technology stack includes Java, .NET, Python, React, Angular, Node.js, Vue.js, TypeScript, REST APIs, GraphQL, Azure, and AWS. We continuously stay aligned with the latest advancements and industry best practices, selecting the right technologies based on your business requirements, scalability needs, and long-term goals. This allows us to deliver flexible, future-ready solutions that can evolve with your business."
         }, 
         { 
             title: "Test-Driven Development for Excellence", 
