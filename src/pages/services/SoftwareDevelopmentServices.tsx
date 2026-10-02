@@ -30,7 +30,7 @@ const SoftwareDevelopmentServices = () => {
   const SoftwareSecurityArchitectureComp = () => {
     const content = [
       `Enterprise software security works best when access control, data protection, audit logging, and deployment policies are planned before development starts.`,
-      `Based on project scope, SDLC Corp maps controls against relevant frameworks such as SOC 2, ISO 27001, HIPAA, PCI DSS, SOX, and GDPR before key architecture decisions are finalized.`
+      `Based on project scope, Codeflux maps controls against relevant frameworks such as SOC 2, ISO 27001, HIPAA, PCI DSS, SOX, and GDPR before key architecture decisions are finalized.`
     ];
     return (
       <SoftwareSecurityArchitecture

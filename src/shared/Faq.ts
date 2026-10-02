@@ -148,7 +148,7 @@ const AIDevelopmentFaqs = [
   },
   {
     question: "How much does custom AI development cost?",
-    answer: "The cost of custom AI development typically ranges from $25,000 to $500,000 or more, depending on project complexity, data requirements, model type, integration needs, and maintenance scope. A simple AI chatbot may cost $25,000 to $50,000, while a complex enterprise AI platform with multiple models, real-time processing, and deep integrations can exceed $300,000. SDLC Corp provides detailed, transparent project estimates after a free initial consultation.",
+    answer: "The cost of custom AI development typically ranges from $25,000 to $500,000 or more, depending on project complexity, data requirements, model type, integration needs, and maintenance scope. A simple AI chatbot may cost $25,000 to $50,000, while a complex enterprise AI platform with multiple models, real-time processing, and deep integrations can exceed $300,000. Codeflux provides detailed, transparent project estimates after a free initial consultation.",
   },
   {
     question: "Can you integrate AI with our existing systems?",
@@ -160,7 +160,7 @@ const AIDevelopmentFaqs = [
   },
   {
     question: "What technologies do you use for AI development?",
-    answer: "SDLC Corp works with all leading AI technologies including TensorFlow, PyTorch, OpenAI GPT, Anthropic Claude, LangChain, Hugging Face Transformers, Scikit-learn, Apache Spark MLlib, AWS SageMaker, Google Vertex AI, and Azure Machine Learning. We select the technology stack for each project based on specific requirements, performance needs, and long-term scalability.",
+    answer: "Codeflux works with all leading AI technologies including TensorFlow, PyTorch, OpenAI GPT, Anthropic Claude, LangChain, Hugging Face Transformers, Scikit-learn, Apache Spark MLlib, AWS SageMaker, Google Vertex AI, and Azure Machine Learning. We select the technology stack for each project based on specific requirements, performance needs, and long-term scalability.",
   },
   {
     question: "What industries benefit most from AI development?",
@@ -168,7 +168,7 @@ const AIDevelopmentFaqs = [
   },
   {
     question: "Do you offer AI consulting before development?",
-    answer: "Yes. SDLC Corp provides AI consulting services that help businesses identify the right AI use cases, evaluate data readiness, define project scope, and build a practical implementation roadmap. AI consulting ensures that your investment targets the highest-impact opportunities and avoids common pitfalls like poor data quality, unrealistic expectations, or technology misalignment.",
+    answer: "Yes. Codeflux provides AI consulting services that help businesses identify the right AI use cases, evaluate data readiness, define project scope, and build a practical implementation roadmap. AI consulting ensures that your investment targets the highest-impact opportunities and avoids common pitfalls like poor data quality, unrealistic expectations, or technology misalignment.",
   },
   {
     question: "Do you provide AI consulting before development starts?",

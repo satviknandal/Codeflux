@@ -216,24 +216,6 @@ const TalentHero = () => {
               blur-[90px]
             "
           />
-
-          {/* <img
-            fetchPriority="high"
-            className="
-              relative z-[1]
-              h-auto
-              w-full
-              max-w-[550px]
-              object-contain
-              drop-shadow-[0_20px_70px_rgba(37,99,235,0.25)]
-            "
-            src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2026/06/18114756/mobile-app-development-company.webp"
-            alt="Custom mobile app development showcase — iOS and Android app built by SDLC Corp"
-            width="900"
-            height="1100"
-            loading="eager"
-            decoding="async"
-          /> */}
           <img
             fetchPriority="high"
             className="
@@ -245,7 +227,7 @@ const TalentHero = () => {
               drop-shadow-[0_20px_70px_rgba(37,99,235,0.25)]
             "
             src={webbg}
-            alt="Custom mobile app development showcase — iOS and Android app built by SDLC Corp"
+            alt="Custom mobile app development showcase — iOS and Android app built by Codeflux"
             width="900"
             height="1100"
             loading="eager"

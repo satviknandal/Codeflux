@@ -85,7 +85,7 @@ const MobileSecurityCompliance = () => {
             <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-[18px] shadow-[0_24px_64px_rgba(12,11,29,0.1)]">
               <img
                 src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2026/06/15113915/security-and-compliance-in-every-app-we-buildapp.webp"
-                alt="Mobile app security and compliance by SDLC Corp"
+                alt="Mobile app security and compliance by Codeflux"
                 width={700}
                 height={560}
                 loading="lazy"

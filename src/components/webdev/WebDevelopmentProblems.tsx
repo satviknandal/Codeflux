@@ -120,7 +120,7 @@ const WebDevelopmentProblems = () => {
 
             <img
               src="https://sdlccorp-web-prod.blr1.cdn.digitaloceanspaces.com/wp-content/uploads/2026/06/09152301/website-problem-we-solve.webp"
-              alt="Common website problems SDLC Corp solves for businesses"
+              alt="Common website problems Codeflux solves for businesses"
               width={560}
               height={620}
               loading="lazy"
