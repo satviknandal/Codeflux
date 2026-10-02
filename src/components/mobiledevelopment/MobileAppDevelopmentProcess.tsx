@@ -43,7 +43,7 @@ const processSteps: ProcessStep[] = [
     icon: PencilRuler,
     link: {
       label: "Our UX & UI Design Services",
-      href: "https://sdlccorp.com/ui-ux-design-company/",
+      href: "../services/webdesignuiux",
     },
   },
   {
@@ -63,7 +63,7 @@ const processSteps: ProcessStep[] = [
     icon: Bug,
     link: {
       label: "Our Testing Services",
-      href: "https://sdlccorp.com/services/testing-services/",
+      href: "../../testingservices",
     },
   },
   {
@@ -83,7 +83,7 @@ const processSteps: ProcessStep[] = [
     icon: Wrench,
     link: {
       label: "Maintenance & Support Plans",
-      href: "https://sdlccorp.com/services/maintenance-support-services/",
+      href: "../../maintenancesupportplans",
     },
   },
 ];
@@ -185,7 +185,7 @@ const ProcessCard = ({ step }: { step: ProcessStep }) => {
         {step.link && (
           <a
             href={step.link.href}
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
             className="
               mt-[14px]

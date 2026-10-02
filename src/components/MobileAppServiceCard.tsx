@@ -105,7 +105,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
 
         {/* CTA */}
         <a
-          href="https://sdlccorp.com/services/app-development/ios-app-development-company/"
+          // href="https://sdlccorp.com/services/app-development/ios-app-development-company/"
           className="
             group
             inline-flex

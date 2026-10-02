@@ -51,7 +51,7 @@ const WebDesignFaqs = [
     question:
       "How much does it cost to develop a custom website?",
     answer:
-      "Costs vary significantly based on project complexity, ranging from $20K for small projects to over $100K for larger ones. We offer a free consultation to help you understand the potential investment and plan for ongoing maintenance. Our goal is always to give you a cost-effective solution.",
+      "Costs vary significantly based on project complexity, ranging from $15K for small projects to over $100K for larger ones. We offer a free consultation to help you understand the potential investment and plan for ongoing maintenance. Our goal is always to give you a cost-effective solution.",
   },
   {
     question: "How secure is custom-built web design?",

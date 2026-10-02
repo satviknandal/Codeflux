@@ -148,7 +148,7 @@ const PricingCardComponent = ({ card }: { card: PricingCard }) => {
       </ul>
 
       <a
-        href="#contact-us"
+        href="../../contactus"
         className={`mt-8 inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300
           ${
             card.featured

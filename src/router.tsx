@@ -31,6 +31,8 @@ import WebsiteDevelopmentServices from "./pages/services/WebsiteDevelopmentServi
 import AgenticAIBlog from "./pages/blogs/AgenticAIBlog";
 import AIAdoptionBlog from "./pages/blogs/AIAdoptionBlog";
 import TalentPage from "./pages/TalentPage";
+import MaintenanceSupportPlansPage from "./pages/MaintenanceSupportPlansPage";
+import TestingServicesPage from "./pages/TestingServicesPage";
 
 const router = createBrowserRouter([
   {
@@ -53,7 +55,11 @@ const router = createBrowserRouter([
             { path: "/services/mobileappservices", element: <MobileAppServices /> },
             { path: "/privacypolicy", element: <PrivacyPolicyPage /> },
             { path: "/termsofservice", element: <TermsofServicePage /> },
+            { path: "/maintenancesupportplans", element: <MaintenanceSupportPlansPage /> },
+            { path: "/testingservices", element: <TestingServicesPage /> },
             { path: "/talent", element: <TalentPage /> },
+
+
             { path: "/blogs", element: <BlogsPage /> },
             { path: "/blog1", element: <Blog1 /> },
             { path: "/inframigrationblog", element: <InfraMigrationBlog /> },
