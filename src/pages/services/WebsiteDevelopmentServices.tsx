@@ -18,11 +18,11 @@ const WebsiteDevelopmentServices = () => {
   const pointers = [ 
         { 
             title: "Over a Decade of Expertise", 
-            description: "Saigon Technology has over 13 years of experience with more than 800 successful projects. Our extensive experience reflects our ability to stay ahead of technology trends and adapt to changing market needs. We deliver reliable, custom software solutions for various industries like healthcare, e-learning, fintech, logistics, online marketplaces, automotive, insurance, and HR.", 
+            description: "Codelux team has over 16 years of experience with more than 100+ successful projects. Our extensive experience reflects our ability to stay ahead of technology trends and adapt to changing market needs. We deliver reliable, custom software solutions for various industries like healthcare, e-learning, fintech, logistics, online marketplaces, automotive, insurance, and HR.", 
         }, 
         { 
             title: "Cost-Effective Approach", 
-            description: "Saigon Technology delivers great value with a team of 350 top developers in Vietnam. Our careful recruitment process ensures highly qualified staff. This way, you can expect high-quality web applications at competitive prices. The rates we offer are from $22 to $46, which is much lower than in Europe and the U.S. From our resources in Ho Chi Minh City and Da Nang, we efficiently handle projects of any size.", 
+            description: "Codeflux delivers great value with a team of local developers. Our careful recruitment process ensures highly qualified staff. This way, you can expect high-quality web applications at competitive prices.", 
         }, 
         { 
             title: "Diverse Domain Experience", 
@@ -42,7 +42,7 @@ const WebsiteDevelopmentServices = () => {
         }, 
         { 
             title: "Test-Driven Development for Excellence", 
-            description: "To a reliable web app development company, testing is an essential step. Saigon Technology checks your app for quality and effectiveness at every development stage. Our apps are high-performing and reliable, thanks to rigorous tests. This is key to unlocking business potential."
+            description: "To a reliable web app development company, testing is an essential step. Codeflux checks your app for quality and effectiveness at every development stage. Our apps are high-performing and reliable, thanks to rigorous tests. This is key to unlocking business potential."
         }, 
         { 
             title: "Agile Practices for Efficient Deliveries", 
@@ -50,7 +50,7 @@ const WebsiteDevelopmentServices = () => {
         },
         { 
             title: "Quality-Centric Approach with ISO Certifications", 
-            description: "Quality and security must be your top priority. Don't worry about that once you partner with Saigon Technology! We follow ISO 9001 & ISO/IEC 27001 standards when developing your web app. These certifications show our dedication to providing high-quality and secure solutions. We also have efficient management systems to ensure consistent quality in every project."
+            description: "Quality and security must be your top priority. Don't worry about that once you partner with Codeflux! We follow ISO 9001 & ISO/IEC 27001 standards when developing your web app. These certifications show our dedication to providing high-quality and secure solutions. We also have efficient management systems to ensure consistent quality in every project."
         }, 
         { 
             title: "Unified Communication & Global Experience", 
