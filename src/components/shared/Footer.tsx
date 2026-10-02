@@ -52,10 +52,10 @@ const footerLinks = {
     //   label: "Team",
     //   path: "team",
     // },
-    {
-      label: "Client Stories",
-      path: "clientstories",
-    },
+    // {
+    //   label: "Client Stories",
+    //   path: "clientstories",
+    // },
     {
       label: "Careers",
       path: "careers",
