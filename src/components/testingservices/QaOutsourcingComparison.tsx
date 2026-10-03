@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 interface ComparisonRow {
   dimension: string;
@@ -63,8 +62,7 @@ const comparisonRows: ComparisonRow[] = [
 const QaOutsourcingComparison: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
   
@@ -390,7 +388,7 @@ const QaOutsourcingComparison: React.FC = () => {
             hover:bg-sky-700
             hover:shadow-[0_10px_28px_rgba(255,255,235,0.18)]
           "
-          onClick={handleContactUs}>
+          onClick={navigateToContactUs}>
             <span>Compare Engagement Models</span><span className="text-md">→</span>
           </button>
         </div>

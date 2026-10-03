@@ -10,14 +10,12 @@ import laptop from "../../assets/software/laptop.png";
 import mobile from "../../assets/software/mobile.png";
 import watch from "../../assets/software/watch.png";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 
 const SoftwareDevelopmentHero = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
   
@@ -177,7 +175,7 @@ const SoftwareDevelopmentHero = () => {
                 hover:bg-sky-500
                 hover:shadow-[0_0_40px_rgba(0,188,255,0.4)]
               "
-              onClick={handleContactUs}
+              onClick={navigateToContactUs}
             >
               <Rocket size={17} />
               Get Software Quote

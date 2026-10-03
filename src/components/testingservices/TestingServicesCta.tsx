@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 const TestingServicesCta = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -66,7 +64,7 @@ const TestingServicesCta = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-[14px]">
             <button
-              onClick={handleContactUs}
+              onClick={navigateToContactUs}
               className="
                 cursor-pointer
                 group/primary

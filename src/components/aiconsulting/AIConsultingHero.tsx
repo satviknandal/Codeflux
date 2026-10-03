@@ -1,13 +1,11 @@
 import { Award, CalendarCheck, Smartphone, UserRound } from 'lucide-react';
 import aiconsulting from '../../assets/ai/aiconsulting.webp';
 import { useNavigate } from 'react-router-dom';
-import { contactus } from '../../shared/utility';
 
 const AIConsultingHero = () => {
     const navigate = useNavigate();
 
-    const handleContactUs = () => {
-        contactus();
+    const navigateToContactUs = () => {
         navigate("../../contactus");
     };
 
@@ -88,7 +86,7 @@ const AIConsultingHero = () => {
                             </div>
                         </div>
                         <button
-                            onClick={handleContactUs}
+                            onClick={navigateToContactUs}
                             className="px-6 py-3 rounded-full border border-pink-400 text-sm md:text-base font-medium hover:text-pink-100 cursor-pointer text-white bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)]"
                         >
                             Schedule an AI Consultation

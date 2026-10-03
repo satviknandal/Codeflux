@@ -2,7 +2,6 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 interface Industry {
   title: string;
@@ -82,8 +81,7 @@ const industries: Industry[] = [
 const UIUXIndustries: React.FC = () => {
   const navigate = useNavigate();
   
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -172,7 +170,7 @@ const UIUXIndustries: React.FC = () => {
             {/* CTA */}
             <div className="mt-12 text-center">
                 <button
-                  onClick={handleContactUs}
+                  onClick={navigateToContactUs}
                   className="
                     cursor-pointer
                     inline-flex items-center gap-2.5

@@ -7,13 +7,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 const TestingServicesHero = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -167,7 +165,7 @@ const TestingServicesHero = () => {
           {/* CTA */}
           <div className="mt-9">
             <button
-              onClick={handleContactUs}
+              onClick={navigateToContactUs}
               className="
                 cursor-pointer
                 group

@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 interface AIBusinessBannerProps {
     title: string;
@@ -11,8 +10,7 @@ interface AIBusinessBannerProps {
 const AIBusinessBanner = ({title, subheading, image, buttonText}: AIBusinessBannerProps) => {
     const navigate = useNavigate();
 
-    const handleContactUs = () => {
-        contactus();
+    const navigateToContactUs = () => {
         navigate("../../contactus");
     };
     
@@ -24,7 +22,7 @@ const AIBusinessBanner = ({title, subheading, image, buttonText}: AIBusinessBann
                     <h3 className="text-2xl md:text-3xl mb-4 leading-normal font-normal text-purple-400">{title}</h3>
                     <label className="text-gray-300 text-sm mb-8 z-2 w-full md:w-[50%]">{subheading}</label>
                     <button 
-                        onClick={handleContactUs}
+                        onClick={navigateToContactUs}
                         className="
                             cursor-pointer
                             bg-[#a07cdb]

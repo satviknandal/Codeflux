@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 const NeedTeam = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../contactus");
   };
   
@@ -54,7 +52,7 @@ const NeedTeam = () => {
             transition-colors duration-200
             hover:bg-[#07324a] hover:text-white
           "
-          onClick={handleContactUs}
+          onClick={navigateToContactUs}
         >
           <span className="text-sm md:text-base">GET IN TOUCH</span>
         </button>

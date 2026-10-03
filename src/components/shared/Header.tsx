@@ -13,7 +13,6 @@ import {
   Smartphone,
   Cloud,
 } from "lucide-react";
-// import FlyoutNav from "./FlyoutNav";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
@@ -27,14 +26,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   const isHomePage = location.pathname === "/";
-  // const isAIConsultingPage = location.pathname.includes("aiconsulting") || location.pathname.includes("aiservices") || location.pathname.includes("aboutus");
-  
-
-  /*
-   * ---------------------------------------------------------
-   * Services
-   * ---------------------------------------------------------
-   */
 
   const links = [
     {
@@ -154,6 +145,10 @@ const Header = () => {
     );
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   /*
    * ---------------------------------------------------------
    * Mega Menu Item
@@ -179,10 +174,13 @@ const Header = () => {
           ease: "easeOut",
         }}
       >
-        <Link
-          to={item.link}
-          onClick={() => setIsDropdownOpen(false)}
+        <a
+          onClick={() => {
+            handleNavigation(item.link);
+            setIsDropdownOpen(false);
+          }}
           className={`
+            cursor-pointer
             group
             relative
             flex
@@ -202,26 +200,17 @@ const Header = () => {
             hover:bg-white/[0.025]
           `}
         >
-          {/* -------------------------------------------------
-              Hover glow
-          ------------------------------------------------- */}
-
-{/* ${isAIConsultingPage ? "text-pink-500 group-hover:text-pink-700" : " group-hover:text-white"} */}
           <span className="pointer-events-none absolute inset-0 rounded-xl bg-[radial-gradient(circle_at_30%_50%,rgba(63,95,252,0.35),transparent_55%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"/>
           <Icon size={16} strokeWidth={0.8} className={`transition-transform duration-300 group-hover:scale-110 
             group-hover:text-white"
           `}/>
-          {/* ${isAIConsultingPage
-                ? "text-pink-400 group-hover:text-pink-700"
-                : "text-gray-300 group-hover:text-white"
-              } */}
           <span className={`relative z-10 text-sm font-normal tracking-[-0.01em] transition-colors duration-300
           text-gray-300 group-hover:text-white
              
             `}>
             {item.label}
           </span>
-        </Link>
+        </a>
       </motion.div>
     );
   };
@@ -240,7 +229,7 @@ const Header = () => {
         <ul className="flex items-center gap-10">
 
           <li>
-            <Link to="/" className="flex items-center text-white transition-colors duration-200 hover:text-white/70">Home</Link>
+            <a onClick={() => handleNavigation("/")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Home</a>
           </li>
 
           <li
@@ -289,7 +278,6 @@ const Header = () => {
               </motion.svg>
             </button>
 
-           {/* // ${isAIConsultingPage ? "bg-[#fff]/40" : "bg-[#101319]/60"} */}
             <AnimatePresence>
               {isDropdownOpen && (
                 <motion.div
@@ -343,9 +331,9 @@ const Header = () => {
               )}
             </AnimatePresence>
           </li>
-          <li><Link to="/aboutus" className="flex items-center text-white transition-colors duration-200 hover:text-white/70">About Us</Link></li>
-          <li><Link to="/blogs" className="flex items-center text-white transition-colors duration-200 hover:text-white/70">Blog</Link></li>
-          <li><Link to="/contactus" className="flex items-center text-white transition-colors duration-200 hover:text-white/70">Contact</Link></li>
+          <li><a onClick={() => handleNavigation("/aboutus")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">About Us</a></li>
+          <li><a onClick={() => handleNavigation("/blogs")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Blog</a></li>
+          <li><a onClick={() => handleNavigation("/contactus")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Contact</a></li>
         </ul>
       </nav>
     );
@@ -429,18 +417,7 @@ const Header = () => {
             <MenuIcon className="h-10 w-10 text-white" />
           </button>
 
-            {flyoutOpen && (
-              // <FlyoutNav
-              //   open={flyoutOpen}
-              //   setOpen={setFlyoutOpen}
-              // />
-              <MobileMenu
-                isOpen={flyoutOpen}
-                onClose={() => setFlyoutOpen(false)}
-              />
-            )}
-
-          {/* Start a Project */}
+          {flyoutOpen && <MobileMenu isOpen={flyoutOpen} onClose={() => setFlyoutOpen(false)}/>}
           <Actions />
 
         </div>

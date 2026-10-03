@@ -1,7 +1,6 @@
 import { ArrowRight, Boxes, Check, Gauge, LayoutGrid, Lightbulb, PenTool, RefreshCw, Search, Smartphone, Star, Users, } from "lucide-react"; 
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 const services = [ 
     { icon: Smartphone, title: "Mobile App UI/UX Design", text: "Native iOS and Android interfaces with Figma handoff, auto-layout, and motion specs.", }, 
@@ -14,12 +13,10 @@ const services = [
     { icon: Lightbulb, title: "UI/UX Strategy and Consulting", text: "Product design strategy with roadmap audits, workshops, and lightweight process setup.", }
 ];
 
-
 const UiUXServices = () => {
   const navigate = useNavigate();
   
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -221,7 +218,7 @@ const UiUXServices = () => {
       {/* CTA */}
       <div className="mt-12 text-center">
         <button
-          onClick={handleContactUs}
+          onClick={navigateToContactUs}
           className="
             cursor-pointer
             inline-flex items-center gap-2.5

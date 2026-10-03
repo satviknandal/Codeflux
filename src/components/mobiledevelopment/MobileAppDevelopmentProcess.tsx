@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 interface ProcessStep {
   number: string;
@@ -279,8 +278,7 @@ const MobileAppDevelopmentProcess = () => {
   const secondRow = processSteps.slice(3, 6);
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -480,7 +478,7 @@ const MobileAppDevelopmentProcess = () => {
         {/* CTA */}
         <div className="mt-[52px] flex justify-center">
           <button
-            onClick={handleContactUs}
+            onClick={navigateToContactUs}
             className="
               cursor-pointer
               inline-flex

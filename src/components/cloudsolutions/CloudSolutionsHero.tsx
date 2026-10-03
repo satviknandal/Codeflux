@@ -5,16 +5,13 @@ import {
   ArrowRight,
   CloudIcon,
 } from "lucide-react";
-// import cloud from "../../assets/hero/cloud.png";
 import cloud from "../../assets/hero/cloud-computing-image2.png";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 const CloudSolutionsHero = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
   
@@ -136,7 +133,7 @@ const CloudSolutionsHero = () => {
           {/* CTA */}
           <div className="mt-9">
             <button
-              onClick={handleContactUs}
+              onClick={navigateToContactUs}
               className="
                 cursor-pointer
                 group

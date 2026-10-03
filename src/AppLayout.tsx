@@ -2,10 +2,15 @@ import { Outlet, useLocation } from "react-router";
 import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
 import AppFlow from "./components/home/AppFlow";
+import { useEffect } from "react";
 
 const AppLayout: React.FC = () => {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const RenderHomeLayout = () => {
     return <div className="hero min-h-[650px] md:min-h-[880px]">

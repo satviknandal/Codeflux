@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 type Solution = {
   id: string;
@@ -136,8 +135,7 @@ const WebDevelopmentSolutionFinder: React.FC = () => {
   const [activeId, setActiveId] = useState("business");
   const activeSolution = solutions.find((solution) => solution.id === activeId) ?? solutions[0];
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
 
@@ -297,7 +295,7 @@ const WebDevelopmentSolutionFinder: React.FC = () => {
         {/* CTA */}
         <div className="mt-11 text-center">
           <button
-            onClick={handleContactUs}
+            onClick={navigateToContactUs}
             className="
               cursor-pointer
               group relative inline-flex items-center gap-[9px]

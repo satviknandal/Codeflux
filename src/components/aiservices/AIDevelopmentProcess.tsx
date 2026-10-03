@@ -1,20 +1,15 @@
 import { motion } from "framer-motion";
-import {
-    ContainerVariant,
-    ItemVariant
-} from "../../shared/MotionSetting";
+import { ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
 import { CircleCheckIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 import { useNavigate } from "react-router-dom";
-import { contactus } from "../../shared/utility";
 
 interface AIDevelopmentProcessProps {}
 
 const AIDevelopmentProcess = ({}: AIDevelopmentProcessProps) => {
     const navigate = useNavigate();
 
-    const handleContactUs = () => {
-        contactus();
+    const navigateToContactUs = () => {
         navigate("../../contactus");
     };
     
@@ -89,7 +84,7 @@ const AIDevelopmentProcess = ({}: AIDevelopmentProcessProps) => {
                         ))}
                     </ul>
                     <button 
-                        onClick={handleContactUs}
+                        onClick={navigateToContactUs}
                         className="cursor-pointer px-6 py-3 rounded-full border border-pink-400 text-sm md:text-base font-medium hover:text-pink-200 cursor-pointer text-white bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)]"
                     >
                         Schedule an AI Consultation

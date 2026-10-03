@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import CompHeader from "../shared/CompHeader";
-import { contactus } from "../../shared/utility";
 
 const comparisonRows = [
   {
@@ -44,8 +43,7 @@ const comparisonRows = [
 const EngagementOptionsComparison = () => {
   const navigate = useNavigate();
 
-  const handleContactUs = () => {
-    contactus();
+  const navigateToContactUs = () => {
     navigate("../../contactus");
   };
   
@@ -147,7 +145,7 @@ const EngagementOptionsComparison = () => {
             hover:bg-sky-700
             hover:shadow-[0_10px_28px_rgba(255,255,235,0.18)]
           "
-          onClick={handleContactUs}>
+          onClick={navigateToContactUs}>
             <span>Discuss Your Model</span><span className="text-md">→</span>
           </button>
         </div>
