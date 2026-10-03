@@ -328,9 +328,10 @@ const MobileWebappBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '10 August 2026', 
+          category: 'App Development', 
+          date: '16 September 2026', 
           title: 'Do You Need a Mobile App or a Progressive Web App?',
+          time: 8,
           desc: ""
         }}
       />

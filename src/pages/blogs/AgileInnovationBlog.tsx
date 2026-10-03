@@ -132,8 +132,9 @@ const AgileInnovationBlog = () => {
       <BlogsHeader
         data={{
           category: 'Innovation', 
-          date: '10 August 2026', 
+          date: '10 September 2026', 
           title: 'Agile innovation: a blueprint for rapid and effective change',
+          time: 7,
           desc: ""
         }}
       />

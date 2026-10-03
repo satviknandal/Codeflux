@@ -79,7 +79,7 @@ const WhyCodefluxForAIDevelopmentData = [
 const AIBlogsData = [
     {
         title: "What is Agentic AI",
-        category: "Digital Transformation",
+        category: "Artificial Intelligence",
         readTime: "10 min read",
         description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
         date: "September 28, 2026",
@@ -88,19 +88,19 @@ const AIBlogsData = [
     },
     {
         title: "AI Adoption Framework: How Enterprises Structure Their AI Initiatives",
-        category: "Tech",
+        category: "Artificial Intelligence",
         readTime: "7 min read",
         description: "From strategy and AI assessment to implementation, scaling, and continuous governance, along with real-world best practices and common AI adoption challenges to avoid, this guide offers you a comprehensive, actionable insight on adopting AI successfully.",
-        date: "September 15, 2026",
+        date: "September 20, 2026",
         href: "/aiadoptionblog",
         image: aiadoption
     },
     {
         title: "Generative AI: what is it, and how can it impact business?",
-        category: "Digital Transformation",
+        category: "Artificial Intelligence",
         readTime: "10 min read",
         description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
-        date: "September 1, 2026",
+        date: "September 15, 2026",
         href: "/generativeaiblog",
         image: generativeai
     }

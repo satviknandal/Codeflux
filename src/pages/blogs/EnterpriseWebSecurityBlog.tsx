@@ -649,9 +649,10 @@ const EnterpriseWebSecurityBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '10 August 2026', 
+          category: 'Web Development', 
+          date: '30 September 2026', 
           title: 'Enterprise Web Portal Security Checklist & Compliance Guide',
+          time: 7,
           desc: ""
         }}
       />

@@ -229,8 +229,9 @@ const InfraMigrationBlog = () => {
       <BlogsHeader
         data={{
           category: 'Tech', 
-          date: '10 August 2026', 
+          date: '16 September 2026', 
           title: 'How to Move On-Premise Infrastructure to the Cloud: A Step-by-Step Migration Guide', 
+          time: 7,
           desc: "Global cloud spending is forecast to surpass $1 trillion by the end of 2026, according to Forrester Research. Meanwhile, McKinsey reports that organisations modernising legacy systems through cloud adoption can reduce IT costs by nearly 40% while also accelerating software release cycles. But those results only really show up when the migration is mapped, planned, and carried out properly. If you rush it, or you treat scope like it’s optional, moving from on-premise to cloud can bring downtime, data integrity problems, and security gaps, that end up costing way more than the “savings” you expected. This guide goes through it all, the right strategy, a step by step process, the key cost items, and then a post migration checklist, so you can move your infrastructure with confidence."
         }}
       />

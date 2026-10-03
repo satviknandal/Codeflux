@@ -12,44 +12,44 @@ import aiadoption from "../assets/blogs/ai-adoption.jpg";
 
 
 import BreadCrumbNav from "../components/BreadcrumbNav";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import type { BlogPost } from "../components/shared/BlogCardComponent";
 import BlogCardComponent from "../components/shared/BlogCardComponent";
 
 const latestBlogPosts: Array<BlogPost> = [
   {
     title: "Enterprise Web Portal Security Checklist & Compliance Guide",
-    category: "App Development",
+    category: "Web Development",
     readTime: "7 min read",
     description: "Enterprise Portal Security Enterprise web portals give customers, employees, vendors, and partners authenticated access to sensitive business data, APIs, documents,",
-    date: "June 24, 2026",
+    date: "September 30, 2026",
     href: "/enterprisewebsecuritychecklistblog",
     image: websecurity,
   },
   {
-    title: "AI Adoption Framework: How Enterprises Structure Their AI Initiatives",
-    category: "Tech",
-    readTime: "7 min read",
-    description: "From strategy and AI assessment to implementation, scaling, and continuous governance, along with real-world best practices and common AI adoption challenges to avoid, this guide offers you a comprehensive, actionable insight on adopting AI successfully.",
-    date: "September 15, 2025",
-    href: "/aiadoptionblog",
-    image: aiadoption
-  },
-  {
     title: "What is Agentic AI",
-    category: "Digital Transformation",
+    category: "Artificial Intelligence",
     readTime: "10 min read",
     description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
-    date: "June 8, 2026",
+    date: "September 28, 2026",
     href: "/agenticaiblog",
     image: agenticAi
   },
   {
+    title: "AI Adoption Framework: How Enterprises Structure Their AI Initiatives",
+    category: "Artificial Intelligence",
+    readTime: "7 min read",
+    description: "From strategy and AI assessment to implementation, scaling, and continuous governance, along with real-world best practices and common AI adoption challenges to avoid, this guide offers you a comprehensive, actionable insight on adopting AI successfully.",
+    date: "September 20, 2025",
+    href: "/aiadoptionblog",
+    image: aiadoption
+  },
+  {
     title: "How to Move On-Premise Infrastructure to the Cloud: A Step-by-Step Migration Guide",
-    category: "Business Software",
+    category: "Tech",
     readTime: "7 min read",
     description: "Learn the complete on-premise to cloud migration process, including strategies, costs, migration steps, checklists, and post-migration optimisation tips.",
-    date: "Dec 15, 2025",
+    date: "September 16, 2026",
     href: "/inframigrationblog",
     image: inframigration
   },
@@ -58,7 +58,7 @@ const latestBlogPosts: Array<BlogPost> = [
     category: "App Development",
     readTime: "7 min read",
     description: "Introduction In 2026, mobile app development will evolve rapidly, and businesses must stay ahead of the curve to deliver high-quality,",
-    date: "June 24, 2026",
+    date: "September 15, 2026",
     href: "/mobileappdevblog",
     image: mobileappdevelopment,
   }
@@ -70,34 +70,34 @@ const featuredBlogPosts: BlogPost[] = [
     category: "Artificial Intelligence",
     readTime: "6 min read",
     description: "Introduction Artificial Intelligence (AI) has moved from being an experimental",
-    date: "January 22, 2026",
+    date: "September 16, 2026",
     href: "/topaiservicesblog",
     image: aitools
   },
   {
-    title: "What Is Digital Transformation?",
-    category: "Tech",
-    readTime: "7 min read",
-    description: "Technology has changed the business landscape, but it can be challenging to know how to keep your organization operating competitively.",
-    date: "December 15, 2025",
-    href: "/digitalTranformationBlog",
-    image: digitaltransformation
-  },
-  {
     title: "Do You Need a Mobile App or a Progressive Web App?",
-    category: "Automation",
+    category: "App Development",
     readTime: "8 min read",
     description: "The real factors that determine whether you need a mobile app or PWA: device-specific features",
-    date: "February 18, 2026",
+    date: "September 16, 2026",
     href: "/mobileorwebappblog",
     image: mobilewebapp
   },
   {
-    title: "Generative AI: what is it, and how can it impact business?",
+    title: "What Is Digital Transformation?",
     category: "Digital Transformation",
+    readTime: "7 min read",
+    description: "Technology has changed the business landscape, but it can be challenging to know how to keep your organization operating competitively.",
+    date: "September 15, 2026",
+    href: "/digitalTranformationBlog",
+    image: digitaltransformation
+  },
+  {
+    title: "Generative AI: what is it, and how can it impact business?",
+    category: "Artificial Intelligence",
     readTime: "10 min read",
     description: "The artificial intelligence (AI) realm saw a significant stir towards the close of 2022, as OpenAI unleashed ChatGPT to the digital world, promptly amassing an impressive 100 million users in just a few months. The driving force behind this remarkable uptake? Generative AI models",
-    date: "June 8, 2026",
+    date: "September 15, 2026",
     href: "/generativeaiblog",
     image: generativeai
   },
@@ -106,14 +106,13 @@ const featuredBlogPosts: BlogPost[] = [
     category: "Innovation",
     readTime: "7 min read",
     description: "Agile innovation helps enterprises respond to change through strategic experimentation, faster learning and scalable solutions that create lasting business value. ",
-    date: "April 1, 2026",
+    date: "September 10, 2026",
     href: "/agileinnovationblog",
     image: agile
   },
 ];
 
 const BlogsPage = () => {
-  const navigate = useNavigate();
 
   const renderLatestArticle = (post: BlogPost) => {
     return <div className="mb-4 group">
@@ -143,13 +142,10 @@ const BlogsPage = () => {
           </div>
 
           <h2 className="text-[14px] md:text-base md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
-            <a
-              // href={post.href}
-              onClick={() => navigate('blog1')}
-              className="hover:text-sky-600 transition-colors"
+            <Link to={post.href} className="hover:text-sky-600 transition-colors"
             >
               {post.title}
-            </a>
+            </Link>
           </h2>
 
           <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mb-4">
@@ -157,14 +153,10 @@ const BlogsPage = () => {
           </p>
 
           <div className="flex items-center justify-between">
-            <a
-              href={post.href}
-              aria-label={`Read: ${post.title}`}
-              className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1"
-            >
+            <Link to={post.href} className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">
               Read
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </article>

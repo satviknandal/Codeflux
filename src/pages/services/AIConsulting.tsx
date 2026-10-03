@@ -188,9 +188,9 @@ const AIConsulting = () => {
       <AIDevelopmentProcess/>
     </div>
     <IndustryDrivenSolutions/>
-    <AIDevelopmentBlogs/>
-    <AITechStack/>
     <TechAIDifference/>
+    <AITechStack/>
+    <AIDevelopmentBlogs/>
       <div className="container-wrapper">
         <FAQs title="AI Development FAQs" faqs={AIDevelopmentFaqs}/>
       </div>

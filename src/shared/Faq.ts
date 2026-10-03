@@ -247,12 +247,48 @@ const CloudServicesFaqs = [
   }
 ];
 
+const TestingServicesFaqs = [
+  {
+    question: "What are QA and software testing services?",
+    answer: "QA and software testing services include test planning, test case design, manual and automated execution, defect tracking, and KPI reporting across the software development lifecycle. They cover functional, performance, security, accessibility, and compatibility layers. SDLC Corp delivers all of these through certified engineers and tool-agnostic frameworks.",
+  },
+  {
+    question: "What is the difference between QA and software testing?",
+    answer: "QA is the broader discipline of preventing defects through process, standards, and continuous improvement. Software testing is one activity within QA that finds and validates defects. QA owns the framework, while testing executes the checks. Strong programs combine both, treating prevention and detection as a single workflow.",
+  },
+  {
+    question: "How much do QA and software testing services cost?",
+    answer: "QA and software testing services cost between $25 and $150 per hour depending on engineer location, specialization, and engagement model. Offshore manual testing sits at the lower end, while US-based security or AI testing reaches the higher end. Fixed-scope projects run $5,000 to $250,000 based on coverage breadth.",
+  },
+  {
+    question: "Why should I outsource QA and software testing?",
+    answer: "Outsourced QA reduces hiring time from months to days, removes payroll overhead, and adds discipline that in-house teams often skip under release pressure. Specialized vendors bring tool licenses, certified engineers, and process maturity that an internal team would take two or more years to build. The result is faster releases at lower total cost.",
+  },
+  {
+    question: "How do I choose a QA and software testing services company?",
+    answer: "Choose a QA partner on five criteria: ISTQB or equivalent certifications, named tool stack, transparent KPI reporting, references from your industry, and an onboarding timeline under two weeks. Ask for sample dashboards, defect-leakage data, and at least two reference calls. Pricing should be the last filter, not the first.",
+  },
+  {
+    question: "What types of software testing do you offer?",
+    answer: "Offered testing types include functional, regression, performance, load, security, API, mobile, accessibility, usability, compatibility, and AI model testing. Each type uses dedicated tools and engineers trained for that specialty. Coverage scope is defined per project based on application risk, release cadence, and compliance requirements.",
+  },
+  {
+    question: "How quickly can you onboard a QA team?",
+    answer: "A QA team can be onboarded within 48 to 72 hours for staff augmentation or 7 to 10 business days for full managed services. Onboarding includes pod staffing, tool integration, access setup, and first sprint kickoff. ISTQB-trained engineers stay on bench to enable this ramp speed.",
+  },
+  {
+    question: "Can you integrate with our existing CI/CD pipeline?",
+    answer: "Integration with existing CI/CD pipelines is part of standard onboarding. Supported tools include Jenkins, GitHub Actions, GitLab CI, Azure DevOps, and CircleCI. Quality gates are configured for unit, regression, performance, and security stages, with automated reporting to your existing tracker.",
+  }
+];
+
 export {
     WebDevelopmentFaqs,
     WebDesignFaqs,
     SoftwareDevelopmentFaqs,
     MobileAppDevelopmentFaqs,
     AIDevelopmentFaqs,
-    CloudServicesFaqs
+    CloudServicesFaqs,
+    TestingServicesFaqs
 }
 

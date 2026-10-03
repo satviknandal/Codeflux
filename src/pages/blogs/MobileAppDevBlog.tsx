@@ -158,9 +158,10 @@ const MobileAppDevBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '10 August 2026', 
+          category: 'App Development', 
+          date: '15 September 2026', 
           title: 'Must-Have Mobile App Development Tools: What’s Trending?', 
+          time: 7,
           desc: "In 2026, mobile app development will evolve rapidly, and businesses must stay ahead of the curve to deliver high-quality, feature-rich apps. With the increasing demand for innovative solutions, mobile app developers need the right tools to bring their ideas to life. The tools used for mobile app development are crucial to creating seamless, user-friendly, and scalable apps. This blog will explore the must-have mobile app development tools for 2026 and highlight the trends shaping the industry."
         }}
       />

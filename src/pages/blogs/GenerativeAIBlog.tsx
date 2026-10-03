@@ -166,9 +166,10 @@ const GenerativeAIBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '1 September 2026', 
+          category: 'Artificial Intelligence', 
+          date: '15 September 2026', 
           title: 'Generative AI: what is it, and how can it impact business?',
+          time: 10,
           desc: ""
         }}
       />

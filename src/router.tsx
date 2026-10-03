@@ -33,6 +33,9 @@ import AIAdoptionBlog from "./pages/blogs/AIAdoptionBlog";
 import TalentPage from "./pages/TalentPage";
 import MaintenanceSupportPlansPage from "./pages/MaintenanceSupportPlansPage";
 import TestingServicesPage from "./pages/TestingServicesPage";
+import MobileAppTestingBlog from "./pages/blogs/MobileAppTestingBlog";
+import UATTestingBlog from "./pages/blogs/UATTestingBlog";
+import TestCaseManagementBlog from "./pages/blogs/TestCaseManagementBlog";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +75,10 @@ const router = createBrowserRouter([
             { path: "/agenticaiblog", element: <AgenticAIBlog /> },
             { path: "/aiadoptionblog", element: <AIAdoptionBlog /> },
             { path: "/digitalTranformationBlog", element: <DigitalTransformationBlog /> },
+            { path: "/mobileapptestingblog", element: <MobileAppTestingBlog /> },
+            { path: "/uattestingblog", element: <UATTestingBlog /> },
+            { path: "/testcasemanagement", element: <TestCaseManagementBlog /> },
+            
             
             
             { path: "*", element: <NotFoundPage/>},

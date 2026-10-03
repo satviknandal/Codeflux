@@ -4,6 +4,7 @@ interface BlogsHeaderFields {
     category: string, 
     date: string, 
     title: string, 
+    time: number, 
     desc: string
 }
 
@@ -12,14 +13,14 @@ interface BlogsHeaderProps {
 }
 
 const BlogsHeader = ({data}: BlogsHeaderProps) => {
-    const {category, date, title, desc} = data;
+    const {category, date, title, desc, time} = data;
   
     return <header className="py-[60px]">
         <a href="/blogs" className="block text-xs mb-16 text-gray-900">← All Blogs</a>
         <div className="text-xs text-gray-800">
             <span className="text-sky-500 font-bold mr-4">{category}</span>
             <time className="mr-4">{date}</time>
-            <span>5 minute read</span>
+            <span>{time} minute read</span>
         </div>
         <h1 className="text-[#01182e] blogh1">{title}</h1>
         <p className="text-gray-600 text-base">{desc}</p>

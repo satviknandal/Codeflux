@@ -335,9 +335,10 @@ const TopAIServicesBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '10 August 2026', 
+          category: 'Artificial Intelligence', 
+          date: '16 September 2026', 
           title: 'Top AI Services and Tools Every Business Will Need in the Next 3 Years',
+          time: 6,
           desc: ""
         }}
       />

@@ -30,6 +30,8 @@ const Blogs = ({
             return "radialgradient";
         case "aiblog":
             return "bg-[#fff]";
+        case "default":
+            return "bg-[#fff]";
         default:
             return "bg-[#fff]";
         }
@@ -40,7 +42,7 @@ const Blogs = ({
         <section className="mx-auto flex flex-col items-center">
           <CompHeader
               highlighter="Blogs"
-              title={type === 'aiblog' ? <p className='bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)] bg-clip-text text-transparent'>{title}</p> : ''}
+              title={type === 'aiblog' ? <p className='bg-[linear-gradient(to_right,#6025F5,#E40CD3,#FF5555)] bg-clip-text text-transparent'>{title}</p> : <p className='bg-[linear-gradient(to_right,#1d66fc,#7c37fc,#7c37fc)] bg-clip-text text-transparent'>{title}</p>}
               subheading={subheading}
               variant={type === 'aiblog' ? 'pinkdefault': 'default'}
           />

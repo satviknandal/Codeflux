@@ -268,9 +268,10 @@ const DigitalTransformationBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '10 August 2026', 
+          category: 'Digital Transformation', 
+          date: '15 September 2026', 
           title: 'What Is Digital Transformation?', 
+          time: 7,
           desc: 'Technology has changed the business landscape, but it can be challenging to know how to keep your organization operating competitively. Many IT leaders refer to the transition to new technology as "digital transformation."" This guide will help you understand the core concepts of digital transformation and how you can build an effective strategy.'
         }}
       />

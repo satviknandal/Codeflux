@@ -589,9 +589,10 @@ const AIAdoptionBlog = () => {
     return  <article className="container-wrapper-transparent px-6 pb-24">
       <BlogsHeader
         data={{
-          category: 'Tech', 
-          date: '15 September 2026', 
+          category: 'Artificial Intelligence', 
+          date: '20 September 2026', 
           title: 'AI Adoption Framework: How Enterprises Structure Their AI Initiatives',
+          time: 7,
           desc: ""
         }}
       />
