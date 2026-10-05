@@ -67,8 +67,7 @@ const Header = () => {
     {
       label: "Talent Services",
       link: "/services/talentservices",
-      icon: UserRound
-      ,
+      icon: UserRound,
     },
   ];
 
