@@ -170,14 +170,14 @@ const TalentSubServices: React.FC = () => {
         <CompHeader
           highlighter="Sub Services"
           title="Expand Your Development Team, Efficiently"
-          subheading="Quickly scale your development team with cost-effective, highly skilled professionals who integrate seamlessly into your projects. Mitrais’ On-Demand Development Teams provide the flexibility to scale, accelerate delivery, and maintain high-quality standards. Whether you need short-term reinforcements or a long-term dedicated team, we deliver the expertise and stability to drive success."
+          subheading="Quickly scale your development team with cost-effective, highly skilled professionals who integrate seamlessly into your projects. Codeflux On-Demand Development Teams provide the flexibility to scale, accelerate delivery, and maintain high-quality standards. Whether you need short-term reinforcements or a long-term dedicated team, we deliver the expertise and stability to drive success."
           variant="default"
         />
         <div className="h-[40px]"></div>
         <Services
           img="https://www.mitrais.com/wp-content/uploads/2025/05/eaf0c107bcc3847ae61da85f1d8dfa4389a70c9a.webp"
           title="Staff Augmentation"
-          desc="Optimise your software development budget by augmenting your internal team with skilled developers, testers, and engineers. With teams based in Bali, Jakarta, Bandung, and Yogyakarta, Mitrais provides nearshore talent for businesses across the Asia-Pacific, offering cost-effective scalability without compromising quality."
+          desc="Optimise your software development budget by augmenting your internal team with skilled developers, testers, and engineers. With teams based in Delhi, Chandigarh, Codeflux provides nearshore talent for businesses across the Asia-Pacific, offering cost-effective scalability without compromising quality."
           list={[
             "Rapid access to skilled professionals that reduce recruitment delays.",
             "Cost-effective scalability to meet changing project demands.",

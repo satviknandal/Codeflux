@@ -26,17 +26,17 @@ const HarnessExceptionalTalent: React.FC<HarnessExceptionalTalentProps> = () => 
     {
       icon: GlobeIcon,
       title: "Web Developers",
-      description: " SDLC Corp takes pride in its exceptional and dedicated team of web developers. With vast experience in the industry, our web developers possess a forward-thinking approach to web development.",
+      description: "Codeflux takes pride in its exceptional and dedicated team of web developers. With vast experience in the industry, our web developers possess a forward-thinking approach to web development.",
     },
     {
       icon: BugOffIcon,
       title: "Testers",
-      description: " Quality assurance is of utmost importance in delivering successful solutions. At our company, we prioritize delivering high-quality solutions to the market. Our dedicated QA team meticulously scrutinizes every project we take on, guaranteeing the provision of flawless solutions to our valued clients.",
+      description: "Quality assurance is of utmost importance in delivering successful solutions. At our company, we prioritize delivering high-quality solutions to the market. Our dedicated QA team meticulously scrutinizes every project we take on, guaranteeing the provision of flawless solutions to our valued clients.",
     },
     {
       icon: FolderKanbanIcon,
       title: "Project Managers",
-      description: " Our project managers possess comprehensive knowledge of project management and execution. SDLC Corp is well-versed in IT development, and our project managers meticulously oversee every minute detail of the development process, ensuring client satisfaction.",
+      description: "Our project managers possess comprehensive knowledge of project management and execution. Codeflux is well-versed in IT development, and our project managers meticulously oversee every minute detail of the development process, ensuring client satisfaction.",
     },
   ];
 
