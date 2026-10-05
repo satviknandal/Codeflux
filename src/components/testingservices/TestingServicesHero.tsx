@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import testingbg from "../../assets/hero/testingbg.png";
 
 const TestingServicesHero = () => {
   const navigate = useNavigate();
@@ -233,7 +234,7 @@ const TestingServicesHero = () => {
               object-contain
               drop-shadow-[0_20px_70px_rgba(37,99,235,0.25)]
             "
-            src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2026/06/18114756/mobile-app-development-company.webp"
+            src={testingbg}
             alt="Custom mobile app development showcase — iOS and Android app built by Codeflux"
             width="900"
             height="1100"

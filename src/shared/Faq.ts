@@ -282,6 +282,29 @@ const TestingServicesFaqs = [
   }
 ];
 
+const TalentFaqs = [
+  {
+    question: "What kind of IT outsourcing does CodeFlux do?",
+    answer: "The dedicated-team kind. You get full-time engineers who work inside your team — your backlog, your standups, your leads — and we carry the employment behind them: recruiting, salaries, benefits, equipment, HR and retention. We are not a project shop and we do not put a project manager between you and your engineers. If you have used outsourced software development before and it felt like managing a vendor rather than managing a team, this is the structural difference.",
+  },
+  {
+    question: "How do you keep our IP safe?",
+    answer: "One contract with a AUS company, real employment agreements with every engineer, and an IP assignment chain with no gaps in it. Engineers work on your accounts, in your repositories, under your access controls — we do not hold a copy of your codebase or run your infrastructure. NDAs and confidentiality terms are in place before anyone touches anything, and you can add your own security requirements to the engagement.",
+  },
+  {
+    question: "Who owns the code our team writes?",
+    answer: "You do, from the moment it is created. Because the engineers are our employees rather than subcontractors, the assignment runs from engineer to Full Scale to you without a third party in the middle. That is one of the practical differences between outsourcing to a company that employs its engineers and outsourcing to one that brokers contractors.",
+  },
+  {
+    question: "How does this compare to an agency's pricing?",
+    answer: "Rates start at $40 an hour fully loaded and vary with skill set and seniority. The comparison that matters is not the hourly number but what it includes: ours covers salary, benefits, equipment, office, HR and our margin, with no recruiting fee, no discovery phase, no change orders and no account-management layer. Agencies typically quote a blended rate against a scope, so the number you are comparing moves every time the scope does. Most clients land 50 to 70 percent below the cost of an equivalent hire.",
+  },
+  {
+    question: "Can we scale up and down?",
+    answer: "Yes, you can add or drop an engineer with 30 days' notice. There is no multi-year commitment and no termination penalty. Clients tell us that flexibility is the main reason they keep teams for years instead of cutting them at the next budget review.",
+  }
+];
+
 export {
     WebDevelopmentFaqs,
     WebDesignFaqs,
@@ -289,6 +312,7 @@ export {
     MobileAppDevelopmentFaqs,
     AIDevelopmentFaqs,
     CloudServicesFaqs,
-    TestingServicesFaqs
+    TestingServicesFaqs,
+    TalentFaqs
 }
 

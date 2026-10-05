@@ -5,12 +5,12 @@ import whyus from "../../assets/1.jpg";
 import { CircleCheckIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 
-interface WhyCodefluxforWebDevelopmentProps {
+interface WhyCodefluxforTalentServicesProps {
     pointers: any, 
     pointerClass: any
 }
 
-const WhyCodefluxforWebDevelopment = ({pointers, pointerClass}: WhyCodefluxforWebDevelopmentProps) => {
+const WhyCodefluxforTalentServices = ({pointers, pointerClass}: WhyCodefluxforTalentServicesProps) => {
     const [activePointer, setActivePointer] = useState<number | null>(null); 
     
 
@@ -89,4 +89,4 @@ const WhyCodefluxforWebDevelopment = ({pointers, pointerClass}: WhyCodefluxforWe
     </div>
 };
 
-export default WhyCodefluxforWebDevelopment;
+export default WhyCodefluxforTalentServices;

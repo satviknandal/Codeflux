@@ -17,7 +17,6 @@ import AIConsulting from "./pages/services/AIConsulting";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsofServicePage from "./pages/TermsofServicePage";
 import BlogsPage from "./pages/BlogsPage";
-import Blog1 from "./pages/blogs/Blog1";
 import InfraMigrationBlog from "./pages/blogs/InfraMigrationBlog";
 import MobileAppDevBlog from "./pages/blogs/MobileAppDevBlog";
 import EnterpriseWebSecurityBlog from "./pages/blogs/EnterpriseWebSecurityBlog";
@@ -32,7 +31,7 @@ import AgenticAIBlog from "./pages/blogs/AgenticAIBlog";
 import AIAdoptionBlog from "./pages/blogs/AIAdoptionBlog";
 import TalentPage from "./pages/TalentPage";
 import MaintenanceSupportPlansPage from "./pages/MaintenanceSupportPlansPage";
-import TestingServicesPage from "./pages/TestingServicesPage";
+import TestingServicesPage from "./pages/services/TestingServicesPage";
 import MobileAppTestingBlog from "./pages/blogs/MobileAppTestingBlog";
 import UATTestingBlog from "./pages/blogs/UATTestingBlog";
 import TestCaseManagementBlog from "./pages/blogs/TestCaseManagementBlog";
@@ -56,15 +55,14 @@ const router = createBrowserRouter([
             { path: "/services/webdesignuiux", element: <WebDesignUX /> },
             { path: "/services/cloudsolutionsservices", element: <CloudSolutionServices /> },
             { path: "/services/mobileappservices", element: <MobileAppServices /> },
+            { path: "/services/testingservices", element: <TestingServicesPage /> },
+            { path: "/services/talentservices", element: <TalentPage /> },
+            { path: "/services/maintenancesupportplans", element: <MaintenanceSupportPlansPage /> },
             { path: "/privacypolicy", element: <PrivacyPolicyPage /> },
             { path: "/termsofservice", element: <TermsofServicePage /> },
-            { path: "/maintenancesupportplans", element: <MaintenanceSupportPlansPage /> },
-            { path: "/testingservices", element: <TestingServicesPage /> },
-            { path: "/talent", element: <TalentPage /> },
 
 
             { path: "/blogs", element: <BlogsPage /> },
-            { path: "/blog1", element: <Blog1 /> },
             { path: "/inframigrationblog", element: <InfraMigrationBlog /> },
             { path: "/mobileappdevblog", element: <MobileAppDevBlog /> },
             { path: "/enterprisewebsecuritychecklistblog", element: <EnterpriseWebSecurityBlog /> },

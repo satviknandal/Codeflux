@@ -12,6 +12,7 @@ import {
   Palette,
   Smartphone,
   Cloud,
+  UserRound,
 } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
@@ -62,6 +63,12 @@ const Header = () => {
       label: "Cloud Solutions",
       link: "/services/cloudsolutionsservices",
       icon: Cloud,
+    },
+    {
+      label: "Talent Services",
+      link: "/services/talentservices",
+      icon: UserRound
+      ,
     },
   ];
 

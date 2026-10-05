@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import mobileappbg from "../../assets/hero/mobile-app.gif";
 
 const MobileAppHero = () => {
   const navigate = useNavigate();
@@ -235,7 +236,8 @@ const MobileAppHero = () => {
               object-contain
               drop-shadow-[0_20px_70px_rgba(37,99,235,0.25)]
             "
-            src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2026/06/18114756/mobile-app-development-company.webp"
+            src={mobileappbg}
+            // src="https://sdlccorp-web-prod.blr1.digitaloceanspaces.com/wp-content/uploads/2026/06/18114756/mobile-app-development-company.webp"
             alt="Custom mobile app development showcase — iOS and Android app built by Codeflux"
             width="900"
             height="1100"

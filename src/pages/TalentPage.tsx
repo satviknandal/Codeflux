@@ -1,45 +1,43 @@
-import { BlocksIcon, ComponentIcon, GlobeCheckIcon } from "lucide-react";
 import FAQs from "../components/faq/FAQs";
 import NeedTeam from "../components/shared/NeedTeam";
 import FocusedRecruitmentServices from "../components/talent/FocusedRecruitmentServices";
+import HarnessExceptionalTalent from "../components/talent/HarnessExceptionalTalent";
+import TalentDeliveryProcess from "../components/talent/TalentDeliveryProcess";
 import TalentHero from "../components/talent/TalentHero";
 import TalentServices from "../components/talent/TalentServices";
-import WebDevelopmentProblems from "../components/webdev/WebDevelopmentProblems";
-import WhyCodefluxforWebDevelopment from "../components/webdev/WhyCodefluxforWebDevelopment";
-import { WebDevelopmentFaqs } from "../shared/Faq";
+import TalentSubServices from "../components/talent/TalentSubServices";
+import WhyCodefluxforTalentServices from "../components/talent/WhyCodefluxforTalentServices";
+import { TalentFaqs } from "../shared/Faq";
 
 
-const focusedServicesData = [
-    {
-        title: "Website Design & Development",
-        description: "We don't just build websites; we create user experiences that engage and convert. Our designers and developers will collaborate to bring your vision to life with a stunning, functional website.",
-        icon: <GlobeCheckIcon width={16} height={16} className="text-white"/>,
-        tags: ['Custom Design', 'Responsive Layout', 'SEO Friendly', 'User-Centric']
-    },
-    {
-        title: "CMS Development",
-        description: "Empower yourself to easily update and manage your website content with a user-friendly CMS. We'll choose the perfect platform based on your needs, whether it's WordPress, Drupal, or a custom solution.",
-        icon: <ComponentIcon width={16} height={16} className="text-white"/>,
-        tags: ['Multi-User Support', 'Integrated SEO tools', 'Analytics Integration', 'Flexibility and scalability']
-    },
-    {
-        title: "API Development & Integration",
-        description: "Connect your web application to external data sources and services with our expert API development and integration. This allows for a more powerful and dynamic user experience.",
-        icon: <BlocksIcon width={16} height={16} className="text-white"/>,
-        tags: ['Custom API Solutions', 'Third-Party Integration', 'Secure and Reliable', 'Real-Time Data Access']
-    }
-];
+const RenderHiring = () => {
+    return <section className="relative py-20 sm:py-28 md:py-20 bg-[#01182e] overflow-hidden flex flex-col justify-center">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#437189,transparent_1px),linear-gradient(to_bottom,#437189_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-4 text-left">READY TO BUILD</h2>
+                <div className="flex flex-col items-end text-right">
+                    <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-l from-sky-400 to-white tracking-tighter leading-[0.85] mb-6 sm:mb-12">YOUR DREAM TEAM?</h2>
+                    <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-xl font-light leading-relaxed mb-8 sm:mb-12 border-r border-sky-400 pr-4 sm:pr-6">
+                        Lets discuss your resourcing needs and find the perfect match for your projects.
+                    </p>
+                    <button className="group relative inline-flex rounded-xl items-center justify-center gap-3 sm:gap-4 px-6 py-4 sm:px-10 sm:py-5 md:px-10 md:py-5 bg-white text-black text-sm sm:text-base md:text-base font-bold uppercase tracking-widest overflow-hidden hover:bg-sky-400 hover:text-white transition-all duration-500">
+                        <span className="relative z-10 flex items-center gap-3">Start Hiring Now 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right w-6 h-6 group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>;
+}
 
 const TalentPage = () => {
-  
-    const DigitalServices = () => {
-        return <FocusedRecruitmentServices gap={16} data={focusedServicesData}/>
-    }
 
   const pointers = [ 
         { 
-            title: "Over a Decade of Expertise", 
-            description: "Codeflux team has over 16 years of experience with more than 100+ successful projects. Our extensive experience reflects our ability to stay ahead of technology trends and adapt to changing market needs. We deliver reliable, custom software solutions for various industries like healthcare, e-learning, fintech, logistics, online marketplaces, automotive, insurance, and HR.", 
+            title: "Senior Engineers With AI in the Workflow", 
+            description: "Our developers are senior engineers who build with AI inside the daily workflow. AI speeds up the routine work, and a senior engineer stays accountable for everything that ships. ", 
         }, 
         { 
             title: "Cost-Effective Approach", 
@@ -82,14 +80,17 @@ const TalentPage = () => {
   return <>
       <TalentHero/>
       <TalentServices/>
-      <WebDevelopmentProblems/>
-      <DigitalServices/>
-      <WhyCodefluxforWebDevelopment
+      <TalentSubServices/>
+      <FocusedRecruitmentServices/>
+      <WhyCodefluxforTalentServices
         pointers={pointers}
         pointerClass={''}
       />
+      <HarnessExceptionalTalent/>
+      <TalentDeliveryProcess/>
+      <RenderHiring/>
       <main className="container-wrapper">
-        <FAQs title="Our Web Development FAQs" faqs={WebDevelopmentFaqs}/>
+        <FAQs title="IT Talent Outsourcing FAQs" faqs={TalentFaqs}/>
       </main>
       <main className="container-wrapper">
         <NeedTeam/>
