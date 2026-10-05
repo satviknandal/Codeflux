@@ -166,7 +166,7 @@ const TalentSubServices: React.FC = () => {
       <div className="pointer-events-none absolute left-0 top-0 h-[55%] w-[50%] rounded-full bg-sky-600/[0.08] blur-[100px]"/>
       <div className="pointer-events-none absolute bottom-0 right-0 h-[45%] w-[40%] rounded-full bg-sky-600/[0.06] blur-[100px]" />
 
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6">
+      <div className="relative z-10 container-wrapper-transparent">
         <CompHeader
           highlighter="Sub Services"
           title="Expand Your Development Team, Efficiently"

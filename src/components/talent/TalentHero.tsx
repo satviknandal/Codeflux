@@ -12,7 +12,7 @@ import recruitmentbg from "../../assets/hero/recruitmentbg.avif";
 
 const TalentHero = () => {
   return (
-    <div className="relative h-[700px] overflow-hidden">
+    <div className="relative h-[575px] md:h-[700px] overflow-hidden">
       <section
         className="
           absolute
@@ -61,8 +61,8 @@ const TalentHero = () => {
           {/* LEFT */}
           <div className="flex flex-col items-start">
 
-            <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200/20 bg-gray-500/10 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-gray-300/80">
-                <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-gray-300/30">
+            <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200/30 bg-gray-500/50 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-gray-300/90">
+                <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-gray-300/40">
                 <Smartphone size={15} />
                 </div>
                 What We Provide / Professional Staffing
@@ -86,7 +86,7 @@ const TalentHero = () => {
 
               <span
                 className="
-                  text-7xl
+                  text-3xl md:text-7xl inline-block
                   bg-gradient-to-r
                   from-sky-300
                   via-sky-400
@@ -113,12 +113,13 @@ const TalentHero = () => {
             </h1>
 
             {/* Description */}
+
             <p className="mt-4 md:mt-6 max-w-xl text-[14px] md:text-base leading-6 md:leading-6.5">
               Codeflux offers a comprehensive range of recruitment solutions tailored to meet the unique needs of each client. From permanent placements to temporary staffing and contract roles, we provide flexible and effective solutions to help businesses thrive.
             </p>
 
             {/* Trust points */}
-            <div className="mt-8 flex flex-col gap-4">
+            <div className="mt-6 md:mt-8 flex flex-col gap-4">
               {/* Point 1 */}
               <div className="flex items-center gap-3 text-sm text-white">
                 <div
