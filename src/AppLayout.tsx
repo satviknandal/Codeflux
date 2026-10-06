@@ -3,6 +3,8 @@ import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
 import AppFlow from "./components/home/AppFlow";
 import { useEffect } from "react";
+import FloatingContactPanel from "./components/shared/FloatingContactPanel";
+import AIChatbot from "./components/chatbot/AIChatbot";
 
 const AppLayout: React.FC = () => {
   const { pathname } = useLocation();
@@ -45,6 +47,9 @@ const AppLayout: React.FC = () => {
       <div className={isHome ? "max-w-content mx-auto" : "relative top-[89px] mb-20 max-w-content bg-white mx-auto"}>
         <Outlet />
       </div>
+      <FloatingContactPanel />
+      {/* <Chatbot1 /> */}
+      <AIChatbot/>
       <Footer />
     </main>
   );
