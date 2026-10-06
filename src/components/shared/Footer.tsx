@@ -5,6 +5,7 @@ import LinkedinIcon from "../../shared/svg/social/LinkedinIcon";
 import FacebookIcon from "../../shared/svg/social/FacebookIcon";
 import XIcon from "../../shared/svg/social/XIcon";
 import InstagramIcon from "../../shared/svg/social/InstagramIcon";
+import { UserRound } from "lucide-react";
 
 type SocialName = "facebook" | "twitter" | "instagram" | "linkedin";
 
@@ -35,12 +36,16 @@ const footerLinks = {
       path: "services/webdesignuiux",
     },
     {
+      label: "Mobile App Services",
+      path: "services/mobileappservices",
+    },
+    {
       label: "Cloud Solutions",
       path: "services/cloudsolutionsservices",
     },
     {
-      label: "Mobile App Services",
-      path: "services/mobileappservices",
+      label: "Talent Services",
+      path: "services/talentservices"
     },
   ],
   Company: [

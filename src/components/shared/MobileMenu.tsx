@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "../../assets/codeflux-logo.png";
-import {ChevronRight, ChevronDown, ArrowUpRight, XIcon, Cloud, Smartphone, Palette, Globe2, Code2, BrainCircuit, Sparkles, UserRound} from "lucide-react";
+import {ChevronRight, ChevronDown, ArrowUpRight, XIcon, Cloud, Smartphone, Palette, Globe2, Code2, BrainCircuit, Sparkles, UserRound, BlocksIcon} from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { ItemVariant } from "../../shared/MotionSetting";
 
@@ -20,7 +20,7 @@ const navigationlinks: ServiceCategory[] = [
     {
       label: "Our Services",
       link: "/services",
-      icon: BrainCircuit
+      icon: BlocksIcon
     },
     {
       label: "AI Consulting",

@@ -13,6 +13,7 @@ import {
   Smartphone,
   Cloud,
   UserRound,
+  BlocksIcon,
 } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
@@ -29,6 +30,11 @@ const Header = () => {
   const isHomePage = location.pathname === "/";
 
   const links = [
+    {
+      label: "Our Services",
+      link: "/services",
+      icon: BlocksIcon,
+    },
     {
       label: "AI Consulting",
       link: "/services/aiconsulting",
