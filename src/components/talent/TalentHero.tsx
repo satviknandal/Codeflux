@@ -28,7 +28,7 @@ const TalentHero = () => {
           before:inset-0
           before:z-0
           before:opacity-40
-          before:[background-image:radial-gradient(rgba(0,188,255,0.15)_1px,transparent_1px)]
+          before:[background-image:radial-gradient(rgba(0,188,255,0.35)_1px,transparent_1px)]
           before:[background-size:36px_36px]
           after:absolute
           after:left-0
@@ -61,32 +61,21 @@ const TalentHero = () => {
           {/* LEFT */}
           <div className="flex flex-col items-start">
 
-            <div className="mb-4 md:mb-5 inline-flex items-center gap-2 rounded-full border border-gray-200/30 bg-gray-500/50 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-gray-300/90">
-                <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-gray-300/40">
+            <div className="mb-2 md:mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/15 bg-sky-400/10 px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-sky-400">
+              <div className="flex w-5 h-5 md:h-7 md:w-7 items-center justify-center rounded-full bg-sky-400/20">
                 <Smartphone size={15} />
-                </div>
-                What We Provide / Professional Staffing
+              </div>
+              What We Provide / Professional Staffing
             </div>
 
             {/* Heading */}
-            <h1
-              className="
-                max-w-3xl
-                text-2xl
-                font-semibold
-                leading-[1.08]
-                tracking-tight
-                text-white
-                sm:text-4xl
-                lg:text-5xl
-              "
-            >
+            <h1 className="max-w-3xl text-2xl font-semibold md:font-medium leading-[1.08] tracking-tight text-white lg:text-5xl">
               Business Empowered {" "}
               <br className="hidden sm:block" />
 
               <span
                 className="
-                  text-3xl md:text-7xl inline-block
+                  text-3xl md:text-5xl inline-block
                   bg-gradient-to-r
                   from-sky-300
                   via-sky-400
@@ -217,7 +206,8 @@ const TalentHero = () => {
         </div>
        
       </section>
-      <div className="absolute right-0 top-0 w-full h-full bg-gradient-to-l from-[#111] to-transparent z-2"></div>
+      {/* <div className="absolute right-0 top-0 w-full h-full bg-gradient-to-r from-[#111] to-transparent z-2"></div> */}
+      <div className="absolute left-0 top-0 z-[2] h-full w-full bg-gradient-to-r from-[#01182e] via-[#111] to-[#111] opacity-80"/>
        <img
           fetchPriority="high"
           className="
