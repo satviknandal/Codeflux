@@ -190,7 +190,8 @@ const AIChatbot: React.FC = () => {
             items-center
             justify-between
             border-b
-            border-slate-200/80
+            bg-[#071426]
+            border-white/80
             px-4
             py-3.5
           "
@@ -202,6 +203,7 @@ const AIChatbot: React.FC = () => {
                 onClick={handleBack}
                 aria-label="Go back"
                 className="
+                  cursor-pointer
                   flex
                   h-8
                   w-8
@@ -211,7 +213,7 @@ const AIChatbot: React.FC = () => {
                   rounded-full
                   text-slate-500
                   transition
-                  hover:bg-slate-100
+                  hover:bg-slate-200
                   hover:text-slate-900
                 "
               >
@@ -228,7 +230,7 @@ const AIChatbot: React.FC = () => {
                 items-center
                 justify-center
                 rounded-full
-                bg-slate-900
+                bg-slate-700
                 text-white
                 shadow-sm
               "
@@ -241,7 +243,7 @@ const AIChatbot: React.FC = () => {
             </div>
   
             <div className="min-w-0">
-              <h3 className="truncate text-sm font-semibold text-slate-900">
+              <h3 className="truncate text-sm font-semibold text-white">
                 {isLiveChat
                   ? "Live Chat"
                   : selectedItem?.title ||
@@ -292,8 +294,8 @@ const AIChatbot: React.FC = () => {
   
     const renderHome = () => (
       <>
-        <div className="px-4 pb-3 pt-4">
-          <div className="mb-1 flex items-center gap-2">
+        <div className="px-3 pb-3 pt-4">
+          {/* <div className="mb-1 flex items-center gap-2">
             <Sparkles
               size={16}
               className="text-slate-900"
@@ -302,15 +304,15 @@ const AIChatbot: React.FC = () => {
             <h4 className="text-sm font-semibold text-slate-900">
               How can we help?
             </h4>
-          </div>
+          </div> */}
   
-          <p className="text-xs leading-5 text-slate-500">
+          <p className="text-xs leading-3.5 text-slate-500">
             Choose a service to learn more about how Codeflux
             can help your business.
           </p>
         </div>
   
-        <div className="max-h-[390px] overflow-y-auto px-3 pb-2">
+        <div className="max-h-[450px] overflow-y-auto px-3 pb-2">
           <div className="space-y-1.5">
             {chatbotCategories.map((category) => {
               const Icon = category.icon;
@@ -321,6 +323,7 @@ const AIChatbot: React.FC = () => {
                   type="button"
                   onClick={() => handleCategoryClick(category)}
                   className="
+                    cursor-pointer  
                     group
                     flex
                     w-full
@@ -329,30 +332,16 @@ const AIChatbot: React.FC = () => {
                     rounded-xl
                     border
                     border-transparent
-                    p-3
+                    p-2.5
                     text-left
                     transition-all
                     duration-200
-                    hover:border-slate-200
-                    hover:bg-slate-50
+                    bg-white
+                    hover:border-sky-100
+                    hover:bg-sky-50
                   "
                 >
-                  <span
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-lg
-                      bg-slate-100
-                      text-slate-700
-                      transition
-                      group-hover:bg-white
-                      group-hover:shadow-sm
-                    "
-                  >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-100/70 text-slate-700 transition group-hover:bg-white group-hover:shadow-sm">
                     <Icon size={18} />
                   </span>
   
@@ -406,7 +395,7 @@ const AIChatbot: React.FC = () => {
                   items-center
                   justify-center
                   rounded-xl
-                  bg-slate-100
+                  bg-sky-100
                   text-slate-700
                 "
               >
@@ -437,6 +426,7 @@ const AIChatbot: React.FC = () => {
                   type="button"
                   onClick={() => handleItemClick(item)}
                   className="
+                    cursor-pointer
                     group
                     flex
                     w-full
@@ -445,12 +435,13 @@ const AIChatbot: React.FC = () => {
                     rounded-xl
                     border
                     border-transparent
-                    p-3
+                    px-3
+                    py-2.5
                     text-left
                     transition-all
                     duration-200
-                    hover:border-slate-200
-                    hover:bg-slate-50
+                    hover:border-sky-100
+                    hover:bg-sky-50
                   "
                 >
                   <span className="min-w-0 flex-1">
@@ -458,7 +449,7 @@ const AIChatbot: React.FC = () => {
                       {item.title}
                     </span>
   
-                    <span className="mt-1 block text-[11px] leading-4.5 text-slate-500">
+                    <span className="mt-[0.5] block text-[11px] leading-4 text-slate-500">
                       {item.description}
                     </span>
                   </span>
@@ -716,6 +707,7 @@ const AIChatbot: React.FC = () => {
             type="button"
             onClick={openLiveChat}
             className="
+              cursor-pointer
               group
               flex
               w-full
@@ -727,7 +719,7 @@ const AIChatbot: React.FC = () => {
               py-2.5
               text-left
               transition
-              hover:bg-slate-100
+              hover:bg-sky-100/80
             "
           >
             <span
@@ -853,76 +845,74 @@ const AIChatbot: React.FC = () => {
     ========================================================= */
   
     return (
-      <div
-        className="
-          fixed
-          bottom-5
-          right-5
-          z-[110]
-  
-          w-[390px]
-          max-w-[calc(100vw-32px)]
-  
-          overflow-hidden
-          rounded-2xl
-          border
-          border-slate-200/80
-          bg-white
-  
-          shadow-[0_20px_60px_rgba(0,0,0,0.18)]
-  
-          animate-[chatbotIn_0.25s_ease-out]
-        "
-        role="dialog"
-        aria-label="Codeflux chatbot"
-      >
-        {renderHeader()}
-  
-        {isLiveChat
-          ? renderLiveChat()
-          : selectedItem
-          ? renderDetails()
-          : selectedCategory
-          ? renderCategory()
-          : renderHome()}
-  
-        {renderFooter()}
-  
-        {/* =====================================================
-            MOBILE CLOSE / MINIMIZE AREA
-        ===================================================== */}
-  
-        <button
-          type="button"
-          onClick={closeChat}
-          aria-label="Close chatbot"
-          className="
-            absolute
-            right-2
-            top-2
-  
-            hidden
-            max-md:flex
-  
-            h-8
-            w-8
-            items-center
-            justify-center
-            rounded-full
-  
-            bg-white/80
-            text-slate-500
-            shadow-sm
-            backdrop-blur
-  
-            transition
-            hover:bg-white
-            hover:text-slate-900
-          "
+        <div className="rounded-2xl bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-400 p-[1px]">
+
+        <div className="
+            fixed
+            bottom-5
+            right-5
+            z-[110]
+            w-[390px]
+            max-w-[calc(100vw-32px)]
+            overflow-hidden
+            rounded-2xl
+            border
+            border-slate-600
+            bg-white
+            shadow-[0_20px_60px_rgba(0,0,0,0.18)]
+            animate-[chatbotIn_0.25s_ease-out]
+            "
+            role="dialog"
+            aria-label="Codeflux chatbot"
         >
-          <X size={16} />
-        </button>
-      </div>
+            {renderHeader()}
+    
+            {isLiveChat
+            ? renderLiveChat()
+            : selectedItem
+            ? renderDetails()
+            : selectedCategory
+            ? renderCategory()
+            : renderHome()}
+    
+            {renderFooter()}
+    
+            {/* =====================================================
+                MOBILE CLOSE / MINIMIZE AREA
+            ===================================================== */}
+    
+            <button
+            type="button"
+            onClick={closeChat}
+            aria-label="Close chatbot"
+            className="
+                absolute
+                right-2
+                top-2
+    
+                hidden
+                max-md:flex
+    
+                h-8
+                w-8
+                items-center
+                justify-center
+                rounded-full
+    
+                bg-white/80
+                text-slate-500
+                shadow-sm
+                backdrop-blur
+    
+                transition
+                hover:bg-white
+                hover:text-slate-900
+            "
+            >
+            <X size={16} />
+            </button>
+        </div>
+        </div>
     );
 }
 
