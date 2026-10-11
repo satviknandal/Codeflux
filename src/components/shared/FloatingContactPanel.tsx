@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const FloatingContactPanel: React.FC = () => {
   const navigate = useNavigate();
 
-  // Replace this with your actual Calendly URL
   const calendlyUrl = "https://calendly.com/codeflux-sales/30min";
 
   const whatsappNumber = "61478575587";
@@ -96,9 +95,6 @@ const FloatingContactPanel: React.FC = () => {
             />
       </button>
 
-      {/* =========================================================
-          CALENDAR / CALENDLY
-      ========================================================= */}
       <button
         type="button"
         onClick={openCalendly}
