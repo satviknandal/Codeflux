@@ -52,7 +52,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: dist/
+          path: out/
+          if-no-files-found: error
 
   deploy:
     name: Deploy to Azure
