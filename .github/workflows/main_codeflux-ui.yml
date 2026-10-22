@@ -43,6 +43,9 @@ jobs:
       - name: Build Next.js static site
         run: npm run build
 
+      - name: Add static server to build output
+        run: cp deploy/server.mjs out/server.mjs
+
       - name: Verify build output
         run: |
           echo "Build contents:"
