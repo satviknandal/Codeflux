@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface AIBusinessBannerProps {
     title: string;
@@ -8,10 +8,10 @@ interface AIBusinessBannerProps {
 }
 
 const AIBusinessBanner = ({title, subheading, image, buttonText}: AIBusinessBannerProps) => {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const navigateToContactUs = () => {
-        navigate("../../contactus");
+        router.push("/contactus");
     };
     
     const renderCard = () => {
@@ -37,7 +37,7 @@ const AIBusinessBanner = ({title, subheading, image, buttonText}: AIBusinessBann
                         "
                     >{buttonText}</button>
                 </section>
-                <img src={image} className="absolute opacity-5 md:opacity-100 -right-[100px] bottom-0 md:bottom-2.5 z-1 max-h-[250px] md:max-h-[310px]"/>
+                <img src={image} alt="" className="absolute opacity-5 md:opacity-100 -right-[100px] bottom-0 md:bottom-2.5 z-1 max-h-[250px] md:max-h-[310px]"/>
             </div>
         </div>
       </div>

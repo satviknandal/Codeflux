@@ -2,13 +2,12 @@ import DesignIcon from "../svg/DesignIcon";
 import MaintenanceIcon from "../svg/MaintenanceIcon";
 import RocketIcon from "../svg/RocketIcon";
 import SoftwareCodeIcon from "../svg/SoftwareCodeIcon";
-import cloudMigration from "../../assets/cloud/cloudMigration.jpg";
-import cloudoptimization from "../../assets/cloud/cloudoptimization.jpg";
-import devops from "../../assets/cloud/devops.jpg";
-import enterprisesecurity from "../../assets/cloud/enterprisesecurity.jpg";
-import multicloud from "../../assets/cloud/multicloud.jpg";
-import cloudstorage from "../../assets/cloud/cloudstorage.jpg";
-
+const cloudMigration = "/assets/cloud/cloudMigration.jpg";
+const cloudoptimization = "/assets/cloud/cloudoptimization.jpg";
+const devops = "/assets/cloud/devops.jpg";
+const enterprisesecurity = "/assets/cloud/enterprisesecurity.jpg";
+const multicloud = "/assets/cloud/multicloud.jpg";
+const cloudstorage = "/assets/cloud/cloudstorage.jpg";
 const CloudServicesData = [
     {
       title: "Cloud Migration & Transformation",

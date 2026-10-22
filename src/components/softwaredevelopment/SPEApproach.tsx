@@ -1,4 +1,4 @@
-import Sdsapproach from "../../assets/services/SPE-Approach.svg";
+const Sdsapproach = "/assets/services/SPE-Approach.svg";
 import { motion } from "framer-motion";
 import { ContainerVariant } from "../../shared/MotionSetting";
 import CompHeader from "../shared/CompHeader";
@@ -19,7 +19,7 @@ const SPEApproach = ({width = "w-full"}: SoftwareSecurityProps) => {
                 subheading="As a leading software development company, we translate ideas into winning products and accelerate the software product engineering process with a digital-first approach."
                 variant="default"
             />
-            <img src={Sdsapproach} className="w-full md:w-[1000px]"/>
+            <img src={Sdsapproach} alt="Codeflux software development approach" className="w-full md:w-[1000px]"/>
           </div> 
         </section>
       );

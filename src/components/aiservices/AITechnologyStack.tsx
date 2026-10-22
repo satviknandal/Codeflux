@@ -1,47 +1,37 @@
-import awsicon from "../../assets/icons/amazon-aws-icon.webp";
-import azureicon from "../../assets/icons/microsoft-azure-icon.webp";
-import gcpicon from "../../assets/icons/googlecloud-original.svg";
-import dockericon from "../../assets/icons/docker-original.svg";
-
+const awsicon = "/assets/icons/amazon-aws-icon.webp";
+const azureicon = "/assets/icons/microsoft-azure-icon.webp";
+const gcpicon = "/assets/icons/googlecloud-original.svg";
+const dockericon = "/assets/icons/docker-original.svg";
 //datastorage
-import sqldbicon from "../../assets/icons/sql.svg";
-import nosqldbicon from "../../assets/icons/no-sql.svg";
-import datalakeicon from "../../assets/icons/data-lakes.svg";
-import amazons2icon from "../../assets/icons/amazon-s2.svg";
-
+const sqldbicon = "/assets/icons/sql.svg";
+const nosqldbicon = "/assets/icons/no-sql.svg";
+const datalakeicon = "/assets/icons/data-lakes.svg";
+const amazons2icon = "/assets/icons/amazon-s2.svg";
 //data processing
-import pandasicon from "../../assets/icons/pandas.svg";
-import numpyicon from "../../assets/icons/num-py.svg";
-import scipyicon from "../../assets/icons/sci-py.svg";
-
+const pandasicon = "/assets/icons/pandas.svg";
+const numpyicon = "/assets/icons/num-py.svg";
+const scipyicon = "/assets/icons/sci-py.svg";
 //feature engineering
-import featuretoolsicon from "../../assets/icons/featuretools.svg";
-import feasticon from "../../assets/icons/feast.svg";
-import tectonicon from "../../assets/icons/tecton.svg";
-import dataroboticon from "../../assets/icons/data-robot-paxata.svg";
-
-
+const featuretoolsicon = "/assets/icons/featuretools.svg";
+const feasticon = "/assets/icons/feast.svg";
+const tectonicon = "/assets/icons/tecton.svg";
+const dataroboticon = "/assets/icons/data-robot-paxata.svg";
 //ml
-import scikiticon from "../../assets/icons/scikit-learn.svg";
-import kerasicon from "../../assets/icons/keras.svg";
-
+const scikiticon = "/assets/icons/scikit-learn.svg";
+const kerasicon = "/assets/icons/keras.svg";
 //model
-import fastapiicon from "../../assets/icons/fast-api.svg";
-
+const fastapiicon = "/assets/icons/fast-api.svg";
 //visualization
-import tableauicon from "../../assets/icons/tableau.svg";
-import matplotlibicon from "../../assets/icons/matplotlib.svg";
-import plotlyicon from "../../assets/icons/plotly.svg";
-
+const tableauicon = "/assets/icons/tableau.svg";
+const matplotlibicon = "/assets/icons/matplotlib.svg";
+const plotlyicon = "/assets/icons/plotly.svg";
 //devops
-import giticon from "../../assets/icons/git.svg";
-import jenkinsicon from "../../assets/icons/jenkins.svg";
-
+const giticon = "/assets/icons/git.svg";
+const jenkinsicon = "/assets/icons/jenkins.svg";
 //monitoring
-import mlflowicon from "../../assets/icons/ml-flow.svg";
-import neptuneicon from "../../assets/icons/neptune.svg";
-
-import tensorflowicon from "../../assets/icons/tensorflow.webp";
+const mlflowicon = "/assets/icons/ml-flow.svg";
+const neptuneicon = "/assets/icons/neptune.svg";
+const tensorflowicon = "/assets/icons/tensorflow.webp";
 import { CardContainerVariant, ContainerVariant, ItemVariantLeft, ItemVariantRight } from "../../shared/MotionSetting";
 import { motion } from "framer-motion";
 import CompHeader from "../shared/CompHeader";

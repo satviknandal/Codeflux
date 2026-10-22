@@ -6,17 +6,17 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import laptop from "../../assets/software/laptop.png";
-import mobile from "../../assets/software/mobile.png";
-import watch from "../../assets/software/watch.png";
-import { useNavigate } from "react-router-dom";
+const laptop = "/assets/software/laptop.png";
+const mobile = "/assets/software/mobile.png";
+const watch = "/assets/software/watch.png";
+import { useRouter } from "next/navigation";
 
 
 const SoftwareDevelopmentHero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
   
   return (
@@ -190,9 +190,9 @@ const SoftwareDevelopmentHero = () => {
         <div className="relative flex items-center justify-center">
           <div className="absolute inset-10 rounded-full bg-blue-500/20 blur-[90px]"/>
           <div className='flex items-end justify-end'>
-          <img src={watch} className='w-[40px] md:w-[70px] h-auto'/>
-          <img src={laptop} className='w-[230px] md:w-[400px]'/>
-          <img src={mobile} className='w-[60px] md:w-[100px]'/>
+          <img src={watch} alt="" className='w-[40px] md:w-[70px] h-auto'/>
+          <img src={laptop} alt="Custom software running on laptop, mobile and smartwatch" className='w-[230px] md:w-[400px]'/>
+          <img src={mobile} alt="" className='w-[60px] md:w-[100px]'/>
         </div>
         </div>
       </div>

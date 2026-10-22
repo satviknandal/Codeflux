@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import logo from "../../assets/codeflux-logo.png";
+const logo = "/assets/codeflux-logo.png";
 import {ChevronRight, ChevronDown, ArrowUpRight, XIcon, Cloud, Smartphone, Palette, Globe2, Code2, BrainCircuit, Sparkles, UserRound, BlocksIcon} from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ItemVariant } from "../../shared/MotionSetting";
 
 interface MobileMenuProps {
@@ -92,13 +93,13 @@ const navigationOtherlinks: ServiceCategory[] = [
     },
   ];
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
 }) => {
-    const navigate = useNavigate();
+    const router = useRouter();
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const handleClose = () => {
@@ -109,7 +110,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
 
   const MobileHeader = () => {
     return <div className="flex items-center justify-between px-5 py-5 h-[80px] max-h-[80px] text-right border-b-[1px] border-b-black/25 bg-black/20">
-        <img src={logo} className="h-10"/>
+        <img src={logo} alt="Codeflux" className="h-10"/>
         <button
             type="button"
             aria-label="Close menu"
@@ -148,7 +149,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             <div className="flex flex-1 flex-col overflow-y-auto px-8 py-4">
               {/* Work */}
               <MotionLink variants={ItemVariant} 
-                to="/"
+                href="/"
                 onClick={handleClose}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -230,7 +231,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                             <div className="">
                                 {navigationlinks.map((item, key) => {
                                     const Icon = item.icon;
-                                    return <MotionLink key={key} to={item.link} onClick={handleClose} className="group flex items-center justify-between border-t border-white/10 py-4">
+                                    return <MotionLink key={key} href={item.link} onClick={handleClose} className="group flex items-center justify-between border-t border-white/10 py-4">
                                         <div className="flex justify-center items-center">
                                             <Icon size={16} strokeWidth={0.8} className={`mr-2.5 text-sky-50 transition-transform duration-300 group-hover:scale-110 group-hover:text-white"`}/>
                                             <span className="text-[15px] font-light text-white/80 transition-colors">{item.label}</span>
@@ -250,7 +251,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
               {navigationOtherlinks.map((nav, key) => {
                 return <MotionLink variants={ItemVariant} 
                     key={key}
-                    to={nav.link}
+                    href={nav.link}
                     onClick={handleClose}
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -292,7 +293,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                         text-md
                         text-white
                     "
-                    onClick={() => navigate("/contactus")}
+                    onClick={() => router.push("/contactus")}
                     >
                     Start a Project
                     </button>

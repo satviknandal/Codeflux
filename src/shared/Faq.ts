@@ -316,3 +316,17 @@ export {
     TalentFaqs
 }
 
+
+// Every FAQ set grouped by service, in the order shown on the /faq page.
+const faqCategories = [
+  { id: "ai-development", title: "AI Development & Consulting", href: "/services/aiservices", faqs: AIDevelopmentFaqs },
+  { id: "software-development", title: "Software Development", href: "/services/softwaredevelopmentservices", faqs: SoftwareDevelopmentFaqs },
+  { id: "web-development", title: "Web Development", href: "/services/webdevelopmentservices", faqs: WebDevelopmentFaqs },
+  { id: "web-design", title: "Website Design & UI/UX", href: "/services/webdesignuiux", faqs: WebDesignFaqs },
+  { id: "mobile-app-development", title: "Mobile App Development", href: "/services/mobileappservices", faqs: MobileAppDevelopmentFaqs },
+  { id: "cloud-services", title: "Cloud & Infrastructure Services", href: "/services/cloudsolutionsservices", faqs: CloudServicesFaqs },
+  { id: "testing-services", title: "QA & Software Testing", href: "/services/testingservices", faqs: TestingServicesFaqs },
+  { id: "talent-services", title: "IT Talent Outsourcing", href: "/services/talentservices", faqs: TalentFaqs },
+];
+
+export { faqCategories };

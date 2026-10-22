@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/codeflux-logo.png";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+const logo = "/assets/codeflux-logo.png";
 import {
   XIcon,
   Sparkles,
@@ -19,7 +20,7 @@ interface FlyoutNavProps {
 }
 
 interface FlyoutLinkProps {
-  to: string;
+  href: string;
   children: React.ReactNode;
 }
 
@@ -105,7 +106,7 @@ const FlyoutNav = ({
   open,
   setOpen,
 }: FlyoutNavProps) => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     if (open) {
@@ -131,13 +132,13 @@ const FlyoutNav = ({
     };
   }, [open, setOpen]);
 
-  const FlyoutLink = ({to, children}: FlyoutLinkProps) => {
+  const FlyoutLink = ({href: to, children}: FlyoutLinkProps) => {
     const isExternal = to.startsWith("http");
     const classes = "block text-sm font-normal text-white hover:text-cyan-400 transition-colors duration-200";
     if (isExternal) {
       return <a href={to} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className={classes}>{children}</a>
     }
-    return <Link to={to} onClick={() => setOpen(false)} className={classes}>{children}</Link>
+    return <Link href={to} onClick={() => setOpen(false)} className={classes}>{children}</Link>
   };
 
   if (!open) {
@@ -161,7 +162,7 @@ const FlyoutNav = ({
 
       <nav className="relative flex flex-col left-0 top-0 h-[100dvh] w-full overflow-y-auto bg-gradient-to-br from-[#0a4985] to-[#012546]" style={{zIndex: 1000000}}>
         <div className="flex justify-between p-5 h-[100px] max-h-[100px] text-right border-b-[1px] border-b-black/25 bg-black/20">
-          <img src={logo} className="h-10"/>
+          <img src={logo} alt="Codeflux" className="h-10"/>
           <button
             type="button"
             aria-label="Close menu"
@@ -175,11 +176,11 @@ const FlyoutNav = ({
 
         <div className="h-[calc(100vh - 200px)] p-5 overflow-scroll">
           <div className="mb-8 space-y-3">
-            <FlyoutLink to="/">Home</FlyoutLink>
-            {/* <FlyoutLink to="/services">Services</FlyoutLink>
-            <FlyoutLink to="/aboutus">About Us</FlyoutLink>
-            <FlyoutLink to="/blogs">Blog</FlyoutLink>
-            <FlyoutLink to="/contactus">Contact</FlyoutLink> */}
+            <FlyoutLink href="/">Home</FlyoutLink>
+            {/* <FlyoutLink href="/services">Services</FlyoutLink>
+            <FlyoutLink href="/aboutus">About Us</FlyoutLink>
+            <FlyoutLink href="/blogs">Blog</FlyoutLink>
+            <FlyoutLink href="/contactus">Contact</FlyoutLink> */}
           </div>
 
           <div className="flex flex-col gap-8 text-white">
@@ -213,20 +214,17 @@ const FlyoutNav = ({
                     {links.map((link) => {
                       const Icon = link.icon;
 
-                      return <button
+                      return <Link
                         key={link.link}
-                        type="button"
-                        onClick={() => {
-                          setOpen(false);
-                          navigate(link.link);
-                        }}
+                        href={link.link}
+                        onClick={() => setOpen(false)}
                         className="flex gap-2.5 py-3 border-b border-b-amber-50/10 text-left text-sm text-[#f3f5f8] transition hover:text-[#7be2fc]"
                       >
                         <Icon size={16} strokeWidth={0.8} className={`transition-transform duration-300 group-hover:scale-110 
                           group-hover:text-white"
                         `}/>
                         {link.label}
-                      </button>
+                      </Link>
                     }
                     )}
 
@@ -258,7 +256,7 @@ const FlyoutNav = ({
                 text-sm
                 text-white
               "
-              onClick={() => navigate("/contactus")}
+              onClick={() => router.push("/contactus")}
             >
               Start a Project
             </button>

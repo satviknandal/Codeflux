@@ -1,12 +1,12 @@
 import { Smartphone } from 'lucide-react';
-import aidevelopment from '../../assets/ai/AI-engineering.webp';
-import { useNavigate } from 'react-router-dom';
+const aidevelopment = "/assets/ai/AI-engineering.webp";
+import { useRouter } from "next/navigation";
 
 const AIServicesHero = () => {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const navigateToContactUs = () => {
-        navigate("../../contactus");
+        router.push("/contactus");
     };
     
     return (

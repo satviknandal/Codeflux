@@ -1,7 +1,6 @@
-import digitaltransformation from "../../assets/blogs/digital-transformation.jpg";
-import mobilewebapp from "../../assets/blogs/mobilewebapp.jpg";
-import generativeai from "../../assets/blogs/generativeai.webp";
-
+const digitaltransformation = "/assets/blogs/digital-transformation.jpg";
+const mobilewebapp = "/assets/blogs/mobilewebapp.jpg";
+const generativeai = "/assets/blogs/generativeai.webp";
 const LatestArticlesData = [
   {
     title: "Generative AI: what is it, and how can it impact business?",

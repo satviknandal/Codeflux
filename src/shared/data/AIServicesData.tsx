@@ -2,16 +2,14 @@ import DesignIcon from "../svg/DesignIcon";
 import MaintenanceIcon from "../svg/MaintenanceIcon";
 import RocketIcon from "../svg/RocketIcon";
 import SoftwareCodeIcon from "../svg/SoftwareCodeIcon";
-import agenticAi from "../../assets/blogs/agentic-ai.png";
-import aiadoption from "../../assets/blogs/ai-adoption.jpg";
-import aieducation from "../../assets/carousel/aieducation.jpg";
-import aitelecom from "../../assets/carousel/aitelecom.jpg";
-import aifintech from "../../assets/carousel/aifintech.jpg";
-import aihealthcare from "../../assets/carousel/aihealthcare.jpg";
-import aifinance from "../../assets/carousel/aifinance.jpg";
-import generativeai from "../../assets/blogs/generativeai.webp";
-
-
+const agenticAi = "/assets/blogs/agentic-ai.png";
+const aiadoption = "/assets/blogs/ai-adoption.jpg";
+const aieducation = "/assets/carousel/aieducation.jpg";
+const aitelecom = "/assets/carousel/aitelecom.jpg";
+const aifintech = "/assets/carousel/aifintech.jpg";
+const aihealthcare = "/assets/carousel/aihealthcare.jpg";
+const aifinance = "/assets/carousel/aifinance.jpg";
+const generativeai = "/assets/blogs/generativeai.webp";
 const AIDevelopmentServices = [
     {
         title: "Machine Learning Development Services",

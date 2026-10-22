@@ -1,5 +1,5 @@
 import { ArrowRight, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export interface BlogPost {
   title: string;
@@ -35,13 +35,13 @@ const BlogCardComponent = ({ post }: { post: BlogPost }) => {
           </span>
         </div>
         <h2 className="text-[14px] md:text-base md:font-headline font-medium md:font-bold tracking-tighter text-gray-900 mb-2 line-clamp-2 group-hover:text-sky-600 transition-colors">
-            <Link to={post.href} className="hover:text-sky-600 transition-colors">{post.title}</Link>
+            <Link href={post.href} className="hover:text-sky-600 transition-colors">{post.title}</Link>
         </h2>
         <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mb-4">{post.description}</p>
 
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-400">{post.date}</span>
-          <Link to={post.href} className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">
+          <Link href={post.href} className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">
             Read
             <ArrowRight className="w-3 h-3" />
           </Link>

@@ -105,7 +105,7 @@ const WebDevelopmentServices = ({
               <p className={`text-xs md:text-[14px] text-gray-300 h-[100px]`}>{item.description}</p>
               <div className="mt-4 flex flex-col gap-2">
                 {item.tags && item.tags.map((obj) => {
-                  return <div className="w-fit text-sm font-medium bg-gradient-to-r from-sky-300/20 to-[#335778]/10 rounded-2xl px-4 py-2 text-[#ffffff]/80">{obj}</div>
+                  return <div key={obj} className="w-fit text-sm font-medium bg-gradient-to-r from-sky-300/20 to-[#335778]/10 rounded-2xl px-4 py-2 text-[#ffffff]/80">{obj}</div>
                 })}
               </div>
             </motion.div>

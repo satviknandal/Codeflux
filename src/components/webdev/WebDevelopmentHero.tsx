@@ -6,14 +6,14 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import webbg from "../../assets/hero/softwarebg.png";
-import { useNavigate } from "react-router-dom";
+const webbg = "/assets/hero/softwarebg.png";
+import { useRouter } from "next/navigation";
 
 const WebDevelopmentHero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
   
   return (

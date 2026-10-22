@@ -1,4 +1,4 @@
-import "../../blog.css";
+import Link from "next/link";
 
 interface BlogsHeaderFields {
     category: string, 
@@ -16,7 +16,7 @@ const BlogsHeader = ({data}: BlogsHeaderProps) => {
     const {category, date, title, desc, time} = data;
   
     return <header className="py-[60px]">
-        <a href="/blogs" className="block text-xs mb-16 text-gray-900">← All Blogs</a>
+        <Link href="/blogs" className="block text-xs mb-16 text-gray-900">← All Blogs</Link>
         <div className="text-xs text-gray-800">
             <span className="text-sky-500 font-bold mr-4">{category}</span>
             <time className="mr-4">{date}</time>

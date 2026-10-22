@@ -47,13 +47,10 @@ const Blogs = ({
               variant={type === 'aiblog' ? 'pinkdefault': 'default'}
           />
           <motion.div variants={CardContainerVariant}
-              className={`grid grid-cols-1 gap-1 md:gap-[var(--grid-gap)] w-full md:w-full`}
+              className={`grid grid-cols-1 md:grid-cols-[repeat(var(--cols),minmax(0,1fr))] gap-1 md:gap-[var(--grid-gap)] w-full md:w-full`}
               style={{
                   "--grid-gap": typeof gap === "number" ? `${gap}px` : gap,
-                gridTemplateColumns:
-                  window.innerWidth >= 768
-                    ? `repeat(${columns}, minmax(0, 1fr))`
-                    : undefined,
+                "--cols": columns,
               } as React.CSSProperties}
             >
               {data.map((item, index) => <BlogCardComponent key={index} post={item} />)}

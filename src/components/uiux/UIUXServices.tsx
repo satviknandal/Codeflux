@@ -1,6 +1,6 @@
 import { ArrowRight, Boxes, Check, Gauge, LayoutGrid, Lightbulb, PenTool, RefreshCw, Search, Smartphone, Star, Users, } from "lucide-react"; 
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const services = [ 
     { icon: Smartphone, title: "Mobile App UI/UX Design", text: "Native iOS and Android interfaces with Figma handoff, auto-layout, and motion specs.", }, 
@@ -14,10 +14,10 @@ const services = [
 ];
 
 const UiUXServices = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

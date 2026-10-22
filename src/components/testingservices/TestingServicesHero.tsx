@@ -6,14 +6,13 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import testingbg from "../../assets/hero/testingbg.png";
-
+import { useRouter } from "next/navigation";
+const testingbg = "/assets/hero/testingbg.png";
 const TestingServicesHero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

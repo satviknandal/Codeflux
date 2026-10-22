@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const NeedTeam = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../contactus");
+    router.push("/contactus");
   };
   
   return (

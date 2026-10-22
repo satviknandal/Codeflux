@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 type Solution = {
   id: string;
@@ -131,12 +131,12 @@ const solutions: Solution[] = [
 ];
 
 const WebDevelopmentSolutionFinder: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [activeId, setActiveId] = useState("business");
   const activeSolution = solutions.find((solution) => solution.id === activeId) ?? solutions[0];
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

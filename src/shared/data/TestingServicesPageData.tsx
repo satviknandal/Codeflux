@@ -1,13 +1,12 @@
 import { Apple } from "lucide-react";
 import { FaAndroid, FaGlobe, FaLayerGroup } from "react-icons/fa";
-import nativeios from "../../assets/app/ios-app-development.webp";
-import nativeandroid from "../../assets/app/native-android-development.webp";
-import crossplatform from "../../assets/app/cross-platform-development.webp";
-import pwa from "../../assets/app/pwa-and-app-modernisation.webp";
-import uattesting from "../../assets/blogs/uat-testing.webp";
-import testcasemanagement from "../../assets/blogs/testcase-management.webp";
-import mobileapptesting from "../../assets/blogs/mobile-app-testing.png";
-
+const nativeios = "/assets/app/ios-app-development.webp";
+const nativeandroid = "/assets/app/native-android-development.webp";
+const crossplatform = "/assets/app/cross-platform-development.webp";
+const pwa = "/assets/app/pwa-and-app-modernisation.webp";
+const uattesting = "/assets/blogs/uat-testing.webp";
+const testcasemanagement = "/assets/blogs/testcase-management.webp";
+const mobileapptesting = "/assets/blogs/mobile-app-testing.png";
 const TestingServicesPageData = [
   {
     icon: <Apple size={14} strokeWidth={2.5} />,

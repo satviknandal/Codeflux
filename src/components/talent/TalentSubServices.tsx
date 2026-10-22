@@ -1,5 +1,7 @@
 import React from "react";
 import CompHeader from "../shared/CompHeader";
+const staffimg = "/assets/talent/staffaugmentation.webp";
+const teamimg = "/assets/talent/dedicateddevteam.webp";
 
 interface ServicesProps {
   img: string;
@@ -175,7 +177,7 @@ const TalentSubServices: React.FC = () => {
         />
         <div className="h-[40px]"></div>
         <Services
-          img="https://www.mitrais.com/wp-content/uploads/2025/05/eaf0c107bcc3847ae61da85f1d8dfa4389a70c9a.webp"
+          img={staffimg}
           title="Staff Augmentation"
           desc="Optimise your software development budget by augmenting your internal team with skilled developers, testers, and engineers. With teams based in Delhi, Chandigarh, Codeflux provides nearshore talent for businesses across the Asia-Pacific, offering cost-effective scalability without compromising quality."
           list={[
@@ -187,7 +189,7 @@ const TalentSubServices: React.FC = () => {
         />
         <div className="h-[40px]"></div>
         <Services
-          img="https://www.mitrais.com/wp-content/uploads/2025/05/b3c3f7a20df1f2b294d787e71d82d48f5e590bee.webp"
+          img={teamimg}
           title="Dedicated Development Teams"
           desc="Build a dedicated team of skilled professionals aligned to your technology and delivery requirements."
           list={[

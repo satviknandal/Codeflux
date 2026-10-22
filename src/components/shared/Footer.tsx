@@ -1,6 +1,6 @@
-import footerbg from "../../assets/footerbg.png";
-import logo from "../../assets/codeflux-logo.png";
-import { useNavigate } from "react-router-dom";
+const footerbg = "/assets/footerbg.png";
+const logo = "/assets/codeflux-logo.png";
+import Link from "next/link";
 import LinkedinIcon from "../../shared/svg/social/LinkedinIcon";
 import FacebookIcon from "../../shared/svg/social/FacebookIcon";
 import XIcon from "../../shared/svg/social/XIcon";
@@ -12,45 +12,45 @@ const footerLinks = {
   Services: [
     {
       label: "Our Services",
-      path: "services",
+      path: "/services",
     },
     {
       label: "AI Services",
-      path: "services/aiservices",
+      path: "/services/aiservices",
     },
     {
       label: "AI Consulting",
-      path: "services/aiconsulting",
+      path: "/services/aiconsulting",
     },
     {
       label: "Software Development",
-      path: "services/softwaredevelopmentservices",
+      path: "/services/softwaredevelopmentservices",
     },
     {
       label: "Web Development",
-      path: "services/webdevelopmentservices",
+      path: "/services/webdevelopmentservices",
     },
     {
       label: "Web Design UI/UX",
-      path: "services/webdesignuiux",
+      path: "/services/webdesignuiux",
     },
     {
       label: "Mobile App Services",
-      path: "services/mobileappservices",
+      path: "/services/mobileappservices",
     },
     {
       label: "Cloud Solutions",
-      path: "services/cloudsolutionsservices",
+      path: "/services/cloudsolutionsservices",
     },
     {
       label: "Talent Services",
-      path: "services/talentservices"
+      path: "/services/talentservices"
     },
   ],
   Company: [
     {
       label: "About Us",
-      path: "aboutus",
+      path: "/aboutus",
     },
     // {
     //   label: "Team",
@@ -62,21 +62,21 @@ const footerLinks = {
     // },
     {
       label: "Careers",
-      path: "careers",
+      path: "/careers",
     },
     {
       label: "Contact",
-      path: "contactus",
+      path: "/contactus",
     },
   ],
   Resources: [
     {
       label: "FAQ",
-      path: "faq",
+      path: "/faq",
     },
     {
       label: "Blogs",
-      path: "blogs",
+      path: "/blogs",
     }
   ],
 };
@@ -90,7 +90,6 @@ function SocialIcon({ name }: { name: SocialName }) {
 }
 
 const Footer = () => {
-  const navigate = useNavigate();
 
   return (
     <footer className="relative w-full overflow-hidden bg-[#012546] text-[#f7f9fc]">
@@ -161,17 +160,14 @@ const Footer = () => {
               </h3>
 
               {links.map((link) => (
-                <span
+                <Link
                   key={link.path}
-                  onClick={() => {
-                    window.scrollTo(0,0);
-                    navigate(link.path)
-                  }}
+                  href={link.path}
                   className="cursor-pointer text-sm text-[#f3f5f8]
                   transition hover:text-[#7be2fc]"
                 >
                   {link.label}
-                </span>
+                </Link>
               ))}
             </nav>
           ))}
@@ -188,22 +184,16 @@ const Footer = () => {
             © 2026 Codeflux Pty Ltd. All rights reserved.
           </span>
           <div className="flex flex-row gap-6 justify-center md:justify-end">
-            <span 
-              className="cursor-pointer transition hover:text-[#7be2fc]" 
-              onClick={() => {
-                window.scrollTo(0,0);
-                navigate('privacypolicy')
-              }}>
+            <Link
+              className="transition hover:text-[#7be2fc]"
+              href="/privacypolicy">
                 Privacy Policy
-              </span>
-              <span 
-              className="cursor-pointer transition hover:text-[#7be2fc]" 
-              onClick={() => {
-                window.scrollTo(0,0);
-                navigate('termsofservice')
-              }}>
+                </Link>
+              <Link
+              className="transition hover:text-[#7be2fc]"
+              href="/termsofservice">
                 Terms of Service
-              </span>
+                </Link>
           </div>
         </div>
       </div>

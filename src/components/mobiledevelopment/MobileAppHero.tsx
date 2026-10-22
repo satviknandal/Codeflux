@@ -6,14 +6,13 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import mobileappbg from "../../assets/hero/mobile-app.gif";
-
+import { useRouter } from "next/navigation";
+const mobileappbg = "/assets/hero/mobile-app.gif";
 const MobileAppHero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

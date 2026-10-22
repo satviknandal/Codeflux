@@ -1,4 +1,6 @@
-import { Outlet, useLocation } from "react-router";
+"use client";
+
+import { usePathname } from "next/navigation";
 import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
 import AppFlow from "./components/home/AppFlow";
@@ -6,8 +8,8 @@ import { useEffect } from "react";
 import FloatingContactPanel from "./components/shared/FloatingContactPanel";
 import AIChatbot from "./components/chatbot/AIChatbot";
 
-const AppLayout: React.FC = () => {
-  const { pathname } = useLocation();
+const AppLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
   const isHome = pathname === "/";
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const AppLayout: React.FC = () => {
   }
 
   return (
-    <main
+    <div
       className={`
         min-h-screen
         text-slate-50
@@ -44,14 +46,14 @@ const AppLayout: React.FC = () => {
             {isHome ? <RenderHomeLayout/> : <Header/>}
         </section>
       </div>
-      <div className={isHome ? "max-w-content mx-auto" : "relative top-[89px] mb-20 max-w-content bg-white mx-auto"}>
-        <Outlet />
-      </div>
+      <main className={isHome ? "max-w-content mx-auto" : "relative top-[89px] mb-20 max-w-content bg-white mx-auto"}>
+        {children}
+      </main>
       <FloatingContactPanel />
       {/* <Chatbot1 /> */}
       <AIChatbot/>
       <Footer />
-    </main>
+    </div>
   );
 };
 

@@ -7,11 +7,10 @@ import OptimisationIcon from "../svg/OptimisationIcon";
 import RocketIcon from "../svg/RocketIcon";
 import SoftwareCodeIcon from "../svg/SoftwareCodeIcon";
 import { FaAndroid, FaGlobe, FaLayerGroup } from "react-icons/fa";
-import nativeios from "../../assets/app/ios-app-development.webp";
-import nativeandroid from "../../assets/app/native-android-development.webp";
-import crossplatform from "../../assets/app/cross-platform-development.webp";
-import pwa from "../../assets/app/pwa-and-app-modernisation.webp";
-
+const nativeios = "/assets/app/ios-app-development.webp";
+const nativeandroid = "/assets/app/native-android-development.webp";
+const crossplatform = "/assets/app/cross-platform-development.webp";
+const pwa = "/assets/app/pwa-and-app-modernisation.webp";
 const MobileAppServicesData = [
   {
     icon: <Apple size={14} strokeWidth={2.5} />,

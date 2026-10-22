@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ContainerVariant, ItemVariantLeft, ItemVariantRight } from "../shared/MotionSetting";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HeroItem } from "./Animation";
 
@@ -32,7 +32,7 @@ const TechAgency = () => {
             </motion.p>
 
             <HeroItem>
-              <Link to="/services" className="px-6 py-3 md:px-10 md:py-4.5
+              <Link href="/services" className="px-6 py-3 md:px-10 md:py-4.5
                 inline-flex items-center justify-center gap-[14px]
                 rounded-full
                 bg-sky-600 text-white

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface Industry {
   title: string;
@@ -79,10 +79,10 @@ const industries: Industry[] = [
 ];
 
 const UIUXIndustries: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (
