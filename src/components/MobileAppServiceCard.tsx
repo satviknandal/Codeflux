@@ -97,7 +97,7 @@ const MobileAppServiceCard = ({data, index}:MobileAppServiceCardProps )=> {
 
         <ul className="mb-6 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
           {data.list && data.list.length > 0 && data.list.map((item: any) => {
-            return <li className="flex items-center gap-2 text-[13px] font-normal leading-[1.3] text-gray-700">
+            return <li key={item} className="flex items-center gap-2 text-[13px] font-normal leading-[1.3] text-gray-700">
               <CheckCircle size={15} className="shrink-0 text-sky-600"/>{item}
             </li>
           })}

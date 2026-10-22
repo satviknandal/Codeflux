@@ -69,7 +69,6 @@ const SoftwareAgency = () => {
           </motion.div>
         </div>
         <div>
-          <h1></h1>
           <p>
               
           </p>

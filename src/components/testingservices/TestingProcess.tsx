@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface ProcessStep {
   number: string;
@@ -245,10 +245,10 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
 const TestingProcess = () => {
   const firstRow = processSteps.slice(0, 3);
   const secondRow = processSteps.slice(3, 6);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

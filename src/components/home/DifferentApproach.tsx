@@ -1,18 +1,18 @@
 import React from "react";
 import { motion, type Variants } from "framer-motion";
 import { Zap, Bug, Settings, Cpu, Smartphone, Link2, Code2, Search } from "lucide-react";
-import codefluxLogo from "../../assets/logoIcon.png"
-import mastercardLogo from "../../assets/payment/mastercard.svg";
-import visaLogo from "../../assets/payment/visa.png";
-import payIdLogo from "../../assets/payment/payid.png";
-import nabLogo from "../../assets/payment/nab.png";
-import commBankLogo from "../../assets/payment/commbank.png";
-import azureLogo from "../../assets/icons/microsoft-azure-icon.webp";
-import reactLogo from "../../assets/icons/reactjs-icon.webp";
-import dotnetLogo from "../../assets/icons/dotnetcore-original.svg";
-import kubernetesLogo from "../../assets/icons/kubernetes-plain.svg";
-import awsLogo from "../../assets/icons/amazon-aws-icon.webp";
-import pythonLogo from "../../assets/icons/python-icon.webp";
+const codefluxLogo = "/assets/logoIcon.png";
+const mastercardLogo = "/assets/payment/mastercard.svg";
+const visaLogo = "/assets/payment/visa.png";
+const payIdLogo = "/assets/payment/payid.png";
+const nabLogo = "/assets/payment/nab.png";
+const commBankLogo = "/assets/payment/commbank.png";
+const azureLogo = "/assets/icons/microsoft-azure-icon.webp";
+const reactLogo = "/assets/icons/reactjs-icon.webp";
+const dotnetLogo = "/assets/icons/dotnetcore-original.svg";
+const kubernetesLogo = "/assets/icons/kubernetes-plain.svg";
+const awsLogo = "/assets/icons/amazon-aws-icon.webp";
+const pythonLogo = "/assets/icons/python-icon.webp";
 import CompHeader from "../shared/CompHeader";
 
 interface BadgeProps {

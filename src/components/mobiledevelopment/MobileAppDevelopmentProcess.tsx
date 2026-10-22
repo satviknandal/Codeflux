@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface ProcessStep {
   number: string;
@@ -42,7 +42,7 @@ const processSteps: ProcessStep[] = [
     icon: PencilRuler,
     link: {
       label: "Our UX & UI Design Services",
-      href: "../services/webdesignuiux",
+      href: "/services/webdesignuiux",
     },
   },
   {
@@ -62,7 +62,7 @@ const processSteps: ProcessStep[] = [
     icon: Bug,
     link: {
       label: "Our Testing Services",
-      href: "../services/testingservices",
+      href: "/services/testingservices",
     },
   },
   {
@@ -82,7 +82,7 @@ const processSteps: ProcessStep[] = [
     icon: Wrench,
     link: {
       label: "Maintenance & Support Plans",
-      href: "../../maintenancesupportplans",
+      href: "/services/maintenancesupportplans",
     },
   },
 ];
@@ -276,10 +276,10 @@ const ProcessRow = ({ steps }: { steps: ProcessStep[] }) => {
 const MobileAppDevelopmentProcess = () => {
   const firstRow = processSteps.slice(0, 3);
   const secondRow = processSteps.slice(3, 6);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
 
   return (

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import heroBackground from "../../assets/hero/contactbg.webp";
-
+const heroBackground = "/assets/hero/contactbg.webp";
 const ContactHero = () => {
     return (
         <section className="relative overflow-hidden bg-cover bg-center py-10 md:py-24 h-[900px] md:h-[800px]" style={{backgroundImage: `url(${heroBackground})`}}>

@@ -1,9 +1,9 @@
 import React from "react";
 import { CalendarDays, Mail, Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const FloatingContactPanel: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const calendlyUrl = "https://calendly.com/codeflux-sales/30min";
 
@@ -19,7 +19,7 @@ const FloatingContactPanel: React.FC = () => {
   };
 
   const goToContact = () => {
-    navigate("/contactus");
+    router.push("/contactus");
   };
 
   const callUs = () => {

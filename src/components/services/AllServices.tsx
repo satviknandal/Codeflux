@@ -1,10 +1,10 @@
-import aiconsultingbg from '../../assets/ai/aiconsulting.webp';
-import aiservicesbg from '../../assets/ai/aiconsultingbg.webp';
-import sdsservicesbg from '../../assets/services/softwaredevelopment.jpg';
-import webdevservicesbg from '../../assets/services/webdevelopment.png';
-import webdesignservicesbg from '../../assets/services/webdesignservices.jpg';
-import cloudsolutionservicesbg from '../../assets/services/cloudservices.png';
-import { Link } from 'react-router-dom';
+const aiconsultingbg = "/assets/ai/aiconsulting.webp";
+const aiservicesbg = "/assets/ai/aiconsultingbg.webp";
+const sdsservicesbg = "/assets/services/softwaredevelopment.jpg";
+const webdevservicesbg = "/assets/services/webdevelopment.png";
+const webdesignservicesbg = "/assets/services/webdesignservices.jpg";
+const cloudsolutionservicesbg = "/assets/services/cloudservices.png";
+import Link from "next/link";
 import CompHeader from '../shared/CompHeader';
 import { BrainCircuitIcon, BrainIcon, CloudIcon, CodeXmlIcon, GlobeIcon, PaletteIcon } from 'lucide-react';
 
@@ -216,7 +216,7 @@ const AllServices = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center text-sky-300" href="/services/software-development">
                     Explore AI Services
                   </Link>
                 </div>
@@ -231,7 +231,7 @@ const AllServices = () => {
                   </p>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" href="/services/software-development">
                     Explore AI Consulting
                   </Link>
                 </div>
@@ -246,7 +246,7 @@ const AllServices = () => {
                   </p>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" href="/services/software-development">
                     Explore Web Development
                   </Link>
                 </div>
@@ -266,7 +266,7 @@ const AllServices = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" href="/services/software-development">
                     Explore Software Development
                   </Link>
                 </div>
@@ -281,7 +281,7 @@ const AllServices = () => {
                   </p>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" href="/services/software-development">
                     Explore Web Design UI/UX
                   </Link>
                 </div>
@@ -301,7 +301,7 @@ const AllServices = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" to="/services/software-development">
+                  <Link className="group/link font-label text-xs tracking-wider text-primary-container font-bold uppercase flex items-center gap-2 text-sky-300" href="/services/software-development">
                     Explore Cloud Solutions
                   </Link>
                 </div>

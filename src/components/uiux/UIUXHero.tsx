@@ -1,6 +1,6 @@
 import React from "react";
-import webuiuxbg from "../../assets/hero/webuiuxbg.svg";
-import uxbannerbg from "../../assets/hero/uxbg.webp";
+const webuiuxbg = "/assets/hero/webuiuxbg.svg";
+const uxbannerbg = "/assets/hero/uxbg.webp";
 import { PaletteIcon } from "lucide-react";
 
 interface UIUXHeroProps {
@@ -28,7 +28,7 @@ const UIUXHero: React.FC<UIUXHeroProps> = () => {
             </p>
         </div>
         <img src={webuiuxbg} className="absolute h-full md:h-auto object-cover md:object-fill -top-[0px] z-[2] opacity-30" alt="" />
-        <img src={uxbannerbg} className='w-auto h-full md:w-full md:h-auto absolute top-0 opacity-50'/>
+        <img src={uxbannerbg} alt="" className='w-auto h-full md:w-full md:h-auto absolute top-0 opacity-50'/>
         </div>
     }
 

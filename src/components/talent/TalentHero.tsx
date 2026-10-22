@@ -6,10 +6,7 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import recruitmentbg from "../../assets/hero/recruitmentbg.avif";
-
-
-
+const recruitmentbg = "/assets/hero/recruitmentbg.avif";
 const TalentHero = () => {
   return (
     <div className="relative h-[575px] md:h-[700px] overflow-hidden">

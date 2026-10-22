@@ -12,7 +12,7 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { chatbotCategories, type ChatbotCategory, type ChatbotItem } from "./ChatbotData";
 
 interface LiveMessage {
@@ -23,7 +23,7 @@ interface LiveMessage {
 
 
 const AIChatbot: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   
     const [isOpen, setIsOpen] = useState(false);
   
@@ -111,7 +111,7 @@ const AIChatbot: React.FC = () => {
   
       setIsOpen(false);
       resetChat();
-      navigate(path);
+      router.push(path);
     };
   
     /* =========================================================

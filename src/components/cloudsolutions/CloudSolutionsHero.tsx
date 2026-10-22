@@ -5,14 +5,14 @@ import {
   ArrowRight,
   CloudIcon,
 } from "lucide-react";
-import cloud from "../../assets/hero/cloud-computing-image2.png";
-import { useNavigate } from "react-router-dom";
+const cloud = "/assets/hero/cloud-computing-image2.png";
+import { useRouter } from "next/navigation";
 
 const CloudSolutionsHero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
   
   return (
@@ -185,7 +185,7 @@ const CloudSolutionsHero = () => {
           />
 
           <div className='flex items-end justify-end'>
-          <img src={cloud} className='w-[1000px]'/>
+          <img src={cloud} alt="Cloud and platform engineering illustration" className='w-[1000px]'/>
         </div>
         </div>
       </div>

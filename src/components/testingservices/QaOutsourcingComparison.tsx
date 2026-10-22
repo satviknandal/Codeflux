@@ -11,7 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface ComparisonRow {
   dimension: string;
@@ -60,10 +60,10 @@ const comparisonRows: ComparisonRow[] = [
 ];
 
 const QaOutsourcingComparison: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
   
   return (

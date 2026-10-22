@@ -6,6 +6,7 @@ interface CompHeaderProps {
   title: any;
   subheading: string;
   variant: string;
+  as?: "h1" | "h2" | "h3";
 }
 
 const CompHeader = ({
@@ -13,7 +14,9 @@ const CompHeader = ({
   title,
   subheading = "",
   variant = "default",
+  as = "h3",
 }: CompHeaderProps) => {
+  const Heading = motion[as];
   const getHighlighterColorStyles = () => {
     switch (variant) {
       case "bluegradient":
@@ -108,12 +111,12 @@ const CompHeader = ({
       )}
 
       {/* Title */}
-      <motion.h3
+      <Heading
         variants={ItemVariant}
         className={`mb-2 text-center text-[24px] font-normal leading-[30px] md:mb-4 md:text-4xl md:leading-[40px] ${getTitleStyles()}`}
       >
         {title}
-      </motion.h3>
+      </Heading>
 
       {/* Subheading */}
       {subheading && (

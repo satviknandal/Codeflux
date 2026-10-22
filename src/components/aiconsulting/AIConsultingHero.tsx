@@ -1,12 +1,12 @@
 import { Award, CalendarCheck, Smartphone, UserRound } from 'lucide-react';
-import aiconsulting from '../../assets/ai/aiconsulting.webp';
-import { useNavigate } from 'react-router-dom';
+const aiconsulting = "/assets/ai/aiconsulting.webp";
+import { useRouter } from "next/navigation";
 
 const AIConsultingHero = () => {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const navigateToContactUs = () => {
-        navigate("../../contactus");
+        router.push("/contactus");
     };
 
     return (

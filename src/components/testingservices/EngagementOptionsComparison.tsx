@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import CompHeader from "../shared/CompHeader";
 
 const comparisonRows = [
@@ -41,10 +41,10 @@ const comparisonRows = [
 ];
 
 const EngagementOptionsComparison = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const navigateToContactUs = () => {
-    navigate("../../contactus");
+    router.push("/contactus");
   };
   
   return (

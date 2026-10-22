@@ -1,16 +1,15 @@
-import Gumtree from "../../assets/brands/Gumtree.png";
-import McGrath from "../../assets/brands/McGrath.png";
-import FlightCentre from "../../assets/brands/FlightCentre.png";
-import Funraisin from "../../assets/brands/funraisin.png";
-import Reapit from "../../assets/brands/Reapit.png";
-import GoSwitch from "../../assets/brands/GoSwitch.png";
-import Leasesuite from "../../assets/brands/logo_leasesuite.png";
-import Savills from "../../assets/brands/savills-new.png";
-import BikeExchange from "../../assets/brands/BikeExchange.png";
-import Clubworx from "../../assets/brands/clubworx.png";
-import Pureprofile from "../../assets/brands/Pureprofile.png";
-import VIPC from "../../assets/brands/VIPC_Primary_Blue.png";
-
+const Gumtree = "/assets/brands/Gumtree.png";
+const McGrath = "/assets/brands/McGrath.png";
+const FlightCentre = "/assets/brands/FlightCentre.png";
+const Funraisin = "/assets/brands/funraisin.png";
+const Reapit = "/assets/brands/Reapit.png";
+const GoSwitch = "/assets/brands/GoSwitch.png";
+const Leasesuite = "/assets/brands/logo_leasesuite.png";
+const Savills = "/assets/brands/savills-new.png";
+const BikeExchange = "/assets/brands/BikeExchange.png";
+const Clubworx = "/assets/brands/clubworx.png";
+const Pureprofile = "/assets/brands/Pureprofile.png";
+const VIPC = "/assets/brands/VIPC_Primary_Blue.png";
 const Brands = () => {
   const brands = [
     { src: Gumtree, alt: "Gumtree", width: 165 },

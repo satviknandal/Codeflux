@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import MenuIcon from "../../shared/svg/MenuIcon";
-import logo from "../../assets/codeflux-logo.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+const logo = "/assets/codeflux-logo.png";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 import {
@@ -24,10 +25,10 @@ const Header = () => {
 
   const headerRef = useRef<HTMLDivElement>(null);
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const isHomePage = location.pathname === "/";
+  const isHomePage = pathname === "/";
 
   const links = [
     {
@@ -108,12 +109,12 @@ const Header = () => {
   useEffect(() => {
     setIsDropdownOpen(false);
     setFlyoutOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
 
   const Logo = () => {
     return (
-      <Link to="/" className="inline-flex items-center">
+      <Link href="/" className="inline-flex items-center">
         <img src={logo} alt="Codeflux" className="h-[36px] md:h-[40px] w-auto"/>
       </Link>
     );
@@ -149,16 +150,12 @@ const Header = () => {
             hover:scale-[1.03]
             hover:shadow-[0_0_25px_rgba(79,70,229,0.35)]
           "
-          onClick={() => navigate("/contactus")}
+          onClick={() => router.push("/contactus")}
         >
           Start a Project
         </button>
       </div>
     );
-  };
-
-  const handleNavigation = (path: string) => {
-    navigate(path);
   };
 
   /*
@@ -186,11 +183,9 @@ const Header = () => {
           ease: "easeOut",
         }}
       >
-        <a
-          onClick={() => {
-            handleNavigation(item.link);
-            setIsDropdownOpen(false);
-          }}
+        <Link
+          href={item.link}
+          onClick={() => setIsDropdownOpen(false)}
           className={`
             cursor-pointer
             group
@@ -222,7 +217,7 @@ const Header = () => {
             `}>
             {item.label}
           </span>
-        </a>
+        </Link>
       </motion.div>
     );
   };
@@ -241,7 +236,7 @@ const Header = () => {
         <ul className="flex items-center gap-10">
 
           <li>
-            <a onClick={() => handleNavigation("/")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Home</a>
+            <Link href="/" className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Home</Link>
           </li>
 
           <li
@@ -343,9 +338,9 @@ const Header = () => {
               )}
             </AnimatePresence>
           </li>
-          <li><a onClick={() => handleNavigation("/aboutus")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">About Us</a></li>
-          <li><a onClick={() => handleNavigation("/blogs")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Blog</a></li>
-          <li><a onClick={() => handleNavigation("/contactus")} className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Contact</a></li>
+          <li><Link href="/aboutus" className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">About Us</Link></li>
+          <li><Link href="/blogs" className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Blog</Link></li>
+          <li><Link href="/contactus" className="cursor-pointer flex items-center text-white transition-colors duration-200 hover:text-white/70">Contact</Link></li>
         </ul>
       </nav>
     );

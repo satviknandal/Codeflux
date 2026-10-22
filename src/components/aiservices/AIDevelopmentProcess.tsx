@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
 import { CircleCheckIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface AIDevelopmentProcessProps {}
 
 const AIDevelopmentProcess = ({}: AIDevelopmentProcessProps) => {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const navigateToContactUs = () => {
-        navigate("../../contactus");
+        router.push("/contactus");
     };
     
     const steps = [

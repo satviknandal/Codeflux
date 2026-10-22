@@ -4,7 +4,7 @@ import { CodeIcon } from '../shared/svg/CodeIcon'
 import { PhoneIcon } from '../shared/svg/PhoneIcon'
 import { WandIcon } from '../shared/svg/WandIcon'
 import { CloudIcon } from '../shared/svg/CloudIcon'
-import { Link } from 'react-router-dom'
+import Link from "next/link";
 import { ArrowRight } from 'lucide-react'
 
 
@@ -164,7 +164,7 @@ const TechEdge = () => {
               </div>
 
 
-            <Link to={service.url}className="w-fit inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-300 hover:gap-4 px-6 py-3.5">
+            <Link href={service.url}className="w-fit inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-300 hover:gap-4 px-6 py-3.5">
               {service.ctaText}
               <ArrowRight className="w-5 h-5" />
             </Link>

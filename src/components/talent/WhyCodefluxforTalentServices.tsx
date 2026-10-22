@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ContainerVariant } from "../../shared/MotionSetting";
-import whyus from "../../assets/1.jpg";
+const whyus = "/assets/1.jpg";
 import { CircleCheckIcon } from "lucide-react";
 import CompHeader from "../shared/CompHeader";
 
@@ -73,7 +73,7 @@ const WhyCodefluxforTalentServices = ({pointers, pointerClass}: WhyCodefluxforTa
         <div className="flex gap-16 mt-0 md:mt-16">
             {renderPointers()}
             <div className="hidden md:block w-[40%]">
-                <img src={whyus} className="w-full rounded-2xl"/>
+                <img src={whyus} alt="Why choose Codeflux for talent services" className="w-full rounded-2xl"/>
             </div>
         </div>
         </section>

@@ -3,8 +3,7 @@ import FlyoutNav from './FlyoutNav';
 import ChevronDownIcon from '../../shared/svg/ChevronDown';
 import MenuIcon from '../../shared/svg/MenuIcon';
 import Button from '../Button';
-import logo from "../../assets/codeflux-logo.png";
-
+const logo = "/assets/codeflux-logo.png";
 const HeaderInternal = () => {
   const [flyoutOpen, setFlyoutOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);

@@ -1,27 +1,23 @@
 import React from "react";
 import CompHeader from "../shared/CompHeader";
-import openaiicon from "../../assets/ai-icons/openai.svg";
-import anthropicicon from "../../assets/ai-icons/anthropic.svg";
-import mistralicon from "../../assets/ai-icons/mistral.svg";
-import llamaicon from "../../assets/ai-icons/llama.svg";
-import tensorflowicon from "../../assets/ai-icons/tensorflow.svg";
-import pytorchicon from "../../assets/ai-icons/pytorch.svg";
-import huggingfaceicon from "../../assets/ai-icons/huggingface.svg";
-
-import awsicon from "../../assets/ai-icons/aws.svg";
-import azureicon from "../../assets/ai-icons/azure.svg";
-import gcpicon from "../../assets/ai-icons/gcp.svg";
-import nvidiaicon from "../../assets/ai-icons/nvidia.svg";
-import langchainicon from "../../assets/ai-icons/langchain.svg";
-
-
-import jaxicon from "../../assets/ai-icons/jax.png";
-import pineconeicon from "../../assets/ai-icons/pinecone.svg";
-import weaviateicon from "../../assets/ai-icons/weaviate.svg";
-import qdranticon from "../../assets/ai-icons/qdrant.svg";
-import vercelicon from "../../assets/ai-icons/vercel.svg";
-import kubernetesicon from "../../assets/ai-icons/kubernetes.svg";
-
+const openaiicon = "/assets/ai-icons/openai.svg";
+const anthropicicon = "/assets/ai-icons/anthropic.svg";
+const mistralicon = "/assets/ai-icons/mistral.svg";
+const llamaicon = "/assets/ai-icons/llama.svg";
+const tensorflowicon = "/assets/ai-icons/tensorflow.svg";
+const pytorchicon = "/assets/ai-icons/pytorch.svg";
+const huggingfaceicon = "/assets/ai-icons/huggingface.svg";
+const awsicon = "/assets/ai-icons/aws.svg";
+const azureicon = "/assets/ai-icons/azure.svg";
+const gcpicon = "/assets/ai-icons/gcp.svg";
+const nvidiaicon = "/assets/ai-icons/nvidia.svg";
+const langchainicon = "/assets/ai-icons/langchain.svg";
+const jaxicon = "/assets/ai-icons/jax.png";
+const pineconeicon = "/assets/ai-icons/pinecone.svg";
+const weaviateicon = "/assets/ai-icons/weaviate.svg";
+const qdranticon = "/assets/ai-icons/qdrant.svg";
+const vercelicon = "/assets/ai-icons/vercel.svg";
+const kubernetesicon = "/assets/ai-icons/kubernetes.svg";
 interface Technology {
   name: string;
   src: string;

@@ -1,4 +1,3 @@
-import "../../blog.css";
 
 interface BlogsAsideProps {
     items: any

@@ -7,7 +7,7 @@ import {
   ArrowUpRight,
   Sparkles
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -83,7 +83,7 @@ const slides = [
 ];
 
 const HeroNew = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -145,7 +145,7 @@ const HeroNew = () => {
 
           {/* CTA + metrics */}
           <div className="mt-11 flex flex-wrap items-center gap-4">
-            <button onClick={() => navigate('services/aiservices')} className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 md:px-7 md:py-4 text-[14px] md:text-[16px] font-semibold text-black transition hover:-translate-y-0.5 hover:shadow-xl">
+            <button onClick={() => router.push('/services/aiservices')} className="group flex items-center gap-3 rounded-full bg-white px-6 py-3 md:px-7 md:py-4 text-[14px] md:text-[16px] font-semibold text-black transition hover:-translate-y-0.5 hover:shadow-xl">
               Explore AI Solutions
               <ArrowUpRight
                 size={19}
@@ -153,7 +153,7 @@ const HeroNew = () => {
               />
             </button>
 
-            <button onClick={() => navigate('contactus')} className="rounded-full border border-white/10 bg-white/[.025] px-6 py-3 md:px-7 md:py-4 text-[14px] md:text-[16px] font-semibold text-white/90 backdrop-blur transition hover:bg-white/10">
+            <button onClick={() => router.push('/contactus')} className="rounded-full border border-white/10 bg-white/[.025] px-6 py-3 md:px-7 md:py-4 text-[14px] md:text-[16px] font-semibold text-white/90 backdrop-blur transition hover:bg-white/10">
               Talk to Experts
             </button>
 

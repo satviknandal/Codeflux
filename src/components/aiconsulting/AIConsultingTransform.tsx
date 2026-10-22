@@ -58,7 +58,8 @@ const AIConsultingTransform: React.FC = () => {
           <div className="grid items-start gap-2 md:gap-4 md:grid-cols-[50%_1fr]">
             {data && data.length > 0 && data.map((obj) => {
               return <motion.div
-                variants={ItemVariant} 
+                key={obj.company}
+                variants={ItemVariant}
                 className="
                     group relative flex flex-col overflow-hidden rounded-lg
                     px-5 py-4

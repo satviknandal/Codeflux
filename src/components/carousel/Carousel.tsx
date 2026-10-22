@@ -76,7 +76,7 @@ const Carousel = ({ data, width = "w-full" }: CarouselProps) => {
                 key={item.title}
                 className="rounded-lg border border-[#c0ddf3]/25 bg-[#e3f3ff]/10 shadow-sm"
               >
-                <img src={item.image} className="rounded-tl-lg rounded-tr-lg"/>
+                <img src={item.image} alt={item.title} className="rounded-tl-lg rounded-tr-lg"/>
                 <div className="p-3 md:p-6">
                   <h3 className="text-md md:text-xl font-medium text-pink-100">
                     {item.title}

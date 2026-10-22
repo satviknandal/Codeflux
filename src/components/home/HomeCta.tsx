@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ContainerVariant, ItemVariant } from "../../shared/MotionSetting";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const HomeCta = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <motion.div
       variants={ContainerVariant}
@@ -54,7 +54,7 @@ const HomeCta = () => {
                     hover:bg-sky-700
                     hover:shadow-[0_6px_10px_-6px_rgba(0,132,209,0.5)]
                   "
-                  onClick={() => navigate('contactus')}
+                  onClick={() => router.push('/contactus')}
                 >
                   Schedule a Consultation
                   <ArrowRight size={18} strokeWidth={2} />
